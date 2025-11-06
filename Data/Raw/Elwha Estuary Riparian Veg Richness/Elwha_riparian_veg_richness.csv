@@ -1,0 +1,43 @@
+PlotNumber,CoverType,Year,TotalRichness
+S100,Mixed riparian forest,before,20
+S100,Mixed riparian forest,during,40
+S45S,Mixed riparian forest,before,13
+S45S,Mixed riparian forest,during,14
+S46A,Mixed riparian forest,before,9
+S46A,Mixed riparian forest,during,9
+S7A,Mixed riparian forest,before,22
+S7A,Mixed riparian forest,during,27
+S7B,Mixed riparian forest,before,26
+S7B,Mixed riparian forest,during,22
+S10A,Willow-alder forest,before,25
+S10A,Willow-alder forest,during,18
+S10B,Willow-alder forest,before,17
+S10B,Willow-alder forest,during,20
+S12A,Willow-alder forest,before,12
+S12A,Willow-alder forest,during,11
+S101,Riparian shrub,before,19
+S101,Riparian shrub,during,17
+S102,Riparian shrub,before,23
+S102,Riparian shrub,during,25
+S16B,Riparian shrub,before,10
+S16B,Riparian shrub,during,19
+S33A,Riparian shrub,before,29
+S33A,Riparian shrub,during,38
+S44B,Riparian shrub,before,21
+S44B,Riparian shrub,during,19
+S21A,Emergent marsh transition,before,27
+S21A,Emergent marsh transition,during,13
+S25A,Emergent marsh transition,before,11
+S25A,Emergent marsh transition,during,20
+S34A,Emergent marsh transition,before,27
+S34A,Emergent marsh transition,during,19
+S3A,Emergent marsh transition,before,7
+S3A,Emergent marsh transition,during,6
+S44A,Emergent marsh transition,before,26
+S44A,Emergent marsh transition,during,21
+S35A,Dunegrass,before,23
+S35A,Dunegrass,during,21
+S36A,Dunegrass,before,31
+S36A,Dunegrass,during,25
+S37A,Dunegrass,before,12
+S37A,Dunegrass,during,9
