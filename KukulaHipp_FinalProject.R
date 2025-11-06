@@ -1,0 +1,10 @@
+---
+title: "Elwha River Dam Removal"
+author: "Sylvia Hipp and Kaitlyn Kukula"
+date: "Fall 2025"
+output: pdf_document
+editor_options:
+  chunk_output_type: console
+markdown: 
+  wrap: none
+---
