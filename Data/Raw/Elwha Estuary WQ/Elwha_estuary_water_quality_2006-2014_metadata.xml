@@ -1,0 +1,611 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <pubdate>2017</pubdate>
+        <title>Water quality in the Elwha River estuary, Washington, from 2006 to 2014.</title>
+        <geoform>comma-delimited text</geoform>
+        <serinfo>
+          <sername>data release</sername>
+          <issue>DOI:10.5066/F75B00N4</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, California</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+        <onlink>https://www.sciencebase.gov/catalog/file/get/58f626f8e4b0f2e20545e5ad</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Melissa M. Foley</origin>
+            <origin>Patrick B. Shafroth</origin>
+            <origin>Matthew M. Beirne</origin>
+            <origin>Rebecca Paradis</origin>
+            <origin>Andrew C. Ritchie</origin>
+            <pubdate>2017</pubdate>
+            <title>Ecological parameters in the Elwha River estuary before and during dam removal</title>
+            <serinfo>
+              <sername>data release</sername>
+              <issue>DOI:10.5066/F75B00N4</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, CA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This portion of the data release presents water column dissolved nutrient concentration data and water quality parameters from samples collected in the Elwha River estuary, Washington, in 2006, 2007, 2013, and 2014 (USGS Field Activities L-15-13-PS, L-24-13-PS, T-R5-13-PS, T-R6-13-PS, T-RA-14-PS, 2014-614-FA, 2014-628-FA, 2014-633-FA, 2014-666-FA). Water column samples were collected by hand in acid-washed opaque bottles from multiple locations. Water quality was measured using a handheld Hydolab Data Sonde 4a. The locations of water sample collections were determined with a hand-held global positioning system (GPS). The water samples were filtered through GF/F filters immediately after collection. The filtrate was collected in scintillation vials and frozen until analysis at either the University of Washington marine chemistry lab (2006 and 2007 samples) or the University of California Santa Barbara Marine Science Institute analytical lab (2013 and 2014 samples). Nutrient concentration and water quality data are provided in a comma-delimited spreadsheet (.csv).</abstract>
+      <purpose>Data were obtained to assess the change in water quality in the Elwha estuary following the removal of two dams on the Elwha River between 2011 and 2014.</purpose>
+      <supplinf>Additional information about the field activities from which these data were derived are available online at:
+
+https://cmgds.marine.usgs.gov/fan_info.php?fan=L1513PS
+https://cmgds.marine.usgs.gov/fan_info.php?fan=L2413PS
+https://cmgds.marine.usgs.gov/fan_info.php?fan=TR513PS
+https://cmgds.marine.usgs.gov/fan_info.php?fan=TR613PS
+https://cmgds.marine.usgs.gov/fan_info.php?fan=TRA14PS
+https://cmgds.marine.usgs.gov/fan_info.php?fan=2014-614-FA
+https://cmgds.marine.usgs.gov/fan_info.php?fan=2014-628-FA
+https://cmgds.marine.usgs.gov/fan_info.php?fan=2014-633-FA
+https://cmgds.marine.usgs.gov/fan_info.php?fan=2014-666-FA
+
+Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20060622</begdate>
+          <enddate>20141012</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition at time data were collected</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.56768</westbc>
+        <eastbc>-123.56162</eastbc>
+        <northbc>48.14827</northbc>
+        <southbc>48.14510</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:58f626f8e4b0f2e20545e5ad</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>oceans</themekey>
+      </theme>
+      <theme>
+        <themekt>Data Categories for Marine Planning</themekt>
+        <themekey>water-quality parameters</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>marine chemistry</themekey>
+        <themekey>water quality</themekey>
+      </theme>
+      <theme>
+        <themekt>Global Change Master Directory (GCMD)</themekt>
+        <themekey>nutrients</themekey>
+      </theme>
+      <theme>
+        <themekt>Marine Realms Information Bank (MRIB) keywords</themekt>
+        <themekey>water quality</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Elwha River</placekey>
+        <placekey>Strait of Juan de Fuca</placekey>
+        <placekey>Olympic Peninsula</placekey>
+        <placekey>Clallam County</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>USGS-authored or produced data and information are in the public domain from the U.S. Government and are freely redistributable with proper metadata and source attribution. Please recognize and acknowledge the U.S. Geological Survey and the Lower Elwha Klallam Tribe as the originators of the dataset and in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Jeffrey Duda</cntper>
+          <cntorg>U.S. Geological Survey, Western Fisheries Science Center</cntorg>
+        </cntperp>
+        <cntpos>Research Geologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6505 NE 65th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+        </cntaddr>
+        <cntvoice>206-526-2532</cntvoice>
+        <cntemail>jduda@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Jeffrey Duda</datacred>
+    <native>Microsoft Excel for Mac 2011, Mac OS X Yosemite, version 10.10.5.</native>
+    <crossref>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jonathan A. Warrick</origin>
+        <origin>Andrew C. Ritchie</origin>
+        <origin>Andrew W. Stevens</origin>
+        <origin>Patrick B. Shafroth</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <origin>Guy R. Gelfenbaum</origin>
+        <origin>Randall McCoy</origin>
+        <origin>Erin S. Cubley</origin>
+        <pubdate>2017</pubdate>
+        <title>Coastal habitat and biological community response to dam removal on the Elwha River</title>
+        <pubinfo>
+          <pubplace>Ecological Society of America, Washington DC</pubplace>
+          <publish>Ecological Monographs</publish>
+        </pubinfo>
+        <onlink>http://doi.org/10.1002/ecm.1268</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Detection limits for dissolved nutrients samples were determined independently by the University of Washington Marine Chemistry Lab and the University of California Santa Barbara Marine Science Institute analytical lab (UW/UCSB detection limits: PO4 = 0.03/0.1 mm; NO3 = 0.15/0.2 mm; NH4 = 0.12/0.1 mm).</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Dataset is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in June 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060622</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in July 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060720</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in August 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060831</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in September 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060929</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in October 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20061024</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Analysis of nutrient samples and calibration of the continuous flow instrument follow the protocols of the WOCE Hydrographic Program. Samples were analyzed using a Seal Analytical AA3 at the University of Washington marine chemistry lab.</procdesc>
+        <procdate>20070529</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at one location in March 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070323</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in April 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070418</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in May 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070531</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in June 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070628</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in August 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070808</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at two locations in August 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070830</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Analysis of nutrient samples and calibration of the continuous flow instrument follow the protocols of the WOCE Hydrographic Program. Samples were analyzed using a Seal Analytical AA3 at the University of Washington marine chemistry lab.</procdesc>
+        <procdate>20080127</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in June 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130628</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in July 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130723</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in August 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130822</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at three locations in October 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20131024</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Analysis of nutrient samples was done at the University of California Santa Barbara Marine Science Institute analytical lab using flow injection analysis on a QuickChem 8000.</procdesc>
+        <procdate>20140203</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at four locations in March 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140309</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at four locations in April 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140426</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in June 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140613</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in July 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140725</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Water samples were collected at five locations in October 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20141012</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Analysis of nutrient samples was done at the University of California Santa Barbara Marine Science Institute analytical lab using flow injection analysis on a QuickChem 8000.</procdesc>
+        <procdate>20141217</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add keywords section with USGS persistent identifier as theme keyword. No data were changed.</procdesc>
+        <procdate>20201019</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>VeeAnn A. Cross</cntper>
+            </cntorgp>
+            <cntpos>Marine Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>384 Woods Hole Road</address>
+              <city>Woods Hole</city>
+              <state>MA</state>
+              <postal>02543-1598</postal>
+            </cntaddr>
+            <cntvoice>508-548-8700 x2251</cntvoice>
+            <cntfax>508-457-2310</cntfax>
+            <cntemail>vatnipp@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Performed minor edits to the metadata to correct typos. No data were changed</procdesc>
+        <procdate>20211013</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>Susan A. Cochran</cntper>
+            </cntorgp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Point</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Point</sdtstype>
+        <ptvctcnt>147</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>0.00001</latres>
+        <longres>0.00001</longres>
+        <geogunit>Decimal degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS_1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Water quality</enttypl>
+        <enttypd>Tabular data</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Field Activity Number</attrlabl>
+        <attrdef>Unique U.S. Geological Survey field activity identifier</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identifier for the U.S. Geological Survey field activity. NA indicates no Field Activity Number was generated for that sampling event.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dam Condition</attrlabl>
+        <attrdef>Dam status at the time of sample collection</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Before removal</edomv>
+            <edomvd>samples collected before dam removal began</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>During removal</edomv>
+            <edomvd>samples collected during dam removal (2011-2014)</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Date Collected</attrlabl>
+        <attrdef>Date of sample collection in mm/dd/yyyy format</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>06/22/2006</rdommin>
+            <rdommax>10/12/2014</rdommax>
+            <attrunit>Dates in mm/dd/yyyy format</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site Name</attrlabl>
+        <attrdef>Name of sample collection site</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <udom>Site name for the sample given when collected in the field</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Latitude (deg. N)</attrlabl>
+        <attrdef>Latitude of sample in decimal degrees, north</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>48.1451</rdommin>
+            <rdommax>48.14827</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Longitude (deg. E)</attrlabl>
+        <attrdef>Longitude of sample in decimal degrees, east</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-123.5677</rdommin>
+            <rdommax>-123.5616</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Replicate</attrlabl>
+        <attrdef>Number of replicate collected at a single site. Replicate number for the sample given when collected in the field</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>Integers</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Phosphate concentration</attrlabl>
+        <attrdef>Concentration of ortho-phosphate in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined.</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.03</rdommin>
+            <rdommax>0.55</rdommax>
+            <attrunit>micromolar</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nitrate + Nitrite concentration</attrlabl>
+        <attrdef>Concentration of nitrate and nitrite in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.04</rdommin>
+            <rdommax>17.49</rdommax>
+            <attrunit>micromolar</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ammonium concentration</attrlabl>
+        <attrdef>Concentration of ammonium in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.03</rdommin>
+            <rdommax>52.8</rdommax>
+            <attrunit>micromolar</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Salinity</attrlabl>
+        <attrdef>Concentration of salt in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.02</rdommin>
+            <rdommax>4.55</rdommax>
+            <attrunit>PSU (practical salinity units)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Temperature</attrlabl>
+        <attrdef>Water temperature. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>5.79</rdommin>
+            <rdommax>20.98</rdommax>
+            <attrunit>degrees Celcius</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Turbidity</attrlabl>
+        <attrdef>Concentration of suspended solids in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.30</rdommin>
+            <rdommax>305.60</rdommax>
+            <attrunit>NTU (Nephelometric Turbidity Unit)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dissolved oxygen</attrlabl>
+        <attrdef>Concentration of dissolved oxygen in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>6.57</rdommin>
+            <rdommax>13.80</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>% Dissolved oxygen</attrlabl>
+        <attrdef>Percent dissolved oxygen in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>62.90</rdommin>
+            <rdommax>149.20</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>pH</attrlabl>
+        <attrdef>Concentration of hydrogen ions in the sample. NS indicates that no sample was collected.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>6.30</rdommin>
+            <rdommax>8.05</rdommax>
+            <attrunit>no units</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The first line of the csv file is a header line.</eaover>
+      <eadetcit>U.S. Geological Survey</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>Water quality data are presented as a comma-delimited file (.csv) with associated FGDC-compliant metadata.</resdesc>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>comma-delimited text</formname>
+          <formvern>Microsoft Excel for Mac 2011 14.7.1</formvern>
+          <formcont>comma-delimited text file</formcont>
+          <filedec>No compression applied.</filedec>
+          <transize>0.04</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://www.sciencebase.gov/catalog/file/get/58f626f8e4b0f2e20545e5ad</networkr>
+                <networkr>https://doi.org/10.5066/F75B00N4</networkr>
+              </networka>
+            </computer>
+            <accinstr>Data can be downloaded via the Internet</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211013</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Jeffrey Duda</cntper>
+          <cntorg>U.S. Geological Survey, Western Fisheries Research Center</cntorg>
+        </cntperp>
+        <cntpos>Research Ecologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6505 NE 65th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>United States of America</country>
+        </cntaddr>
+        <cntvoice>206-526-2532</cntvoice>
+        <cntemail>jduda@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

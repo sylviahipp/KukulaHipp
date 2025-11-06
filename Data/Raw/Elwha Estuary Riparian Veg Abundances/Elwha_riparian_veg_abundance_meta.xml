@@ -1,0 +1,2279 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Patrick B. Shafroth</origin>
+        <pubdate>2017</pubdate>
+        <title>Riparian vegetation abundance (percent cover) in the Elwha River estuary, Washington, in 2007 and 2014</title>
+        <geoform>tabular digital data</geoform>
+        <serinfo>
+          <sername>data release</sername>
+          <issue>10.5066/F75B00N4</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, California</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+        <onlink>https://www.sciencebase.gov/catalog/file/get/5927162de4b0b7ff9fb56572</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Melissa M. Foley</origin>
+            <origin>Patrick B. Shafroth</origin>
+            <origin>Matthew M. Bierne</origin>
+            <origin>Rebecca Paradis</origin>
+            <origin>Andrew C. Ritchie</origin>
+            <pubdate>2017</pubdate>
+            <title>Ecological parameters in the Elwha River estuary before and during dam removal</title>
+            <serinfo>
+              <sername>data release</sername>
+              <issue>10.5066/F75B00N4</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, CA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This portion of the data release presents riparian plant species abundance (percent cover) data from plots sampled in the Elwha River estuary, Washington, in 2007 and 2014. In August 2007, we established 21 vegetation plots within the study area in a stratified random fashion, with three to five plots in five of the vegetation cover types denoted in the habitat classification maps: mixed riparian forest, willow-alder forest, riparian shrub, emergent marsh/marsh-shrub transition, and dunegrass. Each plot was 100 square meter, usually 10 m x 10 m, but in areas where the vegetation patch was narrow, plots were either 4 m x 25 m or 5 m x 20 m. We visually estimated percent cover by species of all vascular plants within one of ten cover classes: trace; 0-1 percent; 1-2 percent; 2-5 percent; 5-10 percent; 10-25 percent; 25-50 percent; 50-75 percent; 75-95 percent; 95-100 percent and used the midpoints of the classes for analysis. We resampled all plots in August 2014.  Plant abundance data are provided in a comma-delimited spreadsheet (.csv).</abstract>
+      <purpose>Data were obtained to assess the change in plant species composition in the Elwha estuary following the removal of two dams on the Elwha River between 2011 and 2014.</purpose>
+      <supplinf>Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.
+Although this Federal Geographic Data Committee-compliant metadata file is intended to document the data set in nonproprietary form, as well as in Esri format, this metadata file may include some Esri-specific terminology.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <mdattim>
+          <sngdate>
+            <caldate>200708</caldate>
+          </sngdate>
+          <sngdate>
+            <caldate>201408</caldate>
+          </sngdate>
+        </mdattim>
+      </timeinfo>
+      <current>observed</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.56071</westbc>
+        <eastbc>-123.56009</eastbc>
+        <northbc>48.1477</northbc>
+        <southbc>48.147</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5927162de4b0b7ff9fb56572</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>vegetation</themekey>
+        <themekey>wetland ecosystems</themekey>
+        <themekey>geospatial datasets</themekey>
+      </theme>
+      <theme>
+        <themekt>Marine Realms Information Bank (MRIB) keywords</themekt>
+        <themekey>estuary</themekey>
+        <themekey>dam removal</themekey>
+        <themekey>river</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>environment</themekey>
+        <themekey>geoscientificInformation</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Elwha River</placekey>
+        <placekey>Strait of Juan de Fuca</placekey>
+        <placekey>Olympic Peninsula</placekey>
+        <placekey>Port Angeles</placekey>
+        <placekey>Clallam County</placekey>
+        <placekey>United States of America</placekey>
+        <placekey>State of Washington</placekey>
+      </place>
+    </keywords>
+    <accconst>None.</accconst>
+    <useconst>USGS-authored or produced data and information are in the public domain from the U.S. Government and are freely redistributable with proper metadata and source attribution. Please recognize and acknowledge the U.S. Geological Survey and the National Park Service as the originator(s) of the dataset and in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Patrick B. Shafroth</cntper>
+          <cntorg>U.S. Geological Survey, Southwest Region</cntorg>
+        </cntperp>
+        <cntpos>Research Ecologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>2150 Centre Avenue Bldg C</address>
+          <city>Fort Collins</city>
+          <state>CO</state>
+          <postal>80526</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>970-226-9327</cntvoice>
+        <cntfax>970-226-9230</cntfax>
+        <cntemail>shafrothp@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Matt Beirne and Rebecca Paradis (Lower Elwha Klallam tribe) contributed to all aspects of this work. Tracy Fuentes, Cindy Pritekel, and Vanessa Beauchamp helped with the 2007 vegetation data collection and analysis. Jarrett Schuster, Cody Thomas, and Jamie Michel helped with 2014 vegetation data collection.
+Aaron Freeman helped with planform habitat mapping and metadata creation.</datacred>
+    <crossref>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jonathan A. Warrick</origin>
+        <origin>Andrew Ritchie</origin>
+        <origin>Andrew W. Stevens</origin>
+        <origin>Patrick B. Shafroth</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <origin>Guy Gelfenbaum</origin>
+        <origin>Randall McCoy</origin>
+        <origin>Erin S. Cubley</origin>
+        <pubdate>2017</pubdate>
+        <title>Coastal habitat and biological community response to dam removal on the Elwha River</title>
+        <pubinfo>
+          <pubplace>Ecological Society of America, Washington DC</pubplace>
+          <publish>Ecological Monographs</publish>
+        </pubinfo>
+        <onlink>http://doi.org/10.1002/ecm.1268</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Field estimates of percent cover are subject to variability associated with different observers. At the beginning of each field campaign, all observers work together and practice estimating percent cover so that variability is likely to be reduced. When estimating cover in plots, two people provide independent estimates and then average values if they are within 10 percent or discuss and reconcile larger differences. Formal checking and double-checking of data entry was conducted by two people, following the initial data entry.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>The data set represents species composition (percent cover by species) in August 2007 and August 2014 within sample plots within the Elwha estuary study area (see Spatial_Domain information).</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the data set has either not been conducted, or is not applicable.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Riparian plant species abundance (percent cover) were estimated in 21, 100 square meter vegetation plots within five vegetation types in the Elwha River estuary, Washington, in 2007 and 2014.  We visually estimated percent cover by species of all vascular plants within one of ten cover classes: trace; 0-1 percent; 1-2 percent; 2-5 percent; 5-10 percent; 10-25 percent; 25-50 percent; 50-75 percent; 75-95 percent; 95-100 percent and used the midpoints of the classes for analysis.</procdesc>
+        <procdate>200708</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Keywords section of metadata edited for consistency across the USGS Pacific Coastal and Marine Science Center and to further optimize discovery in search engines and data catalogs. Metadata was modified to bring up to current USGS PCMSC standards. Minor typos were corrected. No data information was changed.</procdesc>
+        <procdate>20180719</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Susan A Cochran</cntper>
+              <cntorg>U.S. Geological Survey, Pacific Coastal and Marine Science Center</cntorg>
+            </cntperp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical address</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060-5792</postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>(831) 460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Corrected Point of Contact and Metadata Contact phone number prefix.</procdesc>
+        <procdate>20180905</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Susan A Cochran</cntper>
+              <cntorg>U.S. Geological Survey, Pacific Coastal and Marine Science Center</cntorg>
+            </cntperp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>2885 Mission St.</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+              <country>United States</country>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add keywords section with USGS persistent identifier as theme keyword. No data were changed.</procdesc>
+        <procdate>20201019</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>VeeAnn A. Cross</cntper>
+            </cntorgp>
+            <cntpos>Marine Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>384 Woods Hole Road</address>
+              <city>Woods Hole</city>
+              <state>MA</state>
+              <postal>02543-1598</postal>
+            </cntaddr>
+            <cntvoice>508-548-8700 x2251</cntvoice>
+            <cntfax>508-457-2310</cntfax>
+            <cntemail>vatnipp@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Performed minor edits to the metadata to correct typos. No data were changed</procdesc>
+        <procdate>20211013</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>Susan A. Cochran</cntper>
+            </cntorgp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Elwha_riparian_veg_abundance.csv</enttypl>
+        <enttypd>Comma Separate Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Plot</attrlabl>
+        <attrdef>Vegetation plot number</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>alpha numeric codes used to uniquely identify individual vegetation plots</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CoverType</attrlabl>
+        <attrdef>Vegetation type descriptor</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Dunegrass</edomv>
+            <edomvd>Plant communities dominated by Leymus mollis (American dunegrass) with generally high diversity of forb species.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Emergent marsh transition</edomv>
+            <edomvd>Plant assemblages including relatively pure emergent marsh plants such as Juncus spp. (rushes), Carex spp. (sedges), Potentilla anserina (Pacific silverweed), Rumex salicifolius (willow dock), and Eleocharis palustris (spike rush). In addition, this vegetation cover type includes vegetation that typically occurs between the narrow bands of emergent marsh vegetation that are subject to regular and relatively large tidally-driven water level fluctuations and patches of riparian shrub or riparian forest that typically are inundated by river flooding vs. tidal fluctuations.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Mixed riparian forest</edomv>
+            <edomvd>Mature forests composed of deciduous and coniferous trees with shrub understory. Common overstory trees include Acer macrophyllum (bigleaf maple), Populus balsamifera ssp. trichocarpa (black cottonwood), Alnus rubra (red alder), Pseudotsuga menziesii (Douglas-fir), Thuja plicata (western red cedar), and Abies grandis (grand fir).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Riparian shrub</edomv>
+            <edomvd>Plant assemblages characterized by high shrub cover, including: Rosa nutkana (Nutka rose), Rosa pisocarpa (clustered wild rose), Crataegus douglasii (black hawthorne), Lonicera involucrata (black twinberry), Malus fusca (Pacific crab apple), Oemleria cerasiformis (Indian-plum), Rubus spectabilis (salmonberry), and Symphoricarpos albus (common snowberry).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Willow-alder forest</edomv>
+            <edomvd>Young deciduous forest composed primarily of Salix spp. (willow species) and Alnus rubra (red alder).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Year</attrlabl>
+        <attrdef>descriptor of time when vegetation plot was sampled, relative to dam removal</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>before</edomv>
+            <edomvd>before dam removal (sampled in 2007)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>during</edomv>
+            <edomvd>during dam removal (sampled in 2014)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ACERCIR</attrlabl>
+        <attrdef>Percent living cover in plot of Acer circinatum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ACERMAC</attrlabl>
+        <attrdef>Percent living cover in plot of Acer macrophyllum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ACHIMIL</attrlabl>
+        <attrdef>Percent living cover in plot of Achillea millefolium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ADENBIC</attrlabl>
+        <attrdef>Percent living cover in plot of Adenocaulon bicolor</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AGROCAP</attrlabl>
+        <attrdef>Percent living cover in plot of Agrostis capillaris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AGROEXA</attrlabl>
+        <attrdef>Percent living cover in plot of Agrostis exarata ssp. minor</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AGROSTO</attrlabl>
+        <attrdef>Percent living cover in plot of Agrostis stolonifera</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AIRACAR</attrlabl>
+        <attrdef>Percent living cover in plot of Aira caryophyllea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ALISPLA</attrlabl>
+        <attrdef>Percent living cover in plot of Alisma plantago-aquatica</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ALNURUB</attrlabl>
+        <attrdef>Percent living cover in plot of Alnus rubra</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AMBRCHA</attrlabl>
+        <attrdef>Percent living cover in plot of Ambrosia chamissonis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ANAPMAR</attrlabl>
+        <attrdef>Percent living cover in plot of Anaphalis margaritacea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ANTEDIM</attrlabl>
+        <attrdef>Percent living cover in plot of Antennaria dimorpha</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARBUMEN</attrlabl>
+        <attrdef>Percent living cover in plot of Arbutus menziesii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARTESUK</attrlabl>
+        <attrdef>Percent living cover in plot of Artemisia suksdorfii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARUNDIO</attrlabl>
+        <attrdef>Percent living cover in plot of Aruncus dioicus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ASPLTRI</attrlabl>
+        <attrdef>Percent living cover in plot of Asplenium trichomanes</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ATHYFIL</attrlabl>
+        <attrdef>Percent living cover in plot of Athyrium filix-femina</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BROMDIA</attrlabl>
+        <attrdef>Percent living cover in plot of Bromus diandrus var. rigidus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BROMINE</attrlabl>
+        <attrdef>Percent living cover in plot of Bromus inermis ssp. inermis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BROMSIT</attrlabl>
+        <attrdef>Percent living cover in plot of Bromus sitchensis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BROMVUL</attrlabl>
+        <attrdef>Percent living cover in plot of Bromus vulgaris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CAKIMAR</attrlabl>
+        <attrdef>Percent living cover in plot of Cakile maritima</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CARDOLG</attrlabl>
+        <attrdef>Percent living cover in plot of Cardamine olgiosperma</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CAREDEW</attrlabl>
+        <attrdef>Percent living cover in plot of Carex deweyana var. deweyana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CARELEN</attrlabl>
+        <attrdef>Percent living cover in plot of Carex lenticularis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CARELYN</attrlabl>
+        <attrdef>Percent living cover in plot of Carex lyngbyei</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CAREOBN</attrlabl>
+        <attrdef>Percent living cover in plot of Carex obnupta</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CARESTI</attrlabl>
+        <attrdef>Percent living cover in plot of Carex stipata var. stipata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CHAMANG</attrlabl>
+        <attrdef>Percent living cover in plot of Chamerion angustifolium ssp. angustifolium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CIRCALP</attrlabl>
+        <attrdef>Percent living cover in plot of Circaea alpina</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CIRSARV</attrlabl>
+        <attrdef>Percent living cover in plot of Cirsium arvense</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CIRSVUL</attrlabl>
+        <attrdef>Percent living cover in plot of Cirsium vulgare</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CLAYSIB</attrlabl>
+        <attrdef>Percent living cover in plot of Claytonia sibirica</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CRATDOU</attrlabl>
+        <attrdef>Percent living cover in plot of Crataegus douglasii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CRATMON</attrlabl>
+        <attrdef>Percent living cover in plot of Crataegus monogyna</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CYTISCO</attrlabl>
+        <attrdef>Percent living cover in plot of Cystisus scoparius</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DACTGLO</attrlabl>
+        <attrdef>Percent living cover in plot of Dactylis glomerata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DESCELO</attrlabl>
+        <attrdef>Percent living cover in plot of Deschampsia elongata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DIGIPUR</attrlabl>
+        <attrdef>Percent living cover in plot of Digitalis purpurea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ELEOPAL</attrlabl>
+        <attrdef>Percent living cover in plot of Eleocharis palustris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ELYMREP</attrlabl>
+        <attrdef>Percent living cover in plot of Elymus repens</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EPILCIL</attrlabl>
+        <attrdef>Percent living cover in plot of Epilobium ciliatum ssp. watsonii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EPIPGIG</attrlabl>
+        <attrdef>Percent living cover in plot of Epipactis gigantea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EQUIARV</attrlabl>
+        <attrdef>Percent living cover in plot of Equisetum arvense</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EQUIFLU</attrlabl>
+        <attrdef>Percent living cover in plot of Equisetum fluviatile</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EQUIHYE</attrlabl>
+        <attrdef>Percent living cover in plot of Equisetum hyemale var. affine</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FESTRUB</attrlabl>
+        <attrdef>Percent living cover in plot of Festuca rubra</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FESTSUB</attrlabl>
+        <attrdef>Percent living cover in plot of Festuca subuliflora</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FESTVIR</attrlabl>
+        <attrdef>Percent living cover in plot of Fragaria virginiana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FRAGVIR</attrlabl>
+        <attrdef>Percent living cover in plot of Fragaria virginiana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GALIAPA</attrlabl>
+        <attrdef>Percent living cover in plot of Galium aparine</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GALIBOR</attrlabl>
+        <attrdef>Percent living cover in plot of Galium boreale</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GALIKAM</attrlabl>
+        <attrdef>Percent living cover in plot of Galium kamtschaticum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GALITRI</attrlabl>
+        <attrdef>Percent living cover in plot of Galium trifidum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GAULSHA</attrlabl>
+        <attrdef>Percent living cover in plot of Gaultheria shallon</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GERAROB</attrlabl>
+        <attrdef>Percent living cover in plot of Geranium robertianum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HEDEHEL</attrlabl>
+        <attrdef>Percent living cover in plot of Hedera helix</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HIERALB</attrlabl>
+        <attrdef>Percent living cover in plot of Hieracium albiflorum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HOLCLAN</attrlabl>
+        <attrdef>Percent living cover in plot of Holcus lanatus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HOLODIS</attrlabl>
+        <attrdef>Percent living cover in plot of Holodiscus discolor</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HYPEPER</attrlabl>
+        <attrdef>Percent living cover in plot of Hypericum perforatum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HYPORAD</attrlabl>
+        <attrdef>Percent living cover in plot of Hypochaeris radicata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IMPAESC</attrlabl>
+        <attrdef>Percent living cover in plot of Impatiens escalcarata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IRISPSE</attrlabl>
+        <attrdef>Percent living cover in plot of Iris pseudacorus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCACU</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus acuminatus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCARC</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus arcticus ssp. littoralis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCART</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus articulatus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCBAL</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus balticus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCBOL</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus bolanderii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCBUF</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus bufonius</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCEFF</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus effusus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>JUNCENS</attrlabl>
+        <attrdef>Percent living cover in plot of Juncus ensifolius</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LAPSCOM</attrlabl>
+        <attrdef>Percent living cover in plot of Lapsana communis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATHJAP</attrlabl>
+        <attrdef>Percent living cover in plot of Lathyrus japonicus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATHPAL</attrlabl>
+        <attrdef>Percent living cover in plot of Lathyrus palustris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATHSYL</attrlabl>
+        <attrdef>Percent living cover in plot of Lathyrus sylvestris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEPICAM</attrlabl>
+        <attrdef>Percent living cover in plot of Lepidium campestre</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEPIVIR</attrlabl>
+        <attrdef>Percent living cover in plot of Lepidium virginicum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEUCVUL</attrlabl>
+        <attrdef>Percent living cover in plot of Leucanthemum vulgare</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LEYMMOL</attrlabl>
+        <attrdef>Percent living cover in plot of Leymus mollis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONICIL</attrlabl>
+        <attrdef>Percent living cover in plot of Lonicera ciliosa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONIINV</attrlabl>
+        <attrdef>Percent living cover in plot of Lonicera involucrata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LOTUCOR</attrlabl>
+        <attrdef>Percent living cover in plot of Lotus corniculatus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MAIADIL</attrlabl>
+        <attrdef>Percent living cover in plot of Maianthemum dilatatum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MALUFUS</attrlabl>
+        <attrdef>Percent living cover in plot of Malus fusca</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MATRDIS</attrlabl>
+        <attrdef>Percent living cover in plot of Matricaria discoidea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MENTARV</attrlabl>
+        <attrdef>Percent living cover in plot of Mentha arvensis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MENTXPIP</attrlabl>
+        <attrdef>Percent living cover in plot of Mentha xpiperita</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MIMULEW</attrlabl>
+        <attrdef>Percent living cover in plot of Mimulus lewisii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MYCEMUR</attrlabl>
+        <attrdef>Percent living cover in plot of Mycelis muralis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MYOSSCO</attrlabl>
+        <attrdef>Percent living cover in plot of Myosotis scorpioides</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MYRIAQU</attrlabl>
+        <attrdef>Percent living cover in plot of Myriophyllum aquaticum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OEMLCER</attrlabl>
+        <attrdef>Percent living cover in plot of Oemleria cerasiformis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OENASAR</attrlabl>
+        <attrdef>Percent living cover in plot of Oenanthe sarmentosa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OSMOBER</attrlabl>
+        <attrdef>Percent living cover in plot of Osmorhiza berteroi</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PETAFRI</attrlabl>
+        <attrdef>Percent living cover in plot of Petasites frigidus var. palmatus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PHALARU</attrlabl>
+        <attrdef>Percent living cover in plot of Phalaris arundinacea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PHLEPRA</attrlabl>
+        <attrdef>Percent living cover in plot of Phleum pratense</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PIPEELO</attrlabl>
+        <attrdef>Percent living cover in plot of Piperia elongata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PLANLAN</attrlabl>
+        <attrdef>Percent living cover in plot of Plantago lanceolata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PLANMAJ</attrlabl>
+        <attrdef>Percent living cover in plot of Plantago major</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PLANMAR</attrlabl>
+        <attrdef>Percent living cover in plot of Plantago maritima</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POA_PAL</attrlabl>
+        <attrdef>Percent living cover in plot of Poa palustris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POA_TRV</attrlabl>
+        <attrdef>Percent living cover in plot of Poa trivialis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POLYGLY</attrlabl>
+        <attrdef>Percent living cover in plot of Polypodium glycyrrhiza</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POLYMUN</attrlabl>
+        <attrdef>Percent living cover in plot of Polystichum munitum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POPUTRI</attrlabl>
+        <attrdef>Percent living cover in plot of Populus balsamifera ssp. trichocarpa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POTEANS</attrlabl>
+        <attrdef>Percent living cover in plot of Potentilla anserina ssp. egedii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PRUNVUL</attrlabl>
+        <attrdef>Percent living cover in plot of Prunella vulgaris</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PSEUMEN</attrlabl>
+        <attrdef>Percent living cover in plot of Pseudotsuga menziesii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PTERAQU</attrlabl>
+        <attrdef>Percent living cover in plot of Pteridium aquilinum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RANUREP</attrlabl>
+        <attrdef>Percent living cover in plot of Ranunculus repens</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RIBEDIV</attrlabl>
+        <attrdef>Percent living cover in plot of Ribes divaricatum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RIBELAC</attrlabl>
+        <attrdef>Percent living cover in plot of Ribes lacustre</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RORIISL</attrlabl>
+        <attrdef>Percent living cover in plot of Rorippa islandica</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ROSANUT</attrlabl>
+        <attrdef>Percent living cover in plot of Rosa nutkana var. nutkana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ROSAPIS</attrlabl>
+        <attrdef>Percent living cover in plot of Rosa pisocarpa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUBUARM</attrlabl>
+        <attrdef>Percent living cover in plot of Rubus armeniacus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUBUPAR</attrlabl>
+        <attrdef>Percent living cover in plot of Rubus parviflorus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUBUSPE</attrlabl>
+        <attrdef>Percent living cover in plot of Rubus spectabilis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUBUURS</attrlabl>
+        <attrdef>Percent living cover in plot of Rubus ursinus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUMEACE</attrlabl>
+        <attrdef>Percent living cover in plot of Rumex acetosella</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUMECRI</attrlabl>
+        <attrdef>Percent living cover in plot of Rumex crispus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RUMESAL</attrlabl>
+        <attrdef>Percent living cover in plot of Rumex salicifolius var. salicifolius</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SALIHOO</attrlabl>
+        <attrdef>Percent living cover in plot of Salix hookeriana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SALILAS</attrlabl>
+        <attrdef>Percent living cover in plot of Salix lasiandra ssp. lasiandra</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SALILUC</attrlabl>
+        <attrdef>Percent living cover in plot of Salix lucida</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SALISIT</attrlabl>
+        <attrdef>Percent living cover in plot of Salix sitchensis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>85.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SAMBRAC</attrlabl>
+        <attrdef>Percent living cover in plot of Sambucus racemosa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>61.3</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SCHEPRA</attrlabl>
+        <attrdef>Percent living cover in plot of Schedonorus pratensis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SCIRMIC</attrlabl>
+        <attrdef>Percent living cover in plot of Scirpus microcarpus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SENEJAC</attrlabl>
+        <attrdef>Percent living cover in plot of Senecio jacobaea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SENESER</attrlabl>
+        <attrdef>Percent living cover in plot of Senecio serra</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SENESYL</attrlabl>
+        <attrdef>Percent living cover in plot of Senecio sylvaticus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SOLADUL</attrlabl>
+        <attrdef>Percent living cover in plot of Solanum dulcamara</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SOLICAN</attrlabl>
+        <attrdef>Percent living cover in plot of Solidago canadensis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SONCOLE</attrlabl>
+        <attrdef>Percent living cover in plot of Sonchus oleraceus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STACCHA</attrlabl>
+        <attrdef>Percent living cover in plot of Stachys chamissonis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STELCAL</attrlabl>
+        <attrdef>Percent living cover in plot of Stellaria calycantha</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STELCRI</attrlabl>
+        <attrdef>Percent living cover in plot of Stellaria crispa</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SYMPALB</attrlabl>
+        <attrdef>Percent living cover in plot of Symphoricarpos albus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TARAOFF</attrlabl>
+        <attrdef>Percent living cover in plot of Taraxacum officinale</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TELLGRA</attrlabl>
+        <attrdef>Percent living cover in plot of Tellima grandiflora</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>THUJPLI</attrlabl>
+        <attrdef>Percent living cover in plot of Thuja plicata</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TOLMMEN</attrlabl>
+        <attrdef>Percent living cover in plot of Tolmiea menziesii</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TRIEBOR</attrlabl>
+        <attrdef>Percent living cover in plot of Trientalis borealis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TRIFDUB</attrlabl>
+        <attrdef>Percent living cover in plot of Trifolium dubium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TRIFREP</attrlabl>
+        <attrdef>Percent living cover in plot of Trifolium repens</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TYPHLAT</attrlabl>
+        <attrdef>Percent living cover in plot of Typha latifolia</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>62.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>URTIDIO</attrlabl>
+        <attrdef>Percent living cover in plot of Urtica dioica</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VACCPAR</attrlabl>
+        <attrdef>Percent living cover in plot of Vaccinium parvifolium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.1</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VEROAME</attrlabl>
+        <attrdef>Percent living cover in plot of Veronica americana</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VICIHIR</attrlabl>
+        <attrdef>Percent living cover in plot of Vicia hirsuta</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VICINIG</attrlabl>
+        <attrdef>Percent living cover in plot of Vicia nigricans ssp. gigantea</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VULPMYU</attrlabl>
+        <attrdef>Percent living cover in plot of Vulpia myuros</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>0.5</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The entity and attribute information provided here describes the tabular data associated with the data set. Please review the detailed descriptions that are provided (the individual attribute descriptions) for information on the values that appear as fields/table entries of the data set.</eaover>
+      <eadetcit>The entity and attribute information provided here describes the tabular data associated with the data set. Please review the detailed descriptions that are provided (the individual attribute descriptions) for information on the values that appear as fields/table entries of the data set.</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>These data are available in comma-delimited (.csv) format (Elwha_riparian_veg_abundance.csv), which also includes CSDGM FGDC-compliant metadata.</resdesc>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>comma-delimited text</formname>
+          <transize>0.012</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://www.sciencebase.gov/catalog/file/get/5927162de4b0b7ff9fb56572</networkr>
+                <networkr>https://doi.org/10.5066/F75B00N4</networkr>
+              </networka>
+            </computer>
+            <accinstr>The first network resource link will begin a direct download of the data. The second link is a landing page for the entire project.</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. No fees are applicable for obtaining the data set.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211013</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS Pacific Coastal and Marine Science Center</cntorg>
+          <cntper>PCMSC Science Data Coordinator</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>2885 Mission St</address>
+          <city>Santa Cruz</city>
+          <state>CA</state>
+          <postal>95060-5792</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>831-427-4747</cntvoice>
+        <cntemail>pcmsc_data@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
