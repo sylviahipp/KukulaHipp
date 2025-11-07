@@ -5,26 +5,38 @@ date: "`r Sys.Date()`"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## NOTES
 
-## R Markdown
+The goal of this study is to perform a general review of coastal organisms following the removal of two dams from the Elwha River in Washington. Some interesting questions to consider could be the use of eDNA for tracking fish movements or determining food chain transformations. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+USGS Report (PDF in folder): chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://pubs.usgs.gov/sir/2011/5120/pdf/sir20115120.pdf
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+A general structure of the study could include:
+1. System analysis: streamflow at available USGS gage site, estuary sediment transport
+2. Comparing water quality metrics before and after dam removal
+   Literature review may be required to put these values in context
+3. Mapping and comparing species distribution/abundance before and after dam removal
+4. Mapping and comparing eDNA and species distribution/abundance
 
-```{r cars}
-summary(cars)
-```
+Available data:
+- eDNA shedding from live and dead fish
+- Estuarian fish
+- Estuarian riparian veg abundance
+- Estuarian riparian veg richness
+- Estuarian sediment
+- Estuarian WQ
+- eDNA post-removal
 
-## Including Plots
+Data we need to gather or find:
+- USGS Gage Station #12045500
+- USGS Gage Station #12044900
+- Watershed spatial data
 
-You can also embed plots, for example:
+Some maps I think would be useful:
+Map 1. Elwha River watershed including major tributaries, dams, USGS monitoring stations, and an inset map showing the general location in Washington
+Map 2-n. Sample collection sites for organism studies. This could be an interactive map.
+Map n+1: Might be interested in showing the spatial species distributions if we find anything of note? This could be an interactive map. 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Some figures I think would be useful:
+- Streamflow at both sites as a function of time
+- Species comparisons before and after dam removal
