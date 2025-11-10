@@ -1,0 +1,86 @@
+---
+title: "Kukula_Elwha_Exploratory"
+author: "Kaitlyn Kukula"
+date: "`r Sys.Date()`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r Setup Environment}
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(ggplot2)
+
+here()
+
+```
+
+
+## Notes
+
+Goal: examine impact of two Elwha dam removals on coastal organisms
+
+
+# Data Availability
+
+### Elwha River
+
+
+### Elwha Estuary RSET (Sediment)
+
+```{r Sediment Data Exploration}
+
+# Sediment deposition in the Elwha River estuary, Washington, measured on rod surface elevation tables (RSETs) from 2011 to 2014
+
+elwha_sediment_raw <- read_csv(here("Data/Raw/Elwha_Estuary_RSET_Sediment/Elwha_estuary_RSETs_2011-2014.csv")) %>%   tibble() %>% 
+  clean_names
+
+summary(elwha_sediment_raw)
+
+elwha_sediment <- elwha_sediment_raw %>% 
+  mutate(date_measured = mdy(date_measured), 
+         average_distance = as.numeric(average_distance), 
+         set_number = as.factor(set_number)) 
+
+# 15 distinct sites represented given longitude and latitude of each site
+# 10 observations from each site
+elwha_sediment %>%  
+  count(set_number)
+
+ggplot(elwha_sediment) +
+  geom_point(aes(x = date_measured, y = average_distance, color = set_number))
+
+
+```
+
+### Elwha Daily Sediment
+```{r}
+
+elwha_daily_sediment_raw <- read_csv(paste0(here("Data/Raw/Elwha_DailySediment_2011_2016/"),
+                                            "Elwha_DailySedimentLoads_2011to2016 (1).csv")) %>% 
+  clean_names()
+
+elwha_daily_sediment <- elwha_daily_sediment_raw %>%
+  mutate(day = mdy(day))
+
+ggplot(elwha_daily_sediment) + 
+  geom_point(aes(x = day, y = daily_discharge_m3_s))
+
+ggplot(elwha_daily_sediment) + 
+  geom_point(aes(x = day, y = daily_ssc_mg_l))
+
+```
+
+
+### Elwha Subtidal Communities
+```{r}
+
+elwha_subtital_comm_raw <- read_csv("Data/Raw/Elwha_Subtidal_Communities/Elwha dive site data.csv") %>% 
+  clean_names()
+
+
+```
