@@ -50,22 +50,69 @@ library(here)
 library(lubridate)
 
 here()
+
+kak_theme <- theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        axis.text.x = element_text(size = 9), # Adjust x-axis values
+        axis.text.y = element_text(size = 9), # Adjust y-axis values
+        axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
+        axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
+        legend.position = "bottom", # Define legend position
+        legend.text = element_text(size = 9), # Define legend entry sizes
+        legend.title = element_text(size = 9)) # Define legend name sizes
+set_theme(kak_theme)
 ```
 
+## Daily discharge data 1998 - 2025
 
 ```{r}
 
-discharge_12045500 <- read.csv(here("Data/Raw/daily_discharge_ 12045500.csv"))
-gage_12045500 <- read.csv(here("Data/Raw/field_measurements_12045500.csv"))
-
-discharge_12045500$time <- mdy(discharge_12045500$time)
-discharge_12045500 <- mutate(discharge_12045500, year = year(time))
-discharge_12045500$value <- as.numeric(discharge_12045500$value)
+discharge_12045500_raw <- read.csv(here("Data/Raw/daily_discharge_ 12045500.csv"))
+discharge_12045500 <- discharge_12045500_raw %>%
+  mutate(time = mdy(time),
+         value = as.numeric(value),
+         day = day(time), 
+         month = month(time),
+         year = year(time)) 
 
 ggplot(data = discharge_12045500 %>% filter(year > 2011 & year < 2020)) +
   geom_line(aes(x = time,y = value))
 
-# Should calculate the mean discharge over the study period for the year, and the 25th and 75th percentile
+# Calculating the discharge over a set of years
+
+year_start = 1998
+year_end = 2024
+discharge_12045500_mean <- discharge_12045500 %>%
+  group_by(month) %>%
+  filter(year > year_start & year < year_end) %>%
+  summarise(mean_discharge = mean(value),
+            min_discharge = min(value),
+            max_discharge = max(value),
+            q25_discharge = quantile(value, 0.25),
+            q75_discharge = quantile(value, 0.75))
+
+# Plotting discharge
+
+ggplot(discharge_12045500_mean) +
+  geom_point(aes(x = month, y = mean_discharge)) +
+  geom_line(aes(x = month, y = mean_discharge)) +
+  labs(x = "Month",
+       y = "Discharge [ft^3/s]") +
+  scale_x_continuous(breaks = 1:12, 
+                     labels = month.abb) +
+  scale_y_continuous(breaks=seq(0,3000,500)) +
+  geom_errorbar(aes(x = month,
+                    y = mean_discharge,
+                    ymin = q25_discharge,
+                    ymax = q75_discharge),
+                width = 0.2)
+```
+
+# Daily gage data
+
+```{r}
+gage_12045500_raw <- read.csv(here("Data/Raw/field_measurements_12045500.csv"))
 
 ```
+
 
