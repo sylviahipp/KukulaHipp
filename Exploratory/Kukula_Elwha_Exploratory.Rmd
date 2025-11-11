@@ -3,6 +3,8 @@ title: "Kukula_Elwha_Exploratory"
 author: "Kaitlyn Kukula"
 date: "`r Sys.Date()`"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## NOTES
@@ -40,3 +42,30 @@ Map n+1: Might be interested in showing the spatial species distributions if we 
 Some figures I think would be useful:
 - Streamflow at both sites as a function of time
 - Species comparisons before and after dam removal
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(lubridate)
+
+here()
+```
+
+
+```{r}
+
+discharge_12045500 <- read.csv(here("Data/Raw/daily_discharge_ 12045500.csv"))
+gage_12045500 <- read.csv(here("Data/Raw/field_measurements_12045500.csv"))
+
+discharge_12045500$time <- mdy(discharge_12045500$time)
+discharge_12045500 <- mutate(discharge_12045500, year = year(time))
+discharge_12045500$value <- as.numeric(discharge_12045500$value)
+
+ggplot(data = discharge_12045500 %>% filter(year > 2011 & year < 2020)) +
+  geom_line(aes(x = time,y = value))
+
+# Should calculate the mean discharge over the study period for the year, and the 25th and 75th percentile
+
+```
+
