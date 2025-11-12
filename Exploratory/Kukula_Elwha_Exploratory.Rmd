@@ -65,7 +65,7 @@ set_theme(kak_theme)
 
 ## Daily discharge data 1998 - 2025
 
-```{r}
+```{r fig.cap = "Mean Monthly Discharge of the Elwha River from 1998 - 2024 (gage station 12045500)}
 
 discharge_12045500_raw <- read.csv(here("Data/Raw/daily_discharge_ 12045500.csv"))
 discharge_12045500 <- discharge_12045500_raw %>%
