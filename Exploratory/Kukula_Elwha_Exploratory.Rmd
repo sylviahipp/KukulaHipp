@@ -65,7 +65,7 @@ set_theme(kak_theme)
 
 ## Daily discharge data 1998 - 2025
 
-```{r fig.cap = "Mean Monthly Discharge of the Elwha River from 1998 - 2024 (gage station 12045500)}
+```{r fig.cap = "Daily Discharge of the Elwha River from 2011 - 2020 (gage station 12045500)"}
 
 discharge_12045500_raw <- read.csv(here("Data/Raw/daily_discharge_ 12045500.csv"))
 discharge_12045500 <- discharge_12045500_raw %>%
@@ -75,8 +75,14 @@ discharge_12045500 <- discharge_12045500_raw %>%
          month = month(time),
          year = year(time)) 
 
+# Plotting the daily discharge data from 2011 to 2020
+
 ggplot(data = discharge_12045500 %>% filter(year > 2011 & year < 2020)) +
   geom_line(aes(x = time,y = value))
+
+```
+
+```{r fig.cap = "Mean Monthly Discharge of the Elwha River from 1998 - 2024 (gage station 12045500)"}
 
 # Calculating the discharge over a set of years
 
@@ -111,8 +117,60 @@ ggplot(discharge_12045500_mean) +
 # Daily gage data
 
 ```{r}
-gage_12045500_raw <- read.csv(here("Data/Raw/field_measurements_12045500.csv"))
+gage_12045500_raw
 
 ```
 
+## Estuarian Invertebrates
+
+This dataset contains observations of 20 estuarian invertebrate species at three sites for one timepoint before and one timepoint after the dam removal.
+
+```{r}
+inverts_raw <- read.csv(here("Data/Raw/Elwha_Estuary_Invertabrates/Elwha_estuary_aquatic_invertebrates_2007-2013.csv")) 
+inverts <- inverts_raw %>%
+  mutate(Date = mdy(Date))
+
+colnames(inverts_raw)
+unique(inverts_raw$Date)
+```
+
+## Subtidal Communities
+
+How many species are observed at each site? Does this change over the years? What taxon (amphipods and dipterans and others - see page 187 of report) are present and how does this vary at the different sites?
+
+```{r}
+subtidal_dive_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha dive site data.csv"))
+unique(subtidal_dive_raw$Site)
+subtidal_temp_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha temperature data.csv"))
+subtidal_towed_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha towed video data.csv"))
+
+```
+
+## Estuary Fish Assemblages
+Dates of observations: May - Sept of 2006, 2007, 2013, and 2014
+Month vs count with each line representing a year and each plot representing a species
+
+```{r}
+estuary_fish_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_Fish/Elwha estuary_fish_2006to2014.csv")
+
+unique(estuary_fish_raw$Date.collected)
+```
+
+## Estuary Water Quality
+
+```{r}
+estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv")
+unique(estuary_wq_raw$Site.Name)
+```
+
+## Salmonid distribution and abundance 
+
+Dates of observations: 2007, 2008, 2018, 2019
+
+Could do some sort of bubble map with this dataset to show where more fish are getting to.
+
+```{r}
+salmonid_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Salmon_Movement/Elwha_Riverscape_reach_data.csv")
+unique(salmonid_raw$Year)
+```
 
