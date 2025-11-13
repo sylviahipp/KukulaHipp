@@ -71,7 +71,9 @@ ggplot(elwha_daily_sediment) +
   geom_point(aes(x = day, y = daily_discharge_m3_s))
 
 ggplot(elwha_daily_sediment) + 
-  geom_point(aes(x = day, y = daily_ssc_mg_l))
+  geom_point(aes(x = day, y = daily_ssc_mg_l)) + 
+  scale_x_date(date_breaks = "6 months", 
+               date_labels = "%m-%y")
 
 ```
 
