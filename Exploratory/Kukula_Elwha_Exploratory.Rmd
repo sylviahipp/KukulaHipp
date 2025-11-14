@@ -133,15 +133,6 @@ gage_elwha_plot <- ggplot() +
   theme(legend.position = "bottom")
 gage_elwha_plot
 
-# Striped fill for elwha dam removal? didnt look very good imo
-# geom_rect_pattern
-#             pattern = "stripe",
-#             pattern_fill = "#7cae00",
-#             fill = 'transparent',
-#             color = 'transparent',
-#             pattern_alpha = 0.25,
-#             pattern_density = 0.6
-
 ```
             
 # Continuous median daily discharge (ft3/s) at 12045500
