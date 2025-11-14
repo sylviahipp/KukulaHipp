@@ -9,6 +9,11 @@ editor_options:
 
 ## NOTES
 
+# Timeline of dam removal:
+
+Elwha Dam: draw-down began June 1, 2011, construction Sept 19, 2011 - March 2012
+Glines Canyon Dam: draw-down began ???, construction Sept 2011 - August 26, 2014
+
 The goal of this study is to perform a general review of coastal organisms following the removal of two dams from the Elwha River in Washington. Some interesting questions to consider could be the use of eDNA for tracking fish movements or determining food chain transformations. 
 
 USGS Report (PDF in folder): chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://pubs.usgs.gov/sir/2011/5120/pdf/sir20115120.pdf
@@ -64,7 +69,158 @@ kak_theme <- theme_classic() +
 set_theme(kak_theme)
 ```
 
-## Daily discharge data 1998 - 2025
+## Daily streamflow for Elwha River at McDonald Bridge near Port Angeles, WA
+
+# Continuous median daily gage height (ft) at 12045500 
+https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=2025-11-06T11:24:16.160-08:00&endDT=2025-11-13T11:24:16.160-08:00&parameterCd=00065&format=rdb
+
+```{r warning=FALSE}
+
+### USGS Gage Data Scraping and Plotting
+# Gage data scraped from the USGS website for site #12045500 (Elwha River at McDonald
+# Bridge near Port Angeles, WA). Datapoints recorded every 15 minutes.
+
+# Define date range
+gage_start = '2007-01-01'
+gage_end = '2017-12-31'
+
+#Set the URLs
+elwha_gage_url <- paste0('https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=', 
+                         gage_start,
+                         'T11:24:16.160-08:00&endDT=',
+                         gage_end, 
+                         'T11:24:16.160-08:00&parameterCd=00065&format=rdb')
+
+#Get the data
+gage_data_elwha_init <- read.table(elwha_gage_url, skip = 28, header=TRUE,
+                                   sep='\t', stringsAsFactors = T) 
+
+#Update the column headers
+colnames(gage_data_elwha_init) = c("agency_cd", "site_no", "datetime", "tz_cd",
+                                   "gage_ht_ft", "150691_00060_cd")
+
+#Tidy the data
+gage_data_elwha <- gage_data_elwha_init %>% 
+  select(datetime, gage_ht_ft) %>% 
+  mutate(datetime = ymd_hm(datetime))
+
+
+#Plot
+# Set rectangle measurements
+gage_elwha_dam_timeline <- data.frame(
+  xmin = as.POSIXct("2011-06-01 01:15:00", tz = "UTC"),
+  xmax = as.POSIXct("2012-03-01 01:15:00", tz = "UTC"),
+  ymin = 10, ymax = 25) # Note that this start date includes the drawdown period.
+gage_glines_dam_timeline <- data.frame(
+  xmin = as.POSIXct("2011-09-19 01:15:00", tz = "UTC"),
+  xmax = as.POSIXct("2014-08-26 01:15:00", tz = "UTC"),
+  ymin = 10, ymax = 25)
+
+gage_elwha_plot <- ggplot() +
+  geom_rect(data = gage_elwha_dam_timeline,
+            aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax),
+            fill = "#7cae00", alpha = 0.5) +
+  geom_rect(data = gage_glines_dam_timeline,
+            aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax),
+            fill = "#00a9af", alpha = 0.25) +
+  geom_line(data = gage_data_elwha, aes(x=datetime, y=gage_ht_ft)) +
+  labs(x = NULL,
+       y = "Gage height [ft]",
+       title = "Elwha River at McDonald Bridge Gage Height (2007 - 2017)") +
+  scale_fill_manual(values = c("Elwha", "Glines"),
+                    labels = c("Elwha Dam Removal", "Glines Canyon Dam removal")) +
+  theme(legend.position = "bottom")
+gage_elwha_plot
+
+# Striped fill for elwha dam removal? didnt look very good imo
+# geom_rect_pattern
+#             pattern = "stripe",
+#             pattern_fill = "#7cae00",
+#             fill = 'transparent',
+#             color = 'transparent',
+#             pattern_alpha = 0.25,
+#             pattern_density = 0.6
+
+```
+            
+# Continuous median daily discharge (ft3/s) at 12045500
+https://nwis.waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=2024-11-13T11:20:31.677-08:00&endDT=2025-11-13T11:20:31.677-08:00&parameterCd=00060&format=rdb
+
+```{r warning=FALSE}
+
+### USGS discharge data scraping and plotting
+# Discharge data scraped from the USGS website for site #12045500 (Elwha River at McDonald
+# Bridge near Port Angeles, WA). Datapoints recorded every 15 minutes.
+
+# Define date range
+discharge_start = '2007-01-01'
+discharge_end = '2017-12-31'
+
+#Set the URLs
+elwha_discharge_url <- paste0('https://nwis.waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=',
+                         discharge_start,
+                         'T11:20:31.677-08:00&endDT=',
+                         discharge_end, 
+                         'T11:20:31.677-08:00&parameterCd=00060&format=rdb')
+
+#Get the data
+discharge_data_elwha_init <- read.table(elwha_discharge_url, skip = 30, header=TRUE,
+                                        sep='\t', stringsAsFactors = T) 
+
+#Update the column headers
+colnames(discharge_data_elwha_init) = c("agency_cd", "site_no", "datetime", "tz_cd",
+                                        "discharge_ft3s", "150691_00060_cd")
+
+#Tidy the data
+discharge_data_elwha <- discharge_data_elwha_init %>% 
+  select(datetime, discharge_ft3s) %>% 
+  mutate(datetime = ymd_hm(datetime))
+
+#Plot
+dis_elwha_dam_timeline <- data.frame(
+  xmin = as.POSIXct("2011-06-01 01:15:00", tz = "UTC"),
+  xmax = as.POSIXct("2012-03-01 01:15:00", tz = "UTC"),
+  ymin = 0, ymax = 38000) # Note that this start date includes the drawdown period.
+dis_glines_dam_timeline <- data.frame(
+  xmin = as.POSIXct("2011-09-19 01:15:00", tz = "UTC"),
+  xmax = as.POSIXct("2014-08-26 01:15:00", tz = "UTC"),
+  ymin = 10, ymax = 38000)
+
+discharge_elwha_plot <- ggplot() +
+  geom_rect(data = dis_elwha_dam_timeline,
+            aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax),
+            fill = "#7cae00", alpha = 0.5) +
+  geom_rect(data = dis_glines_dam_timeline,
+            aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax),
+            fill = "#00a9af", alpha = 0.25) +
+  geom_line(data = discharge_data_elwha, aes(x=datetime, y=discharge_ft3s)) +
+  labs(x = NULL,
+       y = "Discharge [ft3/s]",
+       title = "Elwha River at McDonald Bridge Discharge (2007 - 2017)") +
+  scale_fill_manual(values = c("Elwha", "Glines"),
+                    labels = c("Elwha Dam Removal", "Glines Canyon Dam removal")) +
+  theme(legend.position = "bottom")
+discharge_elwha_plot
+```
+
+```{r fig.cap="Daily streamflow measurements of Elwha River at McDonald Bridge near Port Angeles, WA from 2007 - 2017}
+
+
+
+common_xlim <- c(as.POSIXct(paste0(discharge_start, '01:15:00', tz = "UTC")),
+                 as.POSIXct(paste0(discharge_end, '01:15:00', tz = "UTC"))
+) 
+gage_common <- gage_elwha_plot + xlim(common_xlim)
+discharge_common <- discharge_elwha_plot + xlim(common_xlim)
+
+plot_grid(gage_common,
+          discharge_common,
+          nrow = 2)
+```
 
 ```{r fig.cap = "Daily Discharge of the Elwha River from 2011 - 2020 (gage station 12045500)"}
 
@@ -78,7 +234,7 @@ discharge_12045500 <- discharge_12045500_raw %>%
 
 # Plotting the daily discharge data from 2011 to 2020
 
-ggplot(data = discharge_12045500 %>% filter(year > 2011 & year < 2020)) +
+ggplot(data = discharge_12045500 %>% filter(year > 2006 & year < 2020)) +
   geom_line(aes(x = time,y = value))
 
 ```
