@@ -82,7 +82,7 @@ https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=202
 
 # Define date range
 gage_start = '2007-01-01'
-gage_end = '2017-12-31'
+gage_end = '2017-01-01'
 
 #Set the URLs
 elwha_gage_url <- paste0('https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=', 
@@ -103,7 +103,6 @@ colnames(gage_data_elwha_init) = c("agency_cd", "site_no", "datetime", "tz_cd",
 gage_data_elwha <- gage_data_elwha_init %>% 
   select(datetime, gage_ht_ft) %>% 
   mutate(datetime = ymd_hm(datetime))
-
 
 #Plot
 # Set rectangle measurements
