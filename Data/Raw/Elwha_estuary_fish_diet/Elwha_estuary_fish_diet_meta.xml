@@ -1,0 +1,2832 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <pubdate>20200811</pubdate>
+        <title>Diet of Chinook and coho salmon in the Elwha River estuary, Washington, before and during dam removal</title>
+        <geoform>comma-delimited text</geoform>
+        <serinfo>
+          <sername>data release</sername>
+          <issue>DOI:10.5066/F75B00N4</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, California</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+        <onlink>https://www.sciencebase.gov/catalog/item/58f4f828e4b003da51f65dfa</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Melissa M. Foley</origin>
+            <origin>Patrick B. Shafroth</origin>
+            <origin>Matthew M. Beirne</origin>
+            <origin>Rebecca Paradis</origin>
+            <origin>Andrew C. Ritchie</origin>
+            <origin>Jeffrey J. Duda</origin>
+            <pubdate>2017</pubdate>
+            <title>Ecological parameters in the Elwha River estuary before and during dam removal</title>
+            <edition>2.0</edition>
+            <serinfo>
+              <sername>data release</sername>
+              <issue>DOI:10.5066/F75B00N4</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, CA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This portion of the data release presents fish diet data from Chinook and coho salmon collected in the Elwha River estuary, Washington, in 2006, 2007, 2013, and 2014 (there are no associated USGS Field Activities numbers because data were collected predominantly by biologists from the Lower Elwha Klallam Tribe). Fish were collected using a beach seine at six locations throughout the estuary. Fish were transferred to buckets containing aerated ambient water and kept cool until handling. We anesthetized fish in a diluted solution of tricaine methanesulfonate (MS-222) to count, identify, and measure fork length (FL) to the nearest mm and weight to the nearest 0.1 g. After recovery from anesthesia, all fish were released at the point of capture. Stomach contents from a sub-sample of Chinook and coho were extracted via non-lethal gastric lavage and preserved in ethanol. When possible, stomach contents from ten individuals of each species between 55&#8211;199 mm fork length were collected at each site during each sampling event. Fish with no regurgitated prey were recorded as empty stomachs. Fish diet samples were sent to a professional taxonomist for processing and identification to the lowest practical taxonomic level. Aquatic taxa were typically identified to the genus or species level and terrestrial taxa to family or genus. Some less-common taxa or partially-digested prey items were identified to Order or Class. The locations of samples were determined with a hand-held global positioning system. Fish diet data are provided in a comma-delimited spreadsheet.</abstract>
+      <purpose>Data were obtained to assess the change in fish diet in the Elwha estuary following the removal of two dams on the Elwha River between 2011 and 2014.</purpose>
+      <supplinf>Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20060511</begdate>
+          <enddate>20140827</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition at time data were collected</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.56768</westbc>
+        <eastbc>-123.56135</eastbc>
+        <northbc>48.14993</northbc>
+        <southbc>48.14510</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5f287fa082cef313ed9e1c96</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>oceans</themekey>
+        <themekey>biota</themekey>
+      </theme>
+      <theme>
+        <themekt>Data Categories for Marine Planning</themekt>
+        <themekey>invertebrates</themekey>
+        <themekey>fishes</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>species diversity</themekey>
+        <themekey>invertebrates</themekey>
+        <themekey>vertebrates</themekey>
+      </theme>
+      <theme>
+        <themekt>Global Change Master Directory (GCMD)</themekt>
+        <themekey>animals/invertebrates</themekey>
+      </theme>
+      <theme>
+        <themekt>Marine Realms Information Bank (MRIB) keywords</themekt>
+        <themekey>invertebrates</themekey>
+        <themekey>vertebrates</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Elwha River</placekey>
+        <placekey>Strait of Juan de Fuca</placekey>
+        <placekey>Olympic Peninsula</placekey>
+        <placekey>Clallam County</placekey>
+        <placekey>State of Washington</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>USGS-authored or produced data and information are in the public domain from the U.S. Government and are freely redistributable with proper metadata and source attribution. Please recognize and acknowledge the U.S. Geological Survey and the Lower Elwha Klallam Tribe as the originators of the dataset and in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Matthew M. Beirne</cntper>
+          <cntorg>Lower Elwha Klallam Tribe</cntorg>
+        </cntperp>
+        <cntpos>Environmental Coordinator for Natural Resources</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>2851 Lower Elwha Road</address>
+          <city>Port Angeles</city>
+          <state>WA</state>
+          <postal>98363</postal>
+        </cntaddr>
+        <cntvoice>360-457-4012 ext. 12</cntvoice>
+        <cntfax>360-452-4848</cntfax>
+        <cntemail>matt.beirne@elwha.org</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>Microsoft Excel for Mac 2011, Mac OS X Yosemite, version 10.10.5.</native>
+    <crossref>
+      <citeinfo>
+        <origin>Sarah A. Morley</origin>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca L. Paradis</origin>
+        <origin>Rachelle C. Johnson</origin>
+        <origin>Michael L. McHenry</origin>
+        <origin>Mel Elofson</origin>
+        <origin>Earnest M. Sampson</origin>
+        <origin>Randall E. McCoy</origin>
+        <origin>Justin Stapleton</origin>
+        <origin>George R. Pess</origin>
+        <pubdate>2020</pubdate>
+        <title>Shifting food web structure during dam removal--Disturbance and recovery during a major restoration action</title>
+        <onlink>http://doi.org/10.1371/journal.pone.0239198</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Dataset is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Five fish diet samples were collected in May 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060511</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Ten fish diet samples were collected in May 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060526</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Four fish diet samples were collected in June 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060609</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty six fish diet samples were collected in July 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060720</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Eight fish diet samples were collected in August 2006. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20060817</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>One fish diet sample was collected in May 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070503</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Four fish diet samples were collected in May 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070517</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Ten fish diet samples were collected in May 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070523</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty six fish diet samples were collected in June 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070614</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Two fish diet samples were collected in July 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070712</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Nine fish diet samples were collected in July 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070726</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Eleven fish diet samples were collected in August 2007. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20070828</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty three fish diet samples were collected in May 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130515</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Four fish diet samples were collected in May 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130517</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Five fish diet samples were collected in May 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130529</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Sixteen fish diet samples were collected in June 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130605</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty five fish diet samples were collected in June 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130619</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Eight fish diet samples were collected in July 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130710</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Eight fish diet samples were collected in July 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130717</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Seven fish diet samples were collected in July 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130724</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty one fish diet samples were collected in August 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130807</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Nine fish diet samples were collected in August 2013. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20130821</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Seven fish diet samples were collected in May 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140507</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Eleven fish diet samples were collected in May 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140521</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Fourteen fish diet samples were collected in June 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140604</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Thirty fish diet samples were collected in June 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140618</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty three fish diet samples were collected in July 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140702</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty fish diet samples were collected in July 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140715</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty fish diet samples were collected in August 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140813</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Twenty five fish diet samples were collected in August 2014. A hand-held global positioning system was used to determine the location of the sampling location.</procdesc>
+        <procdate>20140827</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add keywords section with USGS persistent identifier as theme keyword. No data were changed.</procdesc>
+        <procdate>20201019</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>VeeAnn A. Cross</cntper>
+            </cntorgp>
+            <cntpos>Marine Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>384 Woods Hole Road</address>
+              <city>Woods Hole</city>
+              <state>MA</state>
+              <postal>02543-1598</postal>
+            </cntaddr>
+            <cntvoice>508-548-8700 x2251</cntvoice>
+            <cntfax>508-457-2310</cntfax>
+            <cntemail>vatnipp@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add information about accompanying PLOS ONE article (Morley and others, 2020). No data were changed.</procdesc>
+        <procdate>20201112</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Susan A Cochran</cntper>
+              <cntorg>U.S. Geological Survey, Pacific Coastal and Marine Science Center</cntorg>
+            </cntperp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>2885 Mission St.</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+              <country>United States</country>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Performed minor edits to the metadata to correct typos. No data were changed</procdesc>
+        <procdate>20211013</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>Susan A. Cochran</cntper>
+            </cntorgp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Fish diet</enttypl>
+        <enttypd>Tabular data</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>Date samples collected</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>05/11/2006</rdommin>
+            <rdommax>08/27/2014</rdommax>
+            <attrunit>Dates in mm/dd/yyyy format</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dam condition</attrlabl>
+        <attrdef>Dam status at the time of sample collection</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Before</edomv>
+            <edomvd>samples collected before dam removal began</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>During</edomv>
+            <edomvd>samples collected during dam removal (2011-2014)</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Season</attrlabl>
+        <attrdef>Season of collection</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Spring</edomv>
+            <edomvd>samples collected in the spring (May and June)</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Summer</edomv>
+            <edomvd>samples collected in the summer (July and August)</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Fish</attrlabl>
+        <attrdef>Fish species that diet samples was collected from</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Chinook</edomv>
+            <edomvd>samples collected from Chinook salmon</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Coho</edomv>
+            <edomvd>samples collected from coho salmon</edomvd>
+            <edomvds>producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sampling event</attrlabl>
+        <attrdef>Number of sampling events in the study</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>30</rdommax>
+            <attrunit>integers</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Replicate</attrlabl>
+        <attrdef>Replicate number based on number of fish collected. Occasionally seines were replicated in the same location to get a sense of variability in sampling method. Replicate numbers with letters are indicative of a within-site replicate, compared to the numbers indicating replicates within a single date.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>438</rdommax>
+            <attrunit>integers, some alphanumeric</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Acari &#8211; terrestrial unknown</attrlabl>
+        <attrdef>insect Class Acari</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Amphipoda</attrlabl>
+        <attrdef>insect Order Amphipoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>81</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Corophium - varies</attrlabl>
+        <attrdef>insect Order Amphipoda</attrdef>
+        <attrdefs>producer defined.</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>22</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Gammarus - unknown</attrlabl>
+        <attrdef>insect Order Amphipoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Araneae - unknown</attrlabl>
+        <attrdef>insect Order Araneae</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Basommatophora - varies</attrlabl>
+        <attrdef>insect Order Basommatophora</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lymnaeidae - immature</attrlabl>
+        <attrdef>insect Order Basommatophora</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>11</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Physidae - unknown</attrlabl>
+        <attrdef>insect Class Basommatophora</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Planorbidae - unknown</attrlabl>
+        <attrdef>insect Order Basommatophora</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cladocera - unknown</attrlabl>
+        <attrdef>insect Order Cladocera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>535</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Agabini - larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Anobiidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cantharidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cerambycidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coccinellidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coleoptera - terrestrial adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coleoptera - terrestrial larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Curculionidae - terrestrial adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dytiscidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dytiscidae - larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Haliplus - larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroporinae - larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Malthodes - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Oreodytes - larva</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Scolytinae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Staphylinidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Stictotarsus - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Throscidae - adult</attrlabl>
+        <attrdef>insect Order Coleoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Collembola - nymph</attrlabl>
+        <attrdef>insect Order Collembola</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Entomobryomorpha - unknown</attrlabl>
+        <attrdef>insect Order Collembola</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Isotomidae - unknown</attrlabl>
+        <attrdef>insect Order Collembola</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sminthuridae - unknown</attrlabl>
+        <attrdef>insect Order Collembola</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>11</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cyclopoida - adult</attrlabl>
+        <attrdef>insect Order Cyclopoida</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>434</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dermaptera - indeterminate</attrlabl>
+        <attrdef>insect Order Dermaptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Forficula auriculata - adult</attrlabl>
+        <attrdef>insect Order Dermaptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Diplopoda - unknown</attrlabl>
+        <attrdef>insect Order Diplopoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Anthomyiidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Anthomyiidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Asteiidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Bezzia - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>9</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ceratopogonidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>18</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ceratopogonidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ceratopogonidae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>24</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ceratopogoninae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>19</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chaoboridae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chelifera - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>36</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomidae - pharate adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomidae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>91</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomini - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chironomini - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>67</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chrysops - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coelopidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Diptera - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Diptera - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>12</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Diptera - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>11</rdommax>
+            <attrunit>number per sample=</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dixa - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dixella - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dixidae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dolichopodidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dolichopodidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>37</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Drosophilidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Empididae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Empididae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Empididae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Empidoidea - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ephydridae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ephydridae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ephydridae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Forcipomyiinae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Heleomyzidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hilara - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>38</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Metachela - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Muscidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Muscidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>32</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Muscomorpha - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Muscomorpha - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>112</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Muscomorpha - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nematocera - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nematocera - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Opomyzidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ormosia - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Orthocladiinae sp. (RAI Taxon # 0011) - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>70</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Orthocladiinae sp. (RAI Taxon # 0011) - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>12</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Phoridae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Platypalpus - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Prosimulium - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rhagionidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Schizophora - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sciaridae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Simulium - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sphaeroceridae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>28</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Syrphidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tabanidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tanypodinae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>29</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tanytarsini - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>55</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tephritidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tipulidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tipulidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tipulidae - pupa</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Acentrella - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Baetidae - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Baetis - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cinygmula - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ephemeroptera - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Heptageniidae - naiad</attrlabl>
+        <attrdef>insect Order Ephemeroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Siphlonurus - naiad</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Gasterosteidae - juvenile</attrlabl>
+        <attrdef>insect Order Gasterosteiformes</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Gastropoda - terrestrial unknown</attrlabl>
+        <attrdef>insect Order Gastropoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Geophilomorpha - unknown</attrlabl>
+        <attrdef>insect Order Geophilomorpha</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Aphidoidea - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Aphidoidea - nymph</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Auchenorrhyncha - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Auchenorrhyncha - indeterminate</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cercopidae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cicadellidae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cicadellidae - nymph</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coccoidea - nymph</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Corixidae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Corixidae - nymph</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Delphacidae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Gerridae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hemiptera - terrestrial larva</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lygaeidae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Miridae - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Psylloidea - adult</attrlabl>
+        <attrdef>insect Order Hemiptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Psylloidea - nymph</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Reduviidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Salda - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Saldidae - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Heteroptera - adult</attrlabl>
+        <attrdef>insect Order Heteroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Heteroptera - nymph</attrlabl>
+        <attrdef>insect Order Heteroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hirudinea - unknown</attrlabl>
+        <attrdef>insect Order Hirudinea</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Braconidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chalcidoidea - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Diapriidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Dryinidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Formicidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hymenoptera - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ichneumonidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Megaspilidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mymaridae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Platygastridae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Proctotrupidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Pteromalidae - adult</attrlabl>
+        <attrdef>insect Order Hymenoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Insecta - varies</attrlabl>
+        <attrdef>insect Class Insecta</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Isopoda &#8211; immature</attrlabl>
+        <attrdef>insect Order Isopoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Geometridae - larva</attrlabl>
+        <attrdef>insect Order Lepidoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lasiocampidae - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lepidoptera - adult</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lepidoptera - larva</attrlabl>
+        <attrdef>insect Order Diptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sialis - larva</attrlabl>
+        <attrdef>insect Order Megaloptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Microlepidoptera - larva</attrlabl>
+        <attrdef>insect Order Microlepidoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Microlepidoptera - pupa</attrlabl>
+        <attrdef>insect Order Microlepidoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mysida - varies</attrlabl>
+        <attrdef>insect Order Mysida</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nematoda - unknown</attrlabl>
+        <attrdef>insect Class Nematoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chrysopidae - larva</attrlabl>
+        <attrdef>insect Order Neuroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chrysopidae/Hemerobiidae - larva</attrlabl>
+        <attrdef>insect Order Neuroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Neuroptera - terrestrial larva</attrlabl>
+        <attrdef>insect Order Neuroptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Coenagrionidae - adult</attrlabl>
+        <attrdef>insect Order Odonata</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Engallagma - naiad</attrlabl>
+        <attrdef>insect Order Odonata</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ischnura - naiad</attrlabl>
+        <attrdef>insect Order Odonata</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Odonata - naiad</attrlabl>
+        <attrdef>insect Order Odonata</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Oligochaeta - unknown</attrlabl>
+        <attrdef>insect Class Oligochaeta</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Osteichthyes - egg</attrlabl>
+        <attrdef>insect Class Osteichthyes</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>67</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Osteichthyes - fry</attrlabl>
+        <attrdef>insect Class Osteichthyes</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Osteichthyes - unknown</attrlabl>
+        <attrdef>insect Class Osteichthyes</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>169</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ostracoda - unknown</attrlabl>
+        <attrdef>insect Order Ostracoda</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Chloroperlidae - naiad</attrlabl>
+        <attrdef>insect Order Plecoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Plumiperla diversa - adult</attrlabl>
+        <attrdef>insect Order Plecoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sweltsa - naiad</attrlabl>
+        <attrdef>insect Order Plecoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Psocoptera &#8211; adult</attrlabl>
+        <attrdef>insect Order Psocoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Psocoptera - nymph</attrlabl>
+        <attrdef>insect Order Psocoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Phlaeothripidae - adult</attrlabl>
+        <attrdef>insect Order Thysanoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Thripidae - adult</attrlabl>
+        <attrdef>insect Order Thysanoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Glossosomatidae - pupa</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydropsychidae - pupa</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroptila - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>3</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroptilidae - adult</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroptilidae - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroptilidae - pupa</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Integripalpia - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lepidostoma - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Leptoceridae - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Limnephilidae - adult</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Limnephilidae - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ochrotrichia - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>4</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rhyacophila &#8211; larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>10</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Trichoptera - adult</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Trichoptera - larva</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Trichoptera - pupa</attrlabl>
+        <attrdef>insect Order Trichoptera</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2</rdommax>
+            <attrunit>number per sample</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The first line of the csv file is a header line.</eaover>
+      <eadetcit>U.S. Geological Survey</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>Fish diet data are presented as a comma-delimited file (.csv) and associated metadata.</resdesc>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>comma-delimited text</formname>
+          <formvern>Microsoft Excel for Mac 2011 14.7.1</formvern>
+          <formcont>comma-delimited text file</formcont>
+          <filedec>No compression applied.</filedec>
+          <transize>0.008</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://www.sciencebase.gov/catalog/file/get/58f4f828e4b003da51f65dfa</networkr>
+                <networkr>https://www.sciencebase.gov/catalog/item/58f4f828e4b003da51f65dfa</networkr>
+                <networkr>https://doi.org/10.5066/F75B00N4</networkr>
+              </networka>
+            </computer>
+            <accinstr>Data can be downloaded using the Network_Resource_Name links. The first link is a direct link to download the zipped file of data and metadata. The second link points to a landing page for the water parameter data and its metadata. The third link points to a landing page for the entire data release.</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211013</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Matthew M. Beirne</cntper>
+          <cntorg>Lower Elwha Klallam Tribe</cntorg>
+        </cntperp>
+        <cntpos>Environmental Coordinator for Natural Resources</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>2851 Lower Elwha Rd</address>
+          <city>Port Angeles</city>
+          <state>WA</state>
+          <postal>98363</postal>
+          <country>United States of America</country>
+        </cntaddr>
+        <cntvoice>360-457-4012 ext. 12</cntvoice>
+        <cntemail>matt.beirne@elwha.org</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
