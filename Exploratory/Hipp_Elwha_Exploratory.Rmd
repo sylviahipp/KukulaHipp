@@ -1,6 +1,6 @@
 ---
-title: "Kukula_Elwha_Exploratory"
-author: "Kaitlyn Kukula"
+title: "Hipp_Elwha_Exploratory"
+author: "Sylvia Hipp"
 date: "`r Sys.Date()`"
 output: pdf_document
 editor_options: 
@@ -14,6 +14,10 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(ggplot2)
+library(rvest)
+library(dataRetrieval)
+library(tidycensus)
+library(glue)
 
 here()
 
@@ -78,11 +82,90 @@ ggplot(elwha_daily_sediment) +
 ```
 
 
-### Elwha Subtidal Communities
-```{r}
+### Time series data
 
-elwha_subtital_comm_raw <- read_csv("Data/Raw/Elwha_Subtidal_Communities/Elwha dive site data.csv") %>% 
-  clean_names()
+Pull data for USGS site no. 12045500 (Elwha River)
+Interest in discharge and gage height
+```{r timeseries}
 
+# # set parameters
+# site_number <- "USGS-12045500"
+# stat_code <- "00003"  # mean
+# p_code_discharge <- "00060"
+# p_code_gage_height <- "00065"
+# 
+# start_date <- "2010-01-01"
+# end_date <- "2020-01-01"
+# 
+# 
+# # connect to API to read in daily discharge data
+# daily_discharge <- read_waterdata_daily(
+#   monitoring_location_id = site_number,
+#   parameter_code = p_code_discharge,
+#   statistic_id = stat_code,
+#   time = c(start_date, end_date),
+#   skipGeometry = TRUE) %>%
+#   select("monitoring_location_id", "time", "unit_of_measure",
+#          "value", "parameter_code")
 
+site_number <- "12045500"
+param_discharge <- "00060"
+param_gage_height <- "00065"
+
+read_continuous_data <- function(parameter, site_no){
+  data_url <- paste0("https://nwis.waterservices.usgs.gov/nwis/iv/",
+                     glue("?sites={site_no}&agencyCd=USGS&"),
+                     "startDT=2008-01-01T00:00:00.000-08:00&",
+                     "endDT=2016-12-31T23:59:59.999-08:00",
+                     glue("&parameterCd={parameter}&format=rdb"))
+  
+  param_name <- case_when(parameter == "00065" ~ "gage_height_ft", 
+                          parameter == "00060" ~ "discharge_cfs")
+  
+  df_raw <- read.table(
+    file = data_url, 
+    skip = 26, 
+    header = TRUE, 
+    sep = "\t") 
+  
+  return(df_raw[2:nrow(df_raw),]) # remove first row that doesn't contain data
+  
+}
+
+gage_height_raw <- read_continuous_data(param_gage_height, site_number)
+discharge_raw <- read_continuous_data(param_discharge, site_number)
+
+gage_height_df <- gage_height_raw %>% 
+  clean_names() %>% 
+  rename("gage_height_ft" = x150692_00065) %>% 
+  select(-contains("00065")) %>% 
+  mutate(datetime = as.POSIXct(datetime, tz = "PST"), 
+         date = as.Date(datetime), 
+         gage_height_ft = as.numeric(gage_height_ft)) 
+
+discharge_df <- discharge_raw %>% 
+  clean_names() %>% 
+  rename("discharge_cfs" = x150691_00060) %>% 
+  select(-contains("00060")) %>% 
+  mutate(datetime = as.POSIXct(datetime, tz = "PST"), 
+         date = as.Date(datetime), 
+         discharge_cfs = as.numeric(discharge_cfs))
+  
+ggplot()+
+  geom_line(data = gage_height_df, aes(x = datetime, y = gage_height_ft)) 
+
+ggplot()+
+  geom_line(data = gage_height_df, aes(x = datetime, y = gage_height_ft))
+
+## confirm daily data matches the continuous data
+# ggplot() + 
+#   geom_line(data = discharge_df %>% 
+#               mutate(date = as.Date(datetime)) %>% 
+#               group_by(date) %>% 
+#               summarize(avg_discharge = mean(discharge_cfs)) %>% 
+#               ungroup(),
+#             aes(x = date, y = avg_discharge)) + 
+#   geom_line(data = daily_discharge, aes(x = time, y = value), 
+#             color = "red")
+  
 ```
