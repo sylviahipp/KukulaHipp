@@ -7,12 +7,22 @@ editor_options:
   chunk_output_type: console
 ---
 
+## Other datasest
+dataset catalog - https://catalog.data.gov/dataset/?q=elwha&sort=views_recent+desc&publisher=U.S.+Geological+Survey&ext_location=&ext_bbox=&ext_prev_extent=&tags=elwha-river
+
+river topography -https://catalog.data.gov/dataset/river-channel-topography-on-the-elwha-river-washington-2006-to-2022-ver-2-0-july-2025
+dem - https://catalog.data.gov/dataset/digital-elevation-models-dems-of-the-elwha-river-delta-washington-august-2022
+veg data (promising) - https://catalog.data.gov/dataset/vascular-plant-diversity-and-associated-environmental-variables-along-the-elwha-river-2005
+daily sediment from old usgs station - https://catalog.data.gov/dataset/daily-sediment-loads-during-and-after-dam-removal-in-the-elwha-river-washington-2011-to-20
+
 ## NOTES
 
 # Timeline of dam removal:
 
 Elwha Dam: draw-down began June 1, 2011, construction Sept 19, 2011 - March 2012
 Glines Canyon Dam: draw-down began ???, construction Sept 2011 - August 26, 2014
+
+Elwha HUC watershed 17110020 (PNW region, Puget Sound subregion, Puget Sound basin, Dungeness-Elwha subbasin, 1635 sq.mi.)
 
 The goal of this study is to perform a general review of coastal organisms following the removal of two dams from the Elwha River in Washington. Some interesting questions to consider could be the use of eDNA for tracking fish movements or determining food chain transformations. 
 
@@ -82,7 +92,7 @@ https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=202
 
 # Define date range
 gage_start = '2007-01-01'
-gage_end = '2017-12-31'
+gage_end = '2017-01-01'
 
 #Set the URLs
 elwha_gage_url <- paste0('https://waterservices.usgs.gov/nwis/iv/?sites=12045500&agencyCd=USGS&startDT=', 
@@ -103,7 +113,6 @@ colnames(gage_data_elwha_init) = c("agency_cd", "site_no", "datetime", "tz_cd",
 gage_data_elwha <- gage_data_elwha_init %>% 
   select(datetime, gage_ht_ft) %>% 
   mutate(datetime = ymd_hm(datetime))
-
 
 #Plot
 # Set rectangle measurements
@@ -133,15 +142,6 @@ gage_elwha_plot <- ggplot() +
                     labels = c("Elwha Dam Removal", "Glines Canyon Dam removal")) +
   theme(legend.position = "bottom")
 gage_elwha_plot
-
-# Striped fill for elwha dam removal? didnt look very good imo
-# geom_rect_pattern
-#             pattern = "stripe",
-#             pattern_fill = "#7cae00",
-#             fill = 'transparent',
-#             color = 'transparent',
-#             pattern_alpha = 0.25,
-#             pattern_density = 0.6
 
 ```
             
@@ -265,16 +265,14 @@ ggplot(discharge_12045500_mean) +
                 width = 0.2)
 ```
 
-## Daily gage data
+## Is there a connection between invert abundance, salmon populations, and salmon diet in the Elwha River?
 
-```{r}
+Data wrangling plot that would be helpful is one of those stacked bar/point plots that tells you when stuff was sampled or like one of those timelines that we used to show when animals were dosed but instead of doses its the sampling time
 
+# Estuary Invertebrates
 
-```
-
-## Estuarian Invertebrates
-
-This dataset contains observations of 20 estuarian invertebrate species at three sites for one timepoint before and one timepoint after the dam removal.
+This data set contains observations of 20 estuary invertebrate species at three sites for one timepoint before and one timepoint after the dam removal.
+Dates of observations:  May, July, Sept 2007 and 2015
 
 ```{r}
 inverts_raw <- read.csv(here("Data/Raw/Elwha_Estuary_Invertabrates/Elwha_estuary_aquatic_invertebrates_2007-2013.csv")) 
@@ -285,28 +283,15 @@ colnames(inverts_raw)
 unique(inverts_raw$Date)
 ```
 
-## Subtidal Communities
-
-How many species are observed at each site? Does this change over the years? What taxon (amphipods and dipterans and others - see page 187 of report) are present and how does this vary at the different sites?
-
-```{r}
-subtidal_dive_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha dive site data.csv"))
-unique(subtidal_dive_raw$Site)
-subtidal_temp_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha temperature data.csv"))
-subtidal_towed_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha towed video data.csv"))
-
-```
-
-## Estuary Fish Assemblages
+# Estuary Fish Assemblages
 Dates of observations: May - Sept of 2006, 2007, 2013, and 2014
-
-
 Month vs count with each line representing a year and each plot representing a species
 
 ```{r}
 estuary_fish_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_Fish/Elwha estuary_fish_2006to2014.csv") %>%
   mutate(Date = mdy(Date.collected),
          Year = as.factor(Year.collected))
+unique(estuary_fish_raw$Date)
 
 # Select species of interest for a new dataframe at the Eastern site (species with few or no counts omitted from analysis)
 
@@ -322,9 +307,78 @@ ggplot(estuary_fish %>% filter(year(Date) < "2008")) +
 ggplot(estuary_fish %>% filter(year(Date) > "2008")) +
   geom_point(aes(x = month(Date), y = Coho.salmon, color = Year)) +
   geom_line(aes(x = month(Date), y = Coho.salmon, color = Year))
+```
+
+# Salmonid distribution and abundance 
+
+Dates of observations: 2007, 2008, 2018, 2019
+Could do some sort of bubble map with this dataset to show where more fish are getting to.
+Remove columns that have limited data
+
+```{r}
+salmonid_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Salmon_Movement/Elwha_Riverscape_reach_data.csv") %>%
+  mutate(Date = mdy(Date))
 
 
+unique(salmonid_raw$Year)
+```
 
+# Salmon diet
+
+Dates of observations:
+
+```{r}
+salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv") %>%
+  mutate(Date = mdy(Date),
+         Year = as.numeric(Year)) %>% 
+  janitor::clean_names()
+
+# Summed all taxa consumed by salmon type in a year
+diet_totals <- salmonid_diet_raw %>%
+  group_by(year, fish) %>% 
+  summarise(across(c(acari_larva:trichoptera_pupa), ~sum(., na.rm = TRUE))) %>% 
+  ungroup() %>% 
+  pivot_longer(c(acari_larva:trichoptera_pupa)) %>%
+  pivot_wider(id_cols = c("fish", "name"),
+              names_from = "year",
+              values_from = "value",
+              names_prefix = "value_") %>% 
+  mutate(taxa = str_extract(name, "^.+\\_") %>% str_remove_all("\\_")) %>% 
+  group_by(fish, taxa) %>% 
+  summarise(across(c(value_2006:value_2014), ~sum(., na.rm = TRUE))) %>% 
+  ungroup()
+
+# Create a summary table of the number of fish sampled each year
+fish_surveyed_diet <- salmonid_diet_raw %>% 
+  group_by(year, fish) %>% 
+  summarise(count())
+
+  
+# Dataset for Chinook salmon diet
+chinook_diet <- diet_totals %>% filter(fish == "Chinook")
+
+# Dataset for Coho salmon diet
+coho_diet <- diet_totals %>% filter(fish == "Coho")
+
+# Dataset for diet of all salmon species surveyed
+all_salmon_diet <- diet_totals %>%
+  group_by(taxa) %>%
+  summarise(across(c(value_2006:value_2014), ~sum(., na.rm = TRUE)))
+
+
+# After wrangling the invert data, use inner_join to combine with diets so you only grab similar taxa
+```
+
+
+## Subtidal Communities
+
+How many species are observed at each site? Does this change over the years? What taxon (amphipods and dipterans and others - see page 187 of report) are present and how does this vary at the different sites?
+
+```{r}
+subtidal_dive_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha dive site data.csv"))
+unique(subtidal_dive_raw$Site)
+subtidal_temp_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha temperature data.csv"))
+subtidal_towed_raw <- read.csv(here("Data/Raw/Elwha_Subtidal_Communities/Elwha towed video data.csv"))
 
 ```
 
@@ -703,15 +757,5 @@ estuary_wq_plot <- plot_grid(dataset_title,
 estuary_wq_plot
 ```
 
-## Salmonid distribution and abundance 
 
-Dates of observations: 2007, 2008, 2018, 2019
-
-Could do some sort of bubble map with this dataset to show where more fish are getting to.
-Remove columns that have limited data
-
-```{r}
-salmonid_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Salmon_Movement/Elwha_Riverscape_reach_data.csv")
-unique(salmonid_raw$Year)
-```
 
