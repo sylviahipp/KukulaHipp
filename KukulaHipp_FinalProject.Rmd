@@ -9,5 +9,7 @@ markdown:
   wrap: none
 ---
 
+Sylvia: discharge, gage height, sediment, fish transport
+Kaitlyn: invert abundance, fish abundance, fish diet
 
 
