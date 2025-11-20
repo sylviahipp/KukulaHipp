@@ -86,7 +86,7 @@ ggplot(elwha_daily_sediment) +
 
 Pull data for USGS site no. 12045500 (Elwha River)
 Interest in discharge and gage height
-```{r timeseries}
+```{r timeseries data}
 
 # # set parameters
 # site_number <- "USGS-12045500"
@@ -112,11 +112,14 @@ site_number <- "12045500"
 param_discharge <- "00060"
 param_gage_height <- "00065"
 
-read_continuous_data <- function(parameter, site_no){
+start <- "2008-01-01"
+end <- "2016-12-31"
+
+read_continuous_data <- function(parameter, site_no, start, end){
   data_url <- paste0("https://nwis.waterservices.usgs.gov/nwis/iv/",
                      glue("?sites={site_no}&agencyCd=USGS&"),
-                     "startDT=2008-01-01T00:00:00.000-08:00&",
-                     "endDT=2016-12-31T23:59:59.999-08:00",
+                     glue("startDT={start}T00:00:00.000-08:00&"),
+                     "endDT={end}T23:59:59.999-08:00",
                      glue("&parameterCd={parameter}&format=rdb"))
   
   param_name <- case_when(parameter == "00065" ~ "gage_height_ft", 
@@ -132,10 +135,13 @@ read_continuous_data <- function(parameter, site_no){
   
 }
 
-gage_height_raw <- read_continuous_data(param_gage_height, site_number)
-discharge_raw <- read_continuous_data(param_discharge, site_number)
+gage_height_raw <- read_continuous_data(param_gage_height, site_number, 
+                                        start, end)
+discharge_raw <- read_continuous_data(param_discharge, site_number, 
+                                      start, end)
 
 gage_height_df <- gage_height_raw %>% 
+  tibble() %>% 
   clean_names() %>% 
   rename("gage_height_ft" = x150692_00065) %>% 
   select(-contains("00065")) %>% 
@@ -144,6 +150,7 @@ gage_height_df <- gage_height_raw %>%
          gage_height_ft = as.numeric(gage_height_ft)) 
 
 discharge_df <- discharge_raw %>% 
+  tibble() %>% 
   clean_names() %>% 
   rename("discharge_cfs" = x150691_00060) %>% 
   select(-contains("00060")) %>% 
@@ -168,4 +175,35 @@ ggplot()+
 #   geom_line(data = daily_discharge, aes(x = time, y = value), 
 #             color = "red")
   
+```
+
+
+## time series analysis
+```{r}
+# df of all dates in range to fill gaps
+full_dates <- seq.Date(from = ymd(start), 
+                       to = ymd(end), 
+                       by = "day") %>%   tibble("date" = .) 
+
+daily_data <- gage_height_df %>% 
+  group_by(date) %>% 
+  summarise(avg_gage_height_ft = mean(gage_height_ft)) %>% 
+  ungroup() %>% 
+  full_join(discharge_df %>% 
+              group_by(date) %>% 
+              summarize(avg_discharge_cfs = mean(discharge_cfs)) %>% 
+              ungroup(), 
+            by = "date") %>% 
+  full_join(full_dates, by = "date") 
+  # interpolate missing discharge data 
+
+
+
+
+
+
+gage_height_ts <- ts(gage_height_df$gage_height_ft)
+  
+
+
 ```
