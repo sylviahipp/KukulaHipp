@@ -1,0 +1,97 @@
+---
+title: "Discharge_GageHeight"
+author: "Sylvia Hipp"
+date: "`r Sys.Date()`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Set Up Environment
+
+```{r Setup Environment}
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(ggplot2)
+library(rvest)
+library(dataRetrieval)
+library(tidycensus)
+library(glue)
+
+# check current working directory
+here()
+
+```
+
+# Pull Raw Data and Initial Wrangling
+
+## Define USGS Site and Metric Parameters
+
+```{r}
+site_number <- "12045500"
+param_discharge <- "00060"
+param_gage_height <- "00065"
+
+start <- "2008-01-01"
+end <- "2016-12-31"
+
+```
+
+## Read in Raw data
+
+Define function to scrape data from USGS site
+```{r}
+
+read_continuous_data <- function(parameter, site_no, start, end){
+  data_url <- glue(paste0("https://nwis.waterservices.usgs.gov/nwis/iv/?",
+                          "sites={site_no}&agencyCd=USGS&",
+                          "startDT={start}T00:00:00.000-08:00&",
+                          "endDT={end}T23:59:59.999-08:00",
+                          "&parameterCd={parameter}&format=rdb"))
+  
+  param_name <- case_when(parameter == "00065" ~ "gage_height_ft", 
+                          parameter == "00060" ~ "discharge_cfs")
+  
+  df_raw <- read.table(file = data_url, 
+                       skip = 26, 
+                       header = TRUE, 
+                       sep = "\t") %>% 
+    tibble() %>% 
+    select(-c(6)) %>% 
+    rename(!!param_name:=5)
+  
+  return(df_raw[2:nrow(df_raw),]) # remove first row that doesn't contain data
+}
+
+```
+
+Read in Raw Data
+```{r}
+
+gage_height_raw <- read_continuous_data(param_gage_height, site_number, 
+                                        start, end)
+discharge_raw <- read_continuous_data(param_discharge, site_number, 
+                                      start, end)
+
+```
+
+## Data Wrangling
+
+```{r}
+
+gage_height_df <- gage_height_raw %>% 
+  mutate(datetime = as.POSIXct(datetime, tz = "PST"),
+         date = as.Date(datetime)
+         gage_height_ft = as.numeric(gage_height_ft)) %>% 
+  group_by(date) %>% 
+  summarize(avg)
+  
+
+discharge_df <- discharge_raw %>% 
+  mutate(datetime = as.POSIXct(datetime, tz = "PST"), 
+         date = as.Date
+         discharge_cfs = as.numeric(discharge_cfs))
+
+```
