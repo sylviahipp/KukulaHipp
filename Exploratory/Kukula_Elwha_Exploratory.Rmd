@@ -281,6 +281,7 @@ inverts <- inverts_raw %>%
 
 colnames(inverts_raw)
 unique(inverts_raw$Date)
+unique(inverts_raw$Site)
 ```
 
 # Estuary Fish Assemblages
@@ -324,8 +325,6 @@ unique(salmonid_raw$Year)
 ```
 
 # Salmon diet
-
-Dates of observations:
 
 ```{r}
 salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv") %>%
