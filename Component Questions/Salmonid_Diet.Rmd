@@ -1,0 +1,118 @@
+---
+title: "Salmonid_Diet"
+author: "Kaitlyn Kukula"
+date: "`r Sys.Date()`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(lubridate)
+library(cowplot)
+
+here()
+kak_theme <- theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        axis.text.x = element_text(size = 9), # Adjust x-axis values
+        axis.text.y = element_text(size = 9), # Adjust y-axis values
+        axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
+        axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
+        legend.position = "bottom", # Define legend position
+        legend.text = element_text(size = 9), # Define legend entry sizes
+        legend.title = element_text(size = 9)) # Define legend name sizes
+set_theme(kak_theme)
+```
+
+# Read in and clean data
+
+```{r}
+salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv") %>%
+  mutate(Date = mdy(Date),
+         Year = as.numeric(Year)) %>% 
+  janitor::clean_names()
+```
+
+## Explore data
+
+``` {r}
+colnames(salmonid_diet_raw)
+
+# What fish did they study
+unique(salmonid_diet_raw$fish)
+
+# What dates did they sample on
+unique(salmonid_diet_raw$date)
+
+```
+
+## Wrangle data
+
+``` {r}
+# Summed all taxa consumed by salmon type in a year
+diet_totals <- salmonid_diet_raw %>%
+  group_by(year, fish) %>% 
+  summarise(across(c(acari_larva:trichoptera_pupa), ~sum(., na.rm = TRUE))) %>% 
+  ungroup() %>% 
+  pivot_longer(c(acari_larva:trichoptera_pupa)) %>%
+  pivot_wider(id_cols = c("fish", "name"),
+              names_from = "year",
+              values_from = "value",
+              names_prefix = "value_") %>% 
+  mutate(taxa = str_extract(name, "^.+\\_") %>% str_remove_all("\\_")) %>% 
+  group_by(fish, taxa) %>% 
+  summarise(across(c(value_2006:value_2014), ~sum(., na.rm = TRUE))) %>% 
+  ungroup()
+```
+
+## Creating individual dataframes
+
+```{r}
+### Create a data frame for Chinook salmon diet
+# Rows: taxa
+# Columns: totals for each year
+chinook_diet <- diet_totals %>% filter(fish == "Chinook")
+
+### Create a data frame for Coho salmon diet
+# Rows: taxa
+# Columns: totals for each year
+coho_diet <- diet_totals %>% filter(fish == "Coho")
+
+### Create a data frame for the diet of all salmon species before dam removal
+# Rows: taxa
+# Columns: totals for each year
+all_salmon_diet_before <- diet_totals %>%
+  group_by(taxa) %>%
+  summarise(across(c(value_2006:value_2007), ~sum(., na.rm = TRUE)))
+
+### Create a data frame for the diet of all salmon species after dam removal
+# Rows: taxa
+# Columns: totals for each yearall_salmon_diet_after <- diet_totals %>%
+  group_by(taxa) %>%
+  summarise(across(c(value_2013:value_2014), ~sum(., na.rm = TRUE)))
+```
+
+
+## Analyze data
+
+# Is the diet of Chinook and Coho different between species and before and after dam removal?
+
+1. Compare which taxa were the most consumed with a histogram for before and a second histogram for after
+Datasets: chinook_diet, coho_diet
+
+2. Compare the diversity of taxa (did one species consume more types of taxa than the other?) before and after between the salmon species
+Datasets: chinook_diet, coho_diet
+
+3. Compare the diversity of taxa consumed for *all* fish before and after the dam removal (did dam removal change the abundance and diversity of diet?)
+Datasets: all_salmon_diet_before, all_salmon_diet_after 
+
+4. Compare the diversity of taxa consumed for individual salmon species before and after the dam removal (did dam removal change the abundance and diversity of diet?)
+
+# Is there a relationship between observed invertebrate counts and salmonid diet?
+
+After wrangling the invert data, use inner_join to combine with diets so you only grab similar taxa
+
+
+
