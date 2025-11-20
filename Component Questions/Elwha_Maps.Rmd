@@ -2,6 +2,11 @@
 title: "Watershed Maps"
 author: "Kaitlyn Kukula"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 ---
 
+## Elwha River Watershed, Former Dam Sites, and USGS Water Quality Monitoring Sites
+
+
+
+## Benthic macroinvertebrate sampling sites, fish assemblage monitoring sites
