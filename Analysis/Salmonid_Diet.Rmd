@@ -41,10 +41,10 @@ salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elw
 colnames(salmonid_diet_raw)
 
 # What fish did they study
-unique(salmonid_diet_raw$fish)
+#unique(salmonid_diet_raw$fish)
 
 # What dates did they sample on
-unique(salmonid_diet_raw$date)
+#unique(salmonid_diet_raw$date)
 
 ```
 
@@ -75,7 +75,10 @@ diet_totals <- salmonid_diet_raw %>%
 # Columns: totals for each year
 chinook_diet <- diet_totals %>%
   filter(fish == "Chinook") %>% 
-  mutate(value_2006 = as.numeric(value_2006))
+  mutate(value_2006 = as.numeric(value_2006),
+         value_2007 = as.numeric(value_2007),
+         value_2013 = as.numeric(value_2013),
+         value_2014 = as.numeric(value_2014))
 
 ### Create a data frame for Coho salmon diet
 # Rows: taxa
@@ -92,7 +95,8 @@ all_salmon_diet_before <- diet_totals %>%
 ### Create a data frame for the diet of all salmon species after dam removal
 # Rows: taxa
 # Columns: totals for each yearall_salmon_diet_after <- diet_totals %>%
-  group_by(taxa) %>%
+all_salmon_diet_after <- diet_totals %>%
+group_by(taxa) %>%
   summarise(across(c(value_2013:value_2014), ~sum(., na.rm = TRUE)))
 ```
 
@@ -112,16 +116,274 @@ Datasets: all_salmon_diet_before, all_salmon_diet_after
 
 4. Compare the diversity of taxa consumed for individual salmon species before and after the dam removal (did dam removal change the abundance and diversity of diet?)
 
-``` {r}
-# Consumption by salmon species
+# Create a table for the number of taxa consumed by each species per year
 
-chinook_diet_plot <- ggplot(data = chinook_diet %>% 
-                              filter(value_2006 > 0), aes(x = taxa, y = value_2006)) +
+```{r}
+# Create a data frame that contains the total species represented in salmon dietary
+# samples in each year
+salmon_taxa_totals <- data.frame(
+  Salmon = c(rep("Chinook", 4), rep("Coho", 4)),
+  Year = c(rep(c("2006", "2007", "2013", "2014"),2)),
+  Count = c(sum(chinook_diet$value_2006 > 0),
+                   sum(chinook_diet$value_2007 > 0),
+                   sum(chinook_diet$value_2013 > 0),
+                   sum(chinook_diet$value_2014 > 0),
+                   sum(coho_diet$value_2006 > 0),
+                   sum(coho_diet$value_2007 > 0),
+                   sum(coho_diet$value_2013 > 0),
+                   sum(coho_diet$value_2014 > 0)))
+
+salmon_taxa_totals_plot <- ggplot(data = salmon_taxa_totals,
+                                  aes(x = Year, y = Count, fill = Salmon)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Number of Dietary Species Represented in Salmon Diets",
+       x = NULL,
+       y = "Number of Species Observed in Salmon",
+       fill = "Salmon Species")
+  
+salmon_taxa_totals_plot
+```
+
+There was some increase in the diversity of taxa consumed by Chinook salmon after dam removal. In Coho salmon, the diversity of taxa consumed greatly increased after dam removal.
+
+# Taxa consumed by Chinook species yearly (exploratory plots)
+
+``` {r}
+
+# Chinook in 2006
+
+chinook_top_taxa_2006 <- chinook_diet %>% 
+  select(fish:value_2006) %>% 
+  arrange(desc(value_2006)) %>%
+  head(n = 10)
+
+chinook_top_taxa_plot_2006 <- ggplot(data = chinook_top_taxa_2006,
+                                     aes(x = reorder(taxa, -value_2006), y = value_2006)) +
   geom_bar(stat = "identity") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-chinook_diet_plot
+chinook_top_taxa_plot_2006
+
+# Chinook in 2007
+
+chinook_top_taxa_2007 <- chinook_diet %>% 
+  select(fish:taxa, value_2007) %>% 
+  arrange(desc(value_2007)) %>%
+  head(n = 10)
+
+chinook_top_taxa_plot_2007 <- ggplot(data = chinook_top_taxa_2007,
+                                     aes(x = reorder(taxa, -value_2007), y = value_2007)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_plot_2007
+
+# Chinook in 2013
+
+chinook_top_taxa_2013 <- chinook_diet %>%
+  select(fish:taxa, value_2013) %>%
+  arrange(desc(value_2013)) %>%
+  head(n = 10)
+
+chinook_top_taxa_plot_2013 <- ggplot(data = chinook_top_taxa_2013,
+                                     aes(x = reorder(taxa, -value_2013), y = value_2013)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_plot_2013
+
+# Chinook in 2014
+
+chinook_top_taxa_2014 <- chinook_diet %>%
+  select(fish:taxa, value_2014) %>%
+  arrange(desc(value_2014)) %>%
+  head(n = 10)
+
+chinook_top_taxa_plot_2014 <- ggplot(data = chinook_top_taxa_2014,
+                                     aes(x = reorder(taxa, -value_2014), y = value_2014)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_plot_2014
+
+chinook_diet_4x4 <- plot_grid(chinook_top_taxa_plot_2006,
+                              chinook_top_taxa_plot_2007,
+                              chinook_top_taxa_plot_2013,
+                              chinook_top_taxa_plot_2014,
+                              nrow = 2,
+                              ncol = 2)
+chinook_diet_4x4
+```
+
+Based on these results, it does appear that the dam removal caused changes to the top food sources for salmon.
+
+# What were the top taxa before and after the dam removal?
+
+```{r}
+### Investigating the top taxa before
+
+# Creating a data frame with the top 15 taxa before dam removal
+chinook_top_taxa_before <- full_join(chinook_top_taxa_2006, chinook_top_taxa_2007, by = c("fish", "taxa")) %>% 
+  inner_join(chinook_diet %>%
+               select(fish:value_2007),
+             by = c("fish", "taxa")) %>% 
+  select(fish:taxa,
+         value_2006 = value_2006.y,
+         value_2007 = value_2007.y) %>% 
+  pivot_longer(c(value_2006:value_2007))
+
+# Plotting the data
+chinook_top_taxa_before_plot <- ggplot(data = chinook_top_taxa_before %>% head(20),
+                                       aes(x = reorder(taxa, -value),
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_before_plot
+```
+
+Chironomidae dominate the diet before removal with consistent observations between the two years, followed by hilara and whatever that next thing is.
+
+```{r}
+
+### Investigating the top taxa after
+
+chinook_top_taxa_after <- full_join(chinook_top_taxa_2013,
+                                    chinook_top_taxa_2014,
+                                    by = c("fish", "taxa")) %>% 
+  inner_join(chinook_diet %>%
+               select(fish:taxa, value_2013:value_2014),
+             by = c("fish", "taxa")) %>% 
+  select(fish:taxa,
+         value_2013 = value_2013.y,
+         value_2014 = value_2014.y) %>% 
+  pivot_longer(c(value_2013:value_2014))
+
+# Plotting the data
+chinook_top_taxa_after_plot <- ggplot(data = chinook_top_taxa_after %>% head(20),
+                                       aes(x = reorder(taxa, -value),
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_after_plot
+```
+
+Although the diversity of taxa consumed by salmon after the dam removal increased, the diet of salmon is dominated by six groups (cyclopoida, chironomidae, and osteichthyes, whatever that is, chironomini, and tanypodinae). 
+
+# Of the top taxa, which are present before and after removal and how did their occurrences change?
+
+```{r}
+
+chinook_diet_counts <- chinook_diet %>% 
+  mutate(before_count = rowSums(across(value_2006:value_2007)),
+         after_count = rowSums(across(value_2013:value_2014))) %>% 
+  select(fish:taxa, before_count:after_count)
+
+test_plot <- ggplot(chinook_diet_counts, aes())
+
+#Could rename this data set to overlap or something
+chinook_top_taxa_refined <- inner_join(chinook_top_taxa_before %>% pivot_wider(names_from = "name",
+                                                                               values_from = "value"),
+                                       chinook_top_taxa_after %>% pivot_wider(names_from = "name",
+                                                                               values_from = "value"),
+                                       by = "taxa") %>% 
+  select(fish.x:value_2007, value_2013:value_2014) %>% 
+  pivot_longer(c(value_2006:value_2014))
+view(chinook_top_taxa_refined)
+
+# before and after counts with overlap
+
+test_overlap <- inner_join(chinook_top_taxa_refined %>% 
+                             pivot_wider(names_from = name, values_from = value),
+                           chinook_diet_counts) %>% 
+  select(fish,taxa, before_count:after_count) %>% 
+  pivot_longer(c(before_count, after_count))
+
+# Plotting total before and after counts for the taxa that were present in both settings 
+chinook_top_taxa_before_overlap_plot <- ggplot(data = test_overlap,
+                                       aes(x = taxa,
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_before_overlap_plot
+
+chinook_top_taxa_after_overlap_plot <- ggplot(data = chinook_top_taxa_refined %>% filter(name == c("value_2013", "value_2014")),
+                                       aes(x = taxa,
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_after_overlap_plot
+
+chinook_top_taxa_overlap_plot <- 
 
 ```
+
+Certain taxa experienced a large change in occurrences after dam removal, but there is not a clear trend. This may be due to availability of food sources, among other things.
+
+# What happened to the taxa observed before dam removal?
+
+```{r}
+
+# Plotting
+chinook_top_taxa_before_result <- left_join(chinook_top_taxa_before %>%  pivot_wider(names_from = "name",
+                                                                               values_from = "value"),
+                                            chinook_diet) %>% pivot_longer(c(value_2006:value_2014)) 
+
+chinook_top_taxa_before_result_plot <- ggplot(data = chinook_top_taxa_before_result,
+                                       aes(x = taxa,
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_before_result_plot
+```
+
+# What were the levels of the taxa observed after like before removal?
+
+```{r}
+
+chinook_top_taxa_after_result <- left_join(chinook_top_taxa_after %>%
+                                             pivot_wider(names_from = "name", 
+                                                         values_from = "value"), 
+                                           chinook_diet) %>%
+  pivot_longer(c(value_2013:value_2007)) 
+
+chinook_top_taxa_after_result_plot <- ggplot(data = chinook_top_taxa_after_result,
+                                       aes(x = taxa,
+                                           y = value,
+                                           fill = name)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+chinook_top_taxa_after_result_plot
+```
+
+# Of all taxa consumed by Chinook before the dam removal, how many new taxa were present in samples after removal? In other words, what percentage of the taxa observed in after-removal samples were new taxa?
+
+```{r}
+
+## It might be smart to move this code to the top. ##
+
+
+  
+
+```
+
+
+# Of all taxa consumed by Chinook after the dam removal, what percentage were present in samples before removal? In other words, what taxa were not consumed before the dam removal?
+
+
+# All diet plots
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
 
 # Is there a relationship between observed invertebrate counts and salmonid diet?
 
