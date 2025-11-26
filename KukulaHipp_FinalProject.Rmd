@@ -9,7 +9,573 @@ markdown:
   wrap: none
 ---
 
+\newpage
+\tableofcontents 
+\newpage
+\listoftables 
+\newpage
+\listoffigures 
+\newpage
+
 Sylvia: discharge, gage height, sediment, fish transport
 Kaitlyn: invert abundance, fish abundance, fish diet
+
+```{r, echo = FALSE}
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(lubridate)
+library(cowplot)
+
+# here()
+
+kukulahipp_theme <- theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        axis.text.x = element_text(size = 9), # Adjust x-axis values
+        axis.text.y = element_text(size = 9), # Adjust y-axis values
+        axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
+        axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
+        legend.position = "bottom", # Define legend position
+        legend.text = element_text(size = 9), # Define legend entry sizes
+        legend.title = element_text(size = 9)) # Define legend name sizes
+set_theme(kukulahipp_theme)
+```
+
+# Introduction
+
+The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam blocked fish and sediment passage for more than 100 years (Figures 1 and 2). 
+
+```{r, echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha Dam approximately one month into removal (NPS 2025)"}
+knitr::include_graphics("~/KukulaHipp/Images/ElwhaDamRemovalNPS.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Glines Canyon Dam approximately one month into removal (NPS 2025)"}
+knitr::include_graphics("~/KukulaHipp/Images/GlinesDamRemovalNPS.png")
+```
+
+Alongside the concern for fish populations and ecological balance was the concern of rising sea level and the impacts that dams have on coastal erosion and resilience. To restore the passage of fish, preserve the watershed, and protect the people, the Lower Elwha Klallam Tribe sought to remove the dams. They were instrumental in the passing of the Elwha River Ecosystem and Fisheries Restoration Act in 1992, but it took 20 years for dam removal to begin. Thus, from 2011 to 2014, the two dams were removed and impacts were tracked by a team of federal, state, tribal, academic, and community partners.
+
+Studies were conducted before, during, and after dam removal to understand the shifts in the geomorphology, hydrology, and ecology that removal caused. Various groups sought to characterize phenomena such as sediment and woody debris dispersion, vegetation growth, invertebrate densities, and fish migration. In this study, we sought to analyze a portion of these impacts and specifically chose to look at streamflow, sediment transport, water quality, invertebrate density, fish migration, and fish diet before and after the dam removal.
+
+Specific questions studied here include:
+
+------->Sylvia you put your stuff here about the streamflow and sediment
+Question 1. Streamflow
+Question 2. Sediment
+Question 3. Is water quality and nutrient availability impacted by the dam removal?
+Question 4. How is estuary invertebrate density and abundance impacted by the dam removal?
+Question 5. Is there a shift in the types of taxa consumed by salmon before and after the dam removal?
+
+------->Sylvia you put your stuff here about the fish movement
+6. Fish movement
+
+
+\newpage
+
+# Dataset Information
+
+------->Sylvia you put your stuff here about the streamflow and sediment
+
+We have obtained multiple datasets from the United States Geological Survey in regards to the Elwha River dam removals. These datasets include:
+
+1. Elwha estuary sediment (Sylvia?)
+2. 
+3. Elwha River water quality at the estuary
+
+------->Sylvia check this sentence to make sure I have the right datasets plz
+In addition, streamflow data comprised of daily discharge and gage height was obtained from USGS monitoring station #12045500 (Elwha River at McDonald Bridge near Port Angeles, WA). Daily gage height was obtained from USGS monitoring station #12044900 (Elwha River above Lake Mills near Port Angeles, WA). Discharge measurements at this station were discontinued prior to dam removal so were thus not included.
+
+The Elwha River watershed, communities, USGS monitoring sites, and dam locations are available in Figure 3 (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", published 2011 by USGS).
+
+```{r, echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha River watershed, monitoring stations, and dam locations (USGS, 2011)"}
+knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
+```
+
+
+\newpage
+
+# Exploratory Analysis 
+
+## Streamflow
+## Sediment
+## Water quality
+
+```{r warning = FALSE}
+estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv") %>%
+  mutate(Date = mdy(Date.Collected))
+colnames(estuary_wq_raw)
+unique(estuary_wq_raw$Site.Name)
+```
+
+----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
+This dataset contains information of nitrate/nitrile, ammonium, and phosphate concentrations, salinity, temperature, turbidity, dissolved oxygen, and pH at five sites in the Elwha River Estuary. To better understand the individual trends and suitability of this data for analysis, each parameter was plotted against time (plots not shown - for final plot of parameters see Figure #).
+----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
+
+``` {r warning = FALSE, fig.cap = "Measured nitrate/nitrile concentration [uM] before and after dam removal"}
+
+estuary_wq_nitrate <- estuary_wq_raw %>%
+  mutate(Nitrate = as.numeric(Nitrate...Nitrite.concentration)) %>%
+  select(Site.Name:Longitude, Nitrate, Date)
+
+# Create a before plot
+nitrate_before_plot <- ggplot(estuary_wq_nitrate %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Nitrate, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Nitrate, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,20)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Nitrate [", mu, "M]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+nitrate_after_plot <- ggplot(estuary_wq_nitrate %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Nitrate, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Nitrate, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,20)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+nitrate_legend <- get_legend(
+  ggplot(estuary_wq_nitrate %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Nitrate, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+nitrate_plot <- plot_grid(nitrate_before_plot, nitrate_after_plot)
+
+# Create a window for the title
+nitrate_title <- ggplot() + 
+  labs(title = "Nitrate/Nitrile concentrations") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+nitrate_plot_legend <- plot_grid(nitrate_title, nitrate_plot, nitrate_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+# nitrate_plot_legend
+```
+
+
+``` {r fig.cap = "Measured phosphate [uM] before and after dam removal"}
+
+estuary_wq_phos <- estuary_wq_raw %>%
+  mutate(Phosphate = as.numeric(Phosphate.concentration)) %>%
+  select(Site.Name:Longitude, Phosphate, Date)
+
+# Create a before plot
+phos_before_plot <- ggplot(estuary_wq_phos %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Phosphate, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Phosphate, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,0.75)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Phosphate [", mu, "M]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+phos_after_plot <- ggplot(estuary_wq_phos %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Phosphate, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Phosphate, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,0.75)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+phos_legend <- get_legend(
+  ggplot(estuary_wq_phos %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Phosphate, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+phos_plot <- plot_grid(phos_before_plot, phos_after_plot)
+
+# Create a window for the title
+phos_title <- ggplot() + 
+  labs(title = "Phosphate concentrations") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+phos_plot_legend <- plot_grid(phos_title, phos_plot, phos_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#phos_plot_legend
+```
+
+
+``` {r warning = FALSE, fig.cap = "Measured ammonium concentration [uM] before and after dam removal"}
+
+estuary_wq_amm <- estuary_wq_raw %>%
+  mutate(Ammonium = as.numeric(Ammonium.concentration)) %>%
+  select(Site.Name:Longitude, Ammonium, Date)
+
+# Create a before plot
+amm_before_plot <- ggplot(estuary_wq_amm %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Ammonium, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Ammonium, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,20)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Ammonium [", mu, "M]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+amm_after_plot <- ggplot(estuary_wq_amm %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Ammonium, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Ammonium, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,20)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+amm_legend <- get_legend(
+  ggplot(estuary_wq_amm %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Ammonium, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+amm_plot <- plot_grid(amm_before_plot, amm_after_plot)
+
+# Create a window for the title
+amm_title <- ggplot() + 
+  labs(title = "Ammonium concentrations") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+amm_plot_legend <- plot_grid(amm_title, amm_plot, amm_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#amm_plot_legend
+```
+
+
+``` {r fig.cap = "Measured salinity [PSU] before and after dam removal"}
+
+estuary_wq_salinity <- estuary_wq_raw %>%
+  mutate(Salinity = as.numeric(Salinity)) %>%
+  select(Site.Name:Longitude, Salinity, Date)
+
+# Create a before plot
+salinity_before_plot <- ggplot(estuary_wq_salinity %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Salinity, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Salinity, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,0.75)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Salinity [units]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+salinity_after_plot <- ggplot(estuary_wq_salinity %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Salinity, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Salinity, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,0.75)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+salinity_legend <- get_legend(
+  ggplot(estuary_wq_salinity %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Salinity, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+salinity_plot <- plot_grid(salinity_before_plot, salinity_after_plot)
+
+# Create a window for the title
+salinity_title <- ggplot() + 
+  labs(title = "Salinity") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+salinity_plot_legend <- plot_grid(salinity_title, salinity_plot, salinity_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#salinity_plot_legend
+```
+
+
+``` {r fig.cap = "Measured temperature [deg C] before and after dam removal"}
+
+estuary_wq_temperature <- estuary_wq_raw %>%
+  mutate(Temperature = as.numeric(Temperature)) %>%
+  select(Site.Name:Longitude, Temperature, Date)
+
+# Create a before plot
+temp_before_plot <- ggplot(estuary_wq_temperature %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Temperature, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Temperature, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,15)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Salinity [units]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+temp_after_plot <- ggplot(estuary_wq_temperature %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Temperature, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Temperature, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,15)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+temp_legend <- get_legend(
+  ggplot(estuary_wq_temperature %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Temperature, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+temp_plot <- plot_grid(temp_before_plot, temp_after_plot)
+
+# Create a window for the title
+temp_title <- ggplot() + 
+  labs(title = "Temperature") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+temp_plot_legend <- plot_grid(temp_title, temp_plot, temp_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#temp_plot_legend
+```
+
+
+``` {r fig.cap = "Measured dissolved oxygen [mg/L] before and after dam removal"}
+
+estuary_wq_do <- estuary_wq_raw %>%
+  mutate(Dissolved_Oxygen = as.numeric(Dissolved.oxygen)) %>%
+  select(Site.Name:Longitude, Dissolved_Oxygen, Date)
+
+# Create a before plot
+do_before_plot <- ggplot(estuary_wq_do %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Dissolved_Oxygen, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Dissolved_Oxygen, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,15)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Dissolved Oxygen [mg/L]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+do_after_plot <- ggplot(estuary_wq_do %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = Dissolved_Oxygen, color = Site.Name)) +
+  geom_line(aes(x = Date, y = Dissolved_Oxygen, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,15)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+do_legend <- get_legend(
+  ggplot(estuary_wq_do %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Dissolved_Oxygen, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+do_plot <- plot_grid(do_before_plot, do_after_plot)
+
+# Create a window for the title
+do_title <- ggplot() + 
+  labs(title = "Dissolved Oxygen") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+do_plot_legend <- plot_grid(do_title, do_plot, do_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#do_plot_legend
+```
+
+
+``` {r fig.cap = "Measured pH [units] before and after dam removal"}
+
+estuary_wq_ph <- estuary_wq_raw %>%
+  mutate(pH = as.numeric(pH)) %>%
+  select(Site.Name:Longitude, pH, Date)
+
+# Create a before plot
+ph_before_plot <- ggplot(estuary_wq_ph %>% filter(Date <= "2007-08-30")) +
+  geom_point(aes(x = Date, y = pH, color = Site.Name)) +
+  geom_line(aes(x = Date, y = pH, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2006-06-01"), as.Date("2007-09-01")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,10)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = NULL, y = expression(paste("Dissolved Oxygen [units]"))) +
+  scale_color_manual(values = c("ES1" = "#1b9e77", "ES2" = "#d95f02"))
+
+# Create an after plot
+ph_after_plot <- ggplot(estuary_wq_ph %>% filter(Date > "2007-08-30")) +
+  geom_point(aes(x = Date, y = pH, color = Site.Name)) +
+  geom_line(aes(x = Date, y = pH, color = Site.Name), linewidth = 0.75) +
+  scale_x_date(limits = c(as.Date("2013-06-28"), as.Date("2014-10-12")),
+               breaks = "3 month", date_labels = "%b %Y") +
+  ylim(c(0,10)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
+  labs(x = NULL, y = NULL) +
+  scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e"))
+# Create a legend plot
+ph_legend <- get_legend(
+  ggplot(estuary_wq_ph %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = pH, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Create a window for the before and after plots
+ph_plot <- plot_grid(ph_before_plot, ph_after_plot)
+
+# Create a window for the title
+ph_title <- ggplot() + 
+  labs(title = "pH") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+
+# Generate the final plot with title, data, and legend
+ph_plot_legend <- plot_grid(ph_title, ph_plot, ph_legend, 
+                                 nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
+# Display plot
+#ph_plot_legend
+```
+
+To create the plots desired for analysis, the legend and title were assigned to unique variables.
+
+```{r}
+
+# Dataset legend (grabbed from nitrate subset)
+estuary_wq_legend <- get_legend(
+  ggplot(estuary_wq_nitrate %>% filter(Date >= "2007-08-30")) +
+  geom_point(aes(x = Date, y = Nitrate, color = Site.Name)) +
+    scale_color_manual(values = c("ES1" = "#1b9e77","ES2" = "#d95f02",
+                                "IEC" = "#7570b3", "WESC1" = "#e7298a",
+                                "WESC2" = "#66a61e")) +
+    labs(color = "Site"))
+
+# Dataset title
+dataset_title <- ggplot() + 
+  labs(title = "Water Quality at the Elwha River Estuary Before and During Dam Removal",
+       subtitle = "Dam removal: 2011 - 2014") +
+  theme(plot.subtitle = element_text(hjust = 0.5))
+```
+
+Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. The other parameters had significant missing data or displayed no trend.
+
+\newpage
+
+# Analysis
+
+
+
+## Question 1. Streamflow
+
+## Question 2. Sediment
+
+## Question 3. Is water quality and nutrient availability impacted by the dam removal?
+
+----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
+Based on the exploratry analysis, only nitrate/nitrile, phosphate, ammonium, and dissoled oxygen concentrations were considered in this water quality analysis (Figure #). Because each datapoint is based on one reported measurement with no error attached, no statistical analyses were run. Thus, all analysis of this data is based on personal evaluation of results. 
+----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
+
+```{r fig.cap = "Water quality in the Elwha River estuary before and during dam removal", fig.height = 8}
+
+# Final water quality plot
+estuary_wq_plot <- plot_grid(dataset_title,
+                             nitrate_title, nitrate_plot,
+                             phos_title, phos_plot,
+                             do_title, do_plot,
+                             amm_title, amm_plot,
+                             estuary_wq_legend,
+                             nrow = 10, rel_heights = c(2,1,5,1,5,1,5,1,5,1,5,1))
+estuary_wq_plot
+```
+
+These parameters are all connected such that an increase in nitrates will cause an increase in phosphate, leading to an excess of plant growth and decomposition. As a result, dissolved oxygen will decrease and impact aquatic animals. Optimal ranges for these compounds include 0.16 - 48.38 uM for nitrate with lower being better (Lehigh University), and 0.05 - 0.53 uM (normal ~ 0.32) for phosphate (Univeristy of Wisconsin). Concentrations of all analyzed parameters do not breech unsafe thresholds, but it does appear that levels are increased following dam removal. However, lack of data at all sites before the dam removal makes it difficult to assess if these trends are due to the site specifically of the removal of the dam. It is observed that the expected relationships described above are generally represented for nitrate and phosphate, but it is not clear if there is an associated decrease in dissolved oxygen. The data on ammonium are hindered by missing datapoints in the middle of the time period, so it is also difficult to assess effects.
+
+## Question 4. How is estuary invertebrate density and abundance impacted by the dam removal?
+
+
+## Question 5. Is there a shift in the types of taxa consumed by salmon before and after the dam removal?
+
+## Question 6. Fish movement
+
+\newpage
+
+# Summary and Conclusions
+
+
+\newpage
+
+# References
+https://geonarrative.usgs.gov/elwhariverrestoration/
+https://projects.seattletimes.com/2016/elwha/
+
+https://www.nps.gov/olym/learn/nature/dam-removal.htm
+
+https://duke.app.box.com/file/2042213070552
+
+--- Nutrient concentrations
+
+https://ei.lehigh.edu/envirosci/watershed/wq/wqbackground/nitratesbg.html#:~:text=in%20a%20watershed?-,1.,blood%20cells%20to%20carry%20oxygen.
+
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://osse.ssec.wisc.edu/curriculum/earth/Minifact2_Phosphorus.pdf
+
+
 
 
