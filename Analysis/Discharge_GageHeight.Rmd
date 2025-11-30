@@ -17,13 +17,28 @@ library(janitor)
 library(ggplot2)
 library(rvest)
 library(dataRetrieval)
-library(tidycensus)
 library(glue)
 
 # check current working directory
 here()
 
 ```
+
+```{r}
+# set theme
+
+kukulahipp_theme <- theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        axis.text.x = element_text(size = 9), # Adjust x-axis values
+        axis.text.y = element_text(size = 9), # Adjust y-axis values
+        axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
+        axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
+        legend.position = "bottom", # Define legend position
+        legend.text = element_text(size = 9), # Define legend entry sizes
+        legend.title = element_text(size = 9)) # Define legend name sizes
+theme_set(kukulahipp_theme)
+```
+
 
 # Pull Raw Data and Initial Wrangling
 
@@ -79,19 +94,72 @@ discharge_raw <- read_continuous_data(param_discharge, site_number,
 
 ## Data Wrangling
 
+Prepare datasets at the daily level
 ```{r}
+summary(gage_height_df)
+summary(discharge_raw)
 
 gage_height_df <- gage_height_raw %>% 
   mutate(datetime = as.POSIXct(datetime, tz = "PST"),
-         date = as.Date(datetime)
+         date = as.Date(datetime),
          gage_height_ft = as.numeric(gage_height_ft)) %>% 
   group_by(date) %>% 
-  summarize(avg)
+  summarize(avg_gage_height_ft = mean(gage_height_ft, na.rm = TRUE)) %>% 
+  ungroup()
   
 
 discharge_df <- discharge_raw %>% 
   mutate(datetime = as.POSIXct(datetime, tz = "PST"), 
-         date = as.Date
-         discharge_cfs = as.numeric(discharge_cfs))
+         date = as.Date(datetime),
+         discharge_cfs = as.numeric(discharge_cfs)) %>% 
+  group_by(date) %>% 
+  summarize(avg_discharge_cfs = mean(discharge_cfs, na.rm = TRUE)) %>% 
+  ungroup()
 
 ```
+
+Prepare dataset for timeseries analysis
+```{r}
+# visualize trends for gage height and discharge
+ggplot(data = discharge_df) + 
+  geom_line(aes(x = date, y = avg_discharge_cfs)) + 
+  labs(y = "Average Daily Discharge (CFS)", 
+       x = NULL)
+
+ggplot(data = gage_height_df) + 
+  geom_line(aes(x = date, y = avg_gage_height_ft)) + 
+  labs(y = "Average Gage Height (ft)", 
+       x = NULL)
+
+# object with all dates between start and end
+dates <- seq.Date(ymd(start), ymd(end), by = "day") %>% 
+  as_tibble() %>% 
+  rename("date" = value)
+
+# combine data into one dataframe
+ts_df <- dates %>% 
+  left_join(discharge_df, by = "date") %>%  # 130 days missing 
+  left_join(gage_height_df, by = "date") %>% 
+  # use linear interpolation to fill in gaps
+  mutate(avg_discharge_cfs = zoo::na.approx(avg_discharge_cfs)) 
+
+```
+
+## Time Series Analysis
+
+Prepare timeseries objects
+```{r}
+first_month <- month(first(ts_df$date))
+first_year <- year(first(ts_df$date))
+
+# Create time series objects
+discharge_ts <- ts(ts_df$avg_discharge_cfs, 
+                   start = c(first_year, first_month), 
+                   frequency = 365)
+gage_height_ts <- ts(ts_df$avg_gage_height_ft, 
+                     start = c(first_year, first_month), 
+                     frequency = 365)
+
+```
+
+
