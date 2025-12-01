@@ -13,6 +13,8 @@ Use time series analysis to isolate seasonal components of gage height and disch
 
 TO DO: maybe a two-sample t-test to test mean values before vs. during vs. after removal? 
 
+TO DO: For data avaiability, maybe a table of site, location, data available, and dates available
+
 # Set Up Environment
 
 ```{r Setup Environment}
@@ -270,8 +272,8 @@ gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
   labs(y = "Daily Average Gage Height (ft)", 
        x = NULL,
        color = NULL,
-       title = "Gage Height Recorded at USGS Site 12045500", 
-       subtitle = "Elwha River, 2008–2016")
+       title = "Elwha River Average Gage Height", 
+       subtitle = "USGS Station 12045500, 2008–2016")
   
 # Discharge
 discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1000) + 
@@ -280,8 +282,8 @@ discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1000) +
   labs(y = "Daily Average Discharge (cfs)", 
        x = NULL,
        color = NULL,
-       title = "Discharge Recorded at USGS Site 12045500", 
-       subtitle = "Elwha River, 2008–2016")
+       title = "Elwah River Daily Discharge", 
+       subtitle = "USGS Station 12045500, 2008–2016")
 
 gage_height_plot
 discharge_plot
