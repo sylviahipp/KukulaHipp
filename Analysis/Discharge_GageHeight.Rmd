@@ -15,9 +15,11 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(ggplot2)
-library(rvest)
-library(dataRetrieval)
 library(glue)
+library(zoo)
+library(tseries)
+library(Kendall)
+
 
 # check current working directory
 here()
@@ -29,14 +31,28 @@ here()
 
 kukulahipp_theme <- theme_classic() +
   theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        plot.subtitle = element_text(size = 10, hjust = 0.5),   # Adjust subtitle
         axis.text.x = element_text(size = 9), # Adjust x-axis values
         axis.text.y = element_text(size = 9), # Adjust y-axis values
         axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
         axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
         legend.position = "bottom", # Define legend position
         legend.text = element_text(size = 9), # Define legend entry sizes
-        legend.title = element_text(size = 9)) # Define legend name sizes
+        legend.title = element_text(size = 9), # Define legend name sizes
+        )
 theme_set(kukulahipp_theme)
+```
+
+```{r}
+## Key dates
+# https://www.historylink.org/File/11011
+
+start_elwha_dam <- ymd("2011-09-15")
+complete_elwha_dam <- ymd("2012-03-01")
+
+#start_glines_dam <- ymd()
+complete_glines_dam <- ymd("2014-08-26")
+
 ```
 
 
@@ -120,35 +136,31 @@ wrangle_data <- function(df_raw, param){
   return(df)
 }
 
-gage_height_df <- bind_rows(
-  wrangle_data(gage_height_above_raw, "gage_height_ft"), 
-  wrangle_data(gage_height_mid_raw, "gage_height_ft"))
-  
-discharge_df <- bind_rows(
-  wrangle_data(discharge_above_raw, "discharge_cfs"), 
-  wrangle_data(discharge_mid_raw, "discharge_cfs"))
+# gage_height_df <- bind_rows(
+#   wrangle_data(gage_height_above_raw, "gage_height_ft"), 
+#   wrangle_data(gage_height_mid_raw, "gage_height_ft"))
+#   
+# discharge_df <- bind_rows(
+#   wrangle_data(discharge_above_raw, "discharge_cfs"), 
+#   wrangle_data(discharge_mid_raw, "discharge_cfs"))
 
-ggplot(gage_height_df %>% filter(year(date)>2011, site_location=="above")) + 
-  geom_line(aes(x = date, y = avg_gage_height_ft, color = site_location))
+gage_height_df <- wrangle_data(gage_height_mid_raw, "gage_height_ft")
+discharge_df <- wrangle_data(discharge_mid_raw, "discharge_cfs")
+
+ggplot(gage_height_df) + 
+  geom_line(aes(x = date, y = avg_gage_height_ft, color = site_location)) + 
+  labs(y = "Average Gage Height (ft)", 
+       x = NULL)
 
 ggplot(discharge_df) + 
-  geom_line(aes(x = date, y = avg_discharge_cfs, color = site_location))
+  geom_line(aes(x = date, y = avg_discharge_cfs, color = site_location)) + 
+  labs(y = "Average Daily Discharge (CFS)", 
+       x = NULL)
 
 ```
 
 Prepare dataset for timeseries analysis
 ```{r}
-# visualize trends for gage height and discharge
-ggplot(data = discharge_df) + 
-  geom_line(aes(x = date, y = avg_discharge_cfs)) + 
-  labs(y = "Average Daily Discharge (CFS)", 
-       x = NULL)
-
-ggplot(data = gage_height_df) + 
-  geom_line(aes(x = date, y = avg_gage_height_ft)) + 
-  labs(y = "Average Gage Height (ft)", 
-       x = NULL)
-
 # object with all dates between start and end
 dates <- seq.Date(ymd(start), ymd(end), by = "day") %>% 
   as_tibble() %>% 
@@ -156,8 +168,8 @@ dates <- seq.Date(ymd(start), ymd(end), by = "day") %>%
 
 # combine data into one dataframe
 ts_df <- dates %>% 
-  left_join(discharge_df, by = "date") %>%  # 130 days missing 
-  left_join(gage_height_df, by = "date") %>% 
+  left_join(gage_height_df, by = "date") %>%  # 130 days missing 
+  left_join(discharge_df %>% select(-site_no, -site_location), by = "date") %>% 
   # use linear interpolation to fill in gaps
   mutate(avg_discharge_cfs = zoo::na.approx(avg_discharge_cfs)) 
 
@@ -177,6 +189,98 @@ discharge_ts <- ts(ts_df$avg_discharge_cfs,
 gage_height_ts <- ts(ts_df$avg_gage_height_ft, 
                      start = c(first_year, first_month), 
                      frequency = 365)
+
+```
+
+Decompose timeseries objects and run SMK test
+```{r}
+# Seasonal Decomposition of Time Series by Loess
+discharge_decomp <- stl(discharge_ts, s.window = "periodic")
+plot(discharge_decomp)
+
+gage_height_decomp <- stl(gage_height_ts, s.window = "periodic")
+plot(gage_height_decomp)
+
+# Seasonal Mann Kendall Test
+discharge_smk <- Kendall::SeasonalMannKendall(discharge_ts)
+summary(discharge_smk)
+
+gage_height_smk <- Kendall::SeasonalMannKendall(gage_height_ts)
+summary(gage_height_smk)
+
+# separate out seasonal component
+discharge_ts_nonseaonal <- discharge_ts - discharge_decomp$time.series[,"seasonal"]
+trend::mk.test(discharge_ts_nonseaonal)
+
+gage_height_ts_nonseasonal <- gage_height_ts - gage_height_decomp$time.series[,"seasonal"]
+trend::mk.test(gage_height_ts_nonseasonal)
+
+
+```
+
+Potential Plots for Report
+```{r}
+# Show decomposed trends
+## Gage Height
+gage_height_to_plot <- tibble("date" = ts_df$date,
+                              "gage_height_trend" = gage_height_decomp$time.series[,"trend"],
+                              "gage_height" = ts_df$avg_gage_height_ft) %>% 
+  pivot_longer(cols = c("gage_height", "gage_height_trend"), 
+               names_to = "data_type") %>% 
+  mutate(data_type = factor(data_type, 
+                            levels = c("gage_height", "gage_height_trend"), 
+                            labels = c("Recorded Value", "Decomposed Trend")))
+
+
+## Discharge
+discharge_to_plot <- tibble("date" = ts_df$date, 
+                            "discharge_trend" = discharge_decomp$time.series[,"trend"], 
+                            "discharge" = ts_df$avg_discharge_cfs) %>% 
+  pivot_longer(cols = c("discharge", "discharge_trend"), 
+               names_to = "data_type") %>% 
+  mutate(data_type = factor(data_type, 
+                            levels = c("discharge", "discharge_trend"), 
+                            labels = c("Recorded Value", "Decomposed Trend")))
+
+
+# base plot components 
+base_plot <- function(ymin, ymax, vjust){
+  base_plot <- ggplot() + 
+    geom_rect(aes(xmin = start_elwha_dam, xmax = complete_glines_dam, 
+                ymin = ymin, ymax = ymax), alpha = 0.4, fill = "grey") + 
+    annotate(geom = "text", x = ymd("2013-03-01"), y = ymax-vjust, size = 3,
+             label = "Dam Removal Period\n(Sept 2011–Aug 2014)") +
+    scale_color_manual(values = c("darkgrey", "red")) +
+    scale_y_continuous(limits = c(ymin, ymax)) +
+    scale_x_date(expand = c(0,0))
+  
+  return(base_plot)
+}
+
+
+# Gage Height
+gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
+  geom_line(data = gage_height_to_plot, 
+            aes(x = date, y = value, color = data_type)) +
+  labs(y = "Gage Height (ft)", 
+       x = NULL,
+       color = NULL,
+       title = "Gage Height Recorded at USGS Site 12045500", 
+       subtitle = "Elwha River, 2008–2016")
+  
+# Discharge
+discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1000) + 
+  geom_line(data = discharge_to_plot, 
+            aes(x = date, y = value, color = data_type)) + 
+  labs(y = "Discharge (cfs)", 
+       x = NULL,
+       color = NULL,
+       title = "Discharge Recorded at USGS Site 12045500", 
+       subtitle = "Elwha River, 2008–2016")
+
+gage_height_plot
+discharge_plot
+
 
 ```
 
