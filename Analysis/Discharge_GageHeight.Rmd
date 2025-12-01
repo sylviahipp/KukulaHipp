@@ -45,7 +45,8 @@ theme_set(kukulahipp_theme)
 ## Define USGS Site and Metric Parameters
 
 ```{r}
-site_number <- "12045500"
+site_number_mid <- "12045500"
+site_number_above <- "12044900"
 param_discharge <- "00060"
 param_gage_height <- "00065"
 
@@ -85,10 +86,15 @@ read_continuous_data <- function(parameter, site_no, start, end){
 Read in Raw Data
 ```{r}
 
-gage_height_raw <- read_continuous_data(param_gage_height, site_number, 
+gage_height_mid_raw <- read_continuous_data(param_gage_height, site_number_mid, 
                                         start, end)
-discharge_raw <- read_continuous_data(param_discharge, site_number, 
+discharge_mid_raw <- read_continuous_data(param_discharge, site_number_mid, 
                                       start, end)
+
+gage_height_above_raw <- read_continuous_data(param_gage_height, site_number_above, 
+                                              start, end)
+discharge_above_raw <- read_continuous_data(param_discharge, site_number_above, 
+                                            start, end)
 
 ```
 
@@ -96,25 +102,36 @@ discharge_raw <- read_continuous_data(param_discharge, site_number,
 
 Prepare datasets at the daily level
 ```{r}
-summary(gage_height_df)
-summary(discharge_raw)
 
-gage_height_df <- gage_height_raw %>% 
-  mutate(datetime = as.POSIXct(datetime, tz = "PST"),
-         date = as.Date(datetime),
-         gage_height_ft = as.numeric(gage_height_ft)) %>% 
-  group_by(date) %>% 
-  summarize(avg_gage_height_ft = mean(gage_height_ft, na.rm = TRUE)) %>% 
-  ungroup()
+wrangle_data <- function(df_raw, param){
+  avg_var = paste0("avg_", param)
   
+  df <- df_raw %>% 
+    mutate(datetime = as.POSIXct(datetime, tz = "PST"),
+           date = as.Date(datetime), 
+           !!param := as.numeric(!!sym(param)), 
+           site_location = case_when(site_no == "12044900" ~ "above", 
+                                     site_no == "12045500" ~ "mid")) %>% 
+    group_by(date, site_no, site_location) %>% 
+    summarize(!!avg_var := mean(!!sym(param), na.rm = TRUE)) %>% 
+    ungroup()
+  
+  return(df)
+}
 
-discharge_df <- discharge_raw %>% 
-  mutate(datetime = as.POSIXct(datetime, tz = "PST"), 
-         date = as.Date(datetime),
-         discharge_cfs = as.numeric(discharge_cfs)) %>% 
-  group_by(date) %>% 
-  summarize(avg_discharge_cfs = mean(discharge_cfs, na.rm = TRUE)) %>% 
-  ungroup()
+gage_height_df <- bind_rows(
+  wrangle_data(gage_height_above_raw, "gage_height_ft"), 
+  wrangle_data(gage_height_mid_raw, "gage_height_ft"))
+  
+discharge_df <- bind_rows(
+  wrangle_data(discharge_above_raw, "discharge_cfs"), 
+  wrangle_data(discharge_mid_raw, "discharge_cfs"))
+
+ggplot(gage_height_df %>% filter(year(date)>2011, site_location=="above")) + 
+  geom_line(aes(x = date, y = avg_gage_height_ft, color = site_location))
+
+ggplot(discharge_df) + 
+  geom_line(aes(x = date, y = avg_discharge_cfs, color = site_location))
 
 ```
 
