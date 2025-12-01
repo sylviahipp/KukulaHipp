@@ -7,6 +7,12 @@ editor_options:
   chunk_output_type: console
 ---
 
+Goal of this analysis is to understand changes in daily discharge and gage height along the Elwha river before, during, and after removal of the Elwha and Glines Canyon Dams. 
+
+Use time series analysis to isolate seasonal components of gage height and discharge and determine whether there is a statistically significant monotonic trend observed throughtout the period 2008–2016
+
+TO DO: maybe a two-sample t-test to test mean values before vs. during vs. after removal? 
+
 # Set Up Environment
 
 ```{r Setup Environment}
@@ -162,9 +168,8 @@ ggplot(discharge_df) +
 Prepare dataset for timeseries analysis
 ```{r}
 # object with all dates between start and end
-dates <- seq.Date(ymd(start), ymd(end), by = "day") %>% 
-  as_tibble() %>% 
-  rename("date" = value)
+dates <- tibble(
+  "date" = seq.Date(ymd(start), ymd(end), by = "day"))
 
 # combine data into one dataframe
 ts_df <- dates %>% 
@@ -262,7 +267,7 @@ base_plot <- function(ymin, ymax, vjust){
 gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
   geom_line(data = gage_height_to_plot, 
             aes(x = date, y = value, color = data_type)) +
-  labs(y = "Gage Height (ft)", 
+  labs(y = "Daily Average Gage Height (ft)", 
        x = NULL,
        color = NULL,
        title = "Gage Height Recorded at USGS Site 12045500", 
@@ -272,7 +277,7 @@ gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
 discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1000) + 
   geom_line(data = discharge_to_plot, 
             aes(x = date, y = value, color = data_type)) + 
-  labs(y = "Discharge (cfs)", 
+  labs(y = "Daily Average Discharge (cfs)", 
        x = NULL,
        color = NULL,
        title = "Discharge Recorded at USGS Site 12045500", 
