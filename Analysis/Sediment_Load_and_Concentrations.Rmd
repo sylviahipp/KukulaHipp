@@ -71,6 +71,7 @@ daily_sediment_raw <-read_csv(file = filepath) %>%
 ```{r}
 # categorize daily sediments for histogram
 daily_sediment_df <- daily_sediment_raw %>% 
+  mutate(date = mdy(day)) %>% 
   arrange(date) %>% 
   mutate(
     daily_ssc_mg_l = zoo::na.approx(daily_ssc_mg_l),   # linear approximation
