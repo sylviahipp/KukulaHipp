@@ -26,24 +26,33 @@ library(tidyverse)
 library(here)
 library(lubridate)
 library(cowplot)
+library(janitor)
+library(glue)
+library(zoo)
+library(tseries)
+library(Kendall)
 
+# check working directory
 # here()
 
 kukulahipp_theme <- theme_classic() +
   theme(plot.title = element_text(size = 11, hjust = 0.5, face = "bold"), #Adjust title
+        plot.subtitle = element_text(size = 10, hjust = 0.5),
         axis.text.x = element_text(size = 9), # Adjust x-axis values
         axis.text.y = element_text(size = 9), # Adjust y-axis values
-        axis.title.x = element_text(size = 10.5, face = "bold"), # Adjust x-axis title
-        axis.title.y = element_text(size = 10.5, face = "bold"), # Adjust y-axis title
+        axis.title.x = element_text(size = 10.5), # Adjust x-axis title
+        axis.title.y = element_text(size = 10.5), # Adjust y-axis title
         legend.position = "bottom", # Define legend position
         legend.text = element_text(size = 9), # Define legend entry sizes
         legend.title = element_text(size = 9)) # Define legend name sizes
-set_theme(kukulahipp_theme)
+
+# set theme globally
+theme_set(kukulahipp_theme)
 ```
 
-# Introduction
+# I. Introduction
 
-The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam blocked fish and sediment passage for more than 100 years (Figures 1 and 2). 
+The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam, located 7.9 km and 21.6 km from the river mount, respectively, blocked fish and sediment passage for more than 100 years (**Figures 1** and **2**). 
 
 ```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha Dam approximately one month into removal (NPS 2025)"}
 knitr::include_graphics("~/KukulaHipp/Images/ElwhaDamRemovalNPS.png")
@@ -55,13 +64,12 @@ knitr::include_graphics("~/KukulaHipp/Images/GlinesDamRemovalNPS.png")
 
 Alongside the concern for fish populations and ecological balance was the concern of rising sea level and the impacts that dams have on coastal erosion and resilience. To restore the passage of fish, preserve the watershed, and protect the people, the Lower Elwha Klallam Tribe sought to remove the dams. They were instrumental in the passing of the Elwha River Ecosystem and Fisheries Restoration Act in 1992, but it took 20 years for dam removal to begin. Thus, from 2011 to 2014, the two dams were removed and impacts were tracked by a team of federal, state, tribal, academic, and community partners.
 
-Studies were conducted before, during, and after dam removal to understand the shifts in the geomorphology, hydrology, and ecology that removal caused. Various groups sought to characterize phenomena such as sediment and woody debris dispersion, vegetation growth, invertebrate densities, and fish migration. In this study, we sought to analyze a portion of these impacts and specifically chose to look at streamflow, sediment transport, water quality, invertebrate density, fish migration, and fish diet before and after the dam removal.
+Studies were conducted before, during, and after dam removal to understand the shifts in the geomorphology, hydrology, and ecology caused by the removal. Various groups sought to characterize phenomena such as sediment and woody debris dispersion, vegetation growth, invertebrate densities, and fish migration. In this study, we sought to analyze a portion of these impacts and specifically focused on the impacts on streamflow, sediment transport, water quality, invertebrate density, fish migration, and fish diet before, during, and after the dam removal.
 
 Specific questions studied here include:
 
-------->Sylvia you put your stuff here about the streamflow and sediment
-Question 1. Streamflow
-Question 2. Sediment
+Question 1. How are river discharge and gage height impacted by dam removal? 
+Question 2. Is there an observable impact on sediment load and concentration following dam removal? 
 Question 3. Is water quality and nutrient availability impacted by the dam removal?
 Question 4. Is there a shift in the types of taxa consumed by Chinook and Coho salmon before and after the dam removal?
 ------->Sylvia you put your stuff here about the fish movement
@@ -70,22 +78,18 @@ Question 5. Fish movement?
 
 \newpage
 
-# Dataset Information
+# II. Dataset Information
 
-------->Sylvia you put your stuff here about the streamflow and sediment
+We have obtained multiple datasets from the United States Geological Survey (USGS) in regards to the Elwha River dam removals. **For more information on data availability and sources, see Appendix.** These datasets include:
 
-We have obtained multiple datasets from the United States Geological Survey in regards to the Elwha River dam removals. These datasets include:
+1. Elwha River daily sediment loads and concentrations during and after dam removal
+2. Elwha River water quality at the estuary
+3. Invertebrate abundance and density at multiple sites in the estuary
+4. Chinook and Coho salmon diets, sampled at estuary sites
 
-1. Elwha estuary sediment (Sylvia?)
-2. 
-3. Elwha River water quality at the estuary
-4. Invertebrate abundance and density at multiple sites in the estuary
-5. Chinook and Coho salmon diets, sampled at estuary sites
+Additionally, we obtained continuous streamflow data along the Elwha River from USGS's Water Data for the Nation. These data comprised of daily discharge and gage height from USGS monitoring station #12045500 (Elwha River at McDonald Bridge near Port Angeles, WA). For a discussion on data availability from this and other monitoring stations along the Elwha River, see **Exploratory Analysis** below. 
 
-------->Sylvia check this sentence to make sure I have the right datasets plz
-In addition, streamflow data comprised of daily discharge and gage height was obtained from USGS monitoring station #12045500 (Elwha River at McDonald Bridge near Port Angeles, WA). Daily gage height was obtained from USGS monitoring station #12044900 (Elwha River above Lake Mills near Port Angeles, WA). Discharge measurements at this station were discontinued prior to dam removal so were thus not included.
-
-The Elwha River watershed, communities, USGS monitoring sites, and dam locations are available in Figure 3 (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", published 2011 by USGS).
+The relative locations of the Elwha River watershed, communities, USGS monitoring sites, and Elwha and Glines Canyon Dams are depicted in **Figure 3** (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", published 2011 by USGS).
 
 ```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha River watershed, monitoring stations, and dam locations (USGS, 2011)"}
 knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
@@ -94,11 +98,14 @@ knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
 
 \newpage
 
-# Exploratory Analysis 
+# III. Exploratory Analysis 
 
-## Streamflow
-## Sediment
-## Water quality
+## III.A. Streamflow
+
+
+
+## III.B. Sediment
+## III.C. Water quality
 
 ```{r, include = FALSE, warning = FALSE}
 estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv") %>%
@@ -511,7 +518,7 @@ dataset_title <- ggplot() +
 
 Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. The other parameters had significant missing data or displayed no trend.
 
-## Salmon Diet
+## III.D. Salmon Diet
 
 ``` {r include = FALSE, }
 salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv") %>%
@@ -714,13 +721,13 @@ In Coho, similar trends in diversification are seen, however they begin earlier.
 
 \newpage
 
-# Analysis
+# IV. Analysis
 
-## Question 1. Streamflow
+## IV.A. Question 1. How are river discharge and gage height impacted by dam removal?
 
-## Question 2. Sediment
+## IV.B. Question 2. Is there an observable impact on sediment load and concentration following dam removal?
 
-## Question 3. Is water quality and nutrient availability impacted by the dam removal?
+## IV.C. Question 3. Is water quality and nutrient availability impacted by the dam removal?
 
 Based on the exploratry analysis, only nitrate/nitrile, phosphate, ammonium, and dissoled oxygen concentrations were considered in this water quality analysis (Figure #). Because each datapoint is based on one reported measurement with no error attached, no statistical analyses were run. Thus, all analysis of this data is based on visual evaluation.
 
@@ -741,7 +748,7 @@ estuary_wq_plot
 
 These parameters are all connected such that an increase in nitrates will cause an increase in phosphate, leading to an excess of plant growth and decomposition. As a result, dissolved oxygen will decrease and impact aquatic animals. Optimal ranges for these compounds include 0.16 - 48.38 uM for nitrate with lower being better (Lehigh University), and 0.05 - 0.53 uM (normal ~ 0.32) for phosphate (Univeristy of Wisconsin). Concentrations of all analyzed parameters do not breech unsafe thresholds, but it does appear that levels are increased following dam removal. However, lack of data at all sites before the dam removal makes it difficult to assess if these trends are due to the site specifically of the removal of the dam. It is observed that the expected relationships described above are generally represented for nitrate and phosphate, but it is not clear if there is an associated decrease in dissolved oxygen. The data on ammonium are hindered by missing datapoints in the middle of the time period, so it is also difficult to assess effects.
 
-## Question 4. Is there a shift in the types of taxa consumed by salmon before and after the dam removal?
+## IV.D. Question 4. Is there a shift in the types of taxa consumed by salmon before and after the dam removal?
 
 The number of unique taxa consumed by each salmon species was assessed (Figure #). 
 
@@ -840,11 +847,11 @@ coho_top_taxa_3x3
 
 In Coho salmon, chironomidae are the dominant group before and after removal (Figure #). The overall taxa for Coho salmon are certainly dominated by the pre-dam removal state. Few of the taxa identified here have appreciable counts after the removal. This is likely due to the diversification of their diet after removal. 
 
-## Question 5. Fish movement
+## IV.E. Question 5. Fish movement
 
 \newpage
 
-# Summary and Conclusions
+# V. Summary and Conclusions
 
 The impact of the removal of two dams from the Elwha River was assessed using physical and ecological endpoints. A number of datasets generated by USGS before, during, and after dam removal were utilized. It is clear that the removal of these dams has a profound impact on river characteristics and salmon behaviors.
 
@@ -855,13 +862,25 @@ The impact of the removal of two dams from the Elwha River was assessed using ph
 
 \newpage
 
-# References
+# VI. Appendix
+
+## VI.A. Data Sources
+
+## VI.B. References
 https://geonarrative.usgs.gov/elwhariverrestoration/
 https://projects.seattletimes.com/2016/elwha/
 
 https://www.nps.gov/olym/learn/nature/dam-removal.htm
 
 https://duke.app.box.com/file/2042213070552
+
+https://www.nature.com/articles/s41598-018-30817-8
+
+--- Streamflow 
+
+https://waterdata.usgs.gov/blog/gage_height/ 
+
+
 
 --- Nutrient concentrations
 
