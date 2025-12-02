@@ -63,17 +63,6 @@ complete_glines_dam <- ymd("2014-08-26")
 
 ```
 
-# Table of Data Availability 
-```{r}
-
-data_availability <- tibble(
-  "USGS Site No" = c("12044900", "12045500", "12046260"), 
-  "Relative Location" = c()
-)
-
-
-```
-
 
 # Pull Raw Data and Initial Wrangling
 

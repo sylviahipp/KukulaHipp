@@ -31,6 +31,8 @@ library(glue)
 library(zoo)
 library(tseries)
 library(Kendall)
+library(knitr)
+library(kableExtra)
 
 # check working directory
 # here()
@@ -52,7 +54,7 @@ theme_set(kukulahipp_theme)
 
 # I. Introduction
 
-The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam, located 7.9 km and 21.6 km from the river mount, respectively, blocked fish and sediment passage for more than 100 years (**Figures 1** and **2**). 
+The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam, located 7.9 km and 21.6 km from the river mouth, respectively, blocked fish and sediment passage for more than 100 years (**Figures 1** and **2**). 
 
 ```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha Dam approximately one month into removal (NPS 2025)"}
 knitr::include_graphics("~/KukulaHipp/Images/ElwhaDamRemovalNPS.png")
@@ -87,7 +89,7 @@ We have obtained multiple datasets from the United States Geological Survey (USG
 3. Invertebrate abundance and density at multiple sites in the estuary
 4. Chinook and Coho salmon diets, sampled at estuary sites
 
-Additionally, we obtained continuous streamflow data along the Elwha River from USGS's Water Data for the Nation. These data comprised of daily discharge and gage height from USGS monitoring station #12045500 (Elwha River at McDonald Bridge near Port Angeles, WA). For a discussion on data availability from this and other monitoring stations along the Elwha River, see **Exploratory Analysis** below. 
+Additionally, we obtained continuous streamflow data along the Elwha River from USGS's Water Data for the Nation. These data comprised of daily discharge and gage height recorded at USGS monitoring station #12045500 (Elwha River at McDonald Bridge near Port Angeles, WA). For a discussion on data availability from this and other monitoring stations along the Elwha River, see **Section III.A** below. 
 
 The relative locations of the Elwha River watershed, communities, USGS monitoring sites, and Elwha and Glines Canyon Dams are depicted in **Figure 3** (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", published 2011 by USGS).
 
@@ -102,7 +104,139 @@ knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
 
 ## III.A. Streamflow
 
+Water quality data were obtained from USGS's Water Data for the Nation data repository. Historical water data for three USGS monitoring sites along the Elwha River are available. **Table 1** outlines the availability of river discharge and gage height data at each monitoring site. 
 
+```{r echo=FALSE, warning=FALSE}
+usgs_availability <- tibble(
+  "Site No." = c("12044900", "12045500", "12046260"), 
+  "Relative Location" = c("Above Glines Canyon Dam", "Between Glines Canyon and Elwha Dams", "Below Elwha Dam"), 
+  "Discharge" = c("Mar 1994–Sept 2011", "Oct 1989–Present", "Unavailable"), 
+  "Gage Height" = c("Oct 2007–Nov 2015", "Oct 2007–Present", "Unavailable")
+)
+
+kable(usgs_availability, 
+      caption = "Availability of USGS Streamflow Data") %>% 
+  row_spec(0, align = "c", bold = TRUE) %>% 
+  add_header_above(
+    header = c(" " = 2, "Dates Available" = 2), align = "c", bold = TRUE) %>% 
+  kable_classic()
+```
+
+Our goal is to analyze Elwha River streamflow before, during, and after the dam removal, which occurred over the period 2011–2014. Based on data availability, we focused on discharge data obtained from USGS site #12045500 and gage height data from USGS sites #12044900 and #12045500. We pulled continuous data over the period 2008–2017 (as available) to capture a 10-year window surrounding the dam removal. 
+
+```{r include=FALSE}
+# function to read in raw data
+read_usgs_data <- function(parameter, site_no, start, end){
+  data_url <- glue(paste0("https://nwis.waterservices.usgs.gov/nwis/iv/?",
+                          "sites={site_no}&agencyCd=USGS&",
+                          "startDT={start}T00:00:00.000-08:00&",
+                          "endDT={end}T23:59:59.999-08:00",
+                          "&parameterCd={parameter}&format=rdb"))
+  
+  param_name <- case_when(parameter == "00065" ~ "gage_height_ft", 
+                          parameter == "00060" ~ "discharge_cfs")
+  
+  df_raw <- read.table(file = data_url, 
+                       skip = 26, 
+                       header = TRUE, 
+                       sep = "\t") %>% 
+    tibble() %>% 
+    select(-c(6)) %>% 
+    rename(!!param_name:=5)
+  
+  return(df_raw[2:nrow(df_raw),]) # remove first row that doesn't contain data
+}
+```
+
+```{r include=FALSE}
+# Read in Raw Data
+# USGS site no.
+site_number_mid <- "12045500"
+site_number_above <- "12044900"
+
+# data time period
+start = ymd("2008-01-01")
+end = ymd("2017-12-31")
+
+start_removal <- ymd("2011-09-15")
+complete_removal <- ymd("2014-08-26")
+
+# parameters
+param_discharge <- "00060"
+param_gage_height <- "00065"
+
+# discharge raw data
+discharge_mid_raw <- read_usgs_data(param_discharge, site_number_mid, start, end)
+
+# gage height raw data
+gage_height_mid_raw <- read_usgs_data(param_gage_height, site_number_mid, start, end)
+gage_height_above_raw <- read_usgs_data(param_gage_height, site_number_above, start, end)
+
+```
+
+```{r include = FALSE}
+# Data Cleaning
+wrangle_usgs_data <- function(df_raw, param){
+  avg_var = paste0("avg_", param)
+  
+  df <- df_raw %>% 
+    mutate(datetime = as.POSIXct(datetime, tz = "PST"),
+           date = as.Date(datetime), 
+           !!param := as.numeric(!!sym(param)), 
+           site_location = case_when(site_no == "12044900" ~ "above", 
+                                     site_no == "12045500" ~ "mid")) %>% 
+    group_by(date, site_no, site_location) %>% 
+    summarize(!!avg_var := mean(!!sym(param), na.rm = TRUE)) %>% 
+    ungroup()
+  
+  return(df)
+}
+
+gage_height_df <- bind_rows(
+  wrangle_usgs_data(gage_height_mid_raw, "gage_height_ft"), 
+  wrangle_usgs_data(gage_height_above_raw, "gage_height_ft")) 
+
+discharge_df <- wrangle_usgs_data(discharge_mid_raw, "discharge_cfs")
+
+```
+
+
+```{r echo=FALSE, fig.align='center', fig.height=4, fig.cap="Elwha River Average Daily Discharge}
+# Figure: Discharge Data Site 12045500
+discharge_explore_plot <- ggplot() + 
+  geom_rect(aes(xmin = start_removal, xmax = complete_removal, 
+                ymin = 0, ymax = 15000), alpha = 0.4, fill = "grey") +
+  geom_line(data = discharge_df, aes(x = date, y = avg_discharge_cfs)) + 
+  annotate(geom = "text", x = ymd("2013-03-01"), y = 14000, size = 2.5,
+           label = "Dam Removal Period\n(Sept 2011-Aug 2014)") + 
+  scale_y_continuous(labels = scales::comma) + 
+  scale_x_date(expand=c(0,0)) +
+  labs(x = NULL, 
+       y = "Daily Average Discharge (cfs)")
+
+discharge_explore_plot
+```
+
+```{r echo=FAlSE, fig.align='center', fig.height=4, fig.cap="Elwha River Average Daily Gage Height}
+# Figure: Gage Height Data Sites 12045500 and 12044900
+gage_height_explore_plot <- ggplot() + 
+  geom_rect(aes(xmin = start_removal, xmax = complete_removal, 
+                ymin = 0, ymax = 600), alpha = 0.4, fill = "grey") + 
+  geom_line(data = gage_height_df, 
+            aes(x = date, y = avg_gage_height_ft, color = site_no)) + 
+  annotate(geom = "text", x = ymd("2013-03-01"), y = 500, size = 2.5,
+           label = "Dam Removal Period\n(Sept 2011-Aug 2014)") +
+  scale_x_date(expand=c(0,0)) +
+  scale_color_manual(values = c("#1b9e77", "#d95f02")) + 
+  labs(x = NULL, 
+       y = "Daily Average Gage Height (ft)", 
+       color = "USGS Site No.")
+  
+gage_height_explore_plot
+
+```
+
+**Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data. As is apparent in **Figure 5**, gage height at USGS Site #12044900 (located upriver from the Elwha Dam) experienced an immediate spike from 10 ft to nearly 600 ft immediately at the start of the Elwha Dam removal in September 2011. Because the cause and characterization of this spike is unknown, we chose to focus only on USGS Site #12045500 for our analysis of discharge and gage height surrounding the Elwha River dam removals. 
 
 ## III.B. Sediment
 ## III.C. Water quality
