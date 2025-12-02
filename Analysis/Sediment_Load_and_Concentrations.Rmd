@@ -173,7 +173,7 @@ ssc_means_table <- tibble(
 )
 
 knitr::kable(ssc_means_table, 
-             caption = "Suspended Sediment Concentration Before and After Dam Removal")
+             caption = "Suspended Sediment Concentration During and After Dam Removal")
 
 ```
 

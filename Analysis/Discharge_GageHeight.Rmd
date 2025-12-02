@@ -63,6 +63,17 @@ complete_glines_dam <- ymd("2014-08-26")
 
 ```
 
+# Table of Data Availability 
+```{r}
+
+data_availability <- tibble(
+  "USGS Site No" = c("12044900", "12045500", "12046260"), 
+  "Relative Location" = c()
+)
+
+
+```
+
 
 # Pull Raw Data and Initial Wrangling
 
@@ -255,7 +266,7 @@ base_plot <- function(ymin, ymax, vjust){
   base_plot <- ggplot() + 
     geom_rect(aes(xmin = start_elwha_dam, xmax = complete_glines_dam, 
                 ymin = ymin, ymax = ymax), alpha = 0.4, fill = "grey") + 
-    annotate(geom = "text", x = ymd("2013-03-01"), y = ymax-vjust, size = 3,
+    annotate(geom = "text", x = ymd("2013-03-01"), y = ymax-vjust, size = 2,
              label = "Dam Removal Period\n(Sept 2011–Aug 2014)") +
     scale_color_manual(values = c("darkgrey", "red")) +
     scale_y_continuous(limits = c(ymin, ymax)) +
@@ -266,7 +277,7 @@ base_plot <- function(ymin, ymax, vjust){
 
 
 # Gage Height
-gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
+gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 1) +
   geom_line(data = gage_height_to_plot, 
             aes(x = date, y = value, color = data_type)) +
   labs(y = "Daily Average Gage Height (ft)", 
@@ -276,7 +287,7 @@ gage_height_plot <- base_plot(ymin = 9, ymax = 19.5, vjust = 0.75) +
        subtitle = "USGS Station 12045500, 2008–2016")
   
 # Discharge
-discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1000) + 
+discharge_plot <- base_plot(ymin = 0, ymax = 15000, vjust = 1050) + 
   geom_line(data = discharge_to_plot, 
             aes(x = date, y = value, color = data_type)) + 
   labs(y = "Daily Average Discharge (cfs)", 
