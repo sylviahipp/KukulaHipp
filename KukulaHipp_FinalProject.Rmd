@@ -2,7 +2,9 @@
 title: "Elwha River Dam Removal"
 author: "Sylvia Hipp and Kaitlyn Kukula"
 date: "Fall 2025"
-output: pdf_document
+output: 
+  pdf_document: 
+    fig_caption: true
 editor_options:
   chunk_output_type: console
 markdown: 
@@ -163,7 +165,7 @@ kable(
 
 Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
 
-The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
+The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
 filepath <- list.files(here("Data/Raw/Elwha_DailySediment_2011_2016/"), 
@@ -188,9 +190,7 @@ kable(head(daily_sediment_raw, 5),
 
 ## III.A. Streamflow
 
-We focused on river discharge and gage height data to analyze changes to river hydrology following dam removal. **Table 2** outlines the availability of river discharge and gage height data at each USGS monitoring site along the Elwha River. 
-
-*Add paragraph about wrangling and missing data*
+We focused on river discharge and gage height data to analyze changes to river hydrology following dam removal. **Table 2** outlines the availability of river discharge and gage height data at each USGS monitoring site along the Elwha River.
 
 ```{r echo=FALSE, warning=FALSE}
 usgs_availability <- tibble(
@@ -237,7 +237,7 @@ discharge_df <- wrangle_usgs_data(discharge_mid_raw, "discharge_cfs")
 
 ```
 
-To get a sense of how discharge and gage height trend over time, we first plotted the time series data. **Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data. Daily averages were computed over all 15-minute increments recorded in a given day.
+We plotted the time series data to get a sense of how discharge and gage height trend over time. **Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data over 2008–2017. Daily averages were calculated over all 15-minute increments recorded each day. Over this 10-year period, discharge data was missing observations on 130 days. For our analysis, we interpolated discharge on these days using linear interpolation.
 
 ```{r echo=FALSE, fig.align='center', fig.height=3, fig.cap='Elwha River Average Daily Discharge at USGS Site 12045500 (2008–2017)'}
 
@@ -257,9 +257,6 @@ discharge_explore_plot <- ggplot() +
 discharge_explore_plot
 ```
 \newpage
-
-As is apparent in **Figure 5.A**, gage height at USGS Site #12044900 (located upriver from the Elwha Dam) experienced an immediate spike from 10 ft to nearly 600 ft immediately at the start of the Elwha Dam removal in September 2011. Because the cause and characterization of this spike is unknown, we chose to focus only on USGS Site #12045500 for our analysis of discharge and gage height surrounding the Elwha River dam removals. A time series analysis of the data collected at USGS Site #12045500 is outlined in **Section IV.A** below.
-
 
 ```{r echo=FALSE, warning=FALSE, fig.align='center', fig.height=6.5, fig.cap='Elwha River Average Daily Gage Height (2008–2017)'}
 # Figure: Gage Height Data Sites 12045500 and 12044900
@@ -289,16 +286,107 @@ gage_height_mid_only <- baseplot(9, 20, 1) +
   geom_line(data = gage_height_df, #%>% filter(site_no == "12045500"), 
             aes(x = date, y = avg_gage_height_ft, color = site_no))
 
-plot_grid(plotlist = list(gage_height_explore_plot, gage_height_mid_only), 
+plot_grid(gage_height_explore_plot, gage_height_mid_only, 
           labels = c("A", "B"),
           nrow = 2, rel_heights = c(0.45, 0.55))
 
 ```
+
+As is apparent in **Figure 5.A**, gage height at USGS Site #12044900 (located upriver from the Elwha Dam) spiked immediately from 10 ft to nearly 600 ft at the start of the Elwha Dam removal in September 2011. We hypothesize that this spike is due to a change in the zero level used to measure relative stream stage. Because the cause and characterization of this spike is unknown, we chose to exclude observations from this location and focus only on USGS Site #12045500 for our analysis of gage height. A time series analysis of the streamflow data collected at USGS Site #12045500 is discussed further in **Section IV.A** below.
+
 \newpage
 
 ## III.B. Sediment
 
-   
+Prior to removal, the dams along the Elwha River trapped over 20 million cubic meters of sediment (Curran et al., 2017). Our goal is to use suspended sediment concentration and sediment load data measured downstream of both dams (USGS Site #12046260) to understand how dam removal changed the river's sediment budget, therefore impacting river morphology.  
+
+**Figure 6.A** shows the distribution of daily suspended sediment concentrations observed during and after dam removal, with values ranging from 0.22 to 13,819 mg/L. **Figure 6.B** shows the distribution of daily sediment load, with values ranging from 0.1 tonnes to 429,807 tonnes.  
+
+```{r include=FALSE}
+daily_sediment_df <- daily_sediment_raw %>% 
+  mutate(date = mdy(day)) %>% 
+  arrange(date) %>% 
+  select(date, daily_ssc_mg_l, daily_suspended_sediment_load_tonnes) %>% 
+  mutate(
+    daily_ssc_mg_l = zoo::na.approx(daily_ssc_mg_l),   # linear approximation
+    # group concentrations into buckets
+    concentration_mgL = case_when(daily_ssc_mg_l < 100 ~ "<100", 
+                                  daily_ssc_mg_l %>% between(100, 499.99) ~ "100–499",
+                                  daily_ssc_mg_l %>% between(500, 999.99) ~ "500–999",
+                                  daily_ssc_mg_l %>% between(1000, 4999.99) ~ "1,000–4,999", 
+                                  daily_ssc_mg_l %>% between(5000, 9999.99) ~ "5,000–9,999",
+                                  daily_ssc_mg_l >= 10000 ~ ">10,000"),
+    concentration_mgL = factor(concentration_mgL,
+                               levels = c("<100", "100–499", "500–999", 
+                                          "1,000–4,999", "5,000–9,999", ">10,000")))
+```
+
+```{r echo=FALSE, fig.cap='Distribution of Daily Suspended Sediment Concentration and Load at USGS Site #12046260 (2011–2016)', fig.height=5}
+ssc_hist <- ggplot(daily_sediment_df) + 
+  geom_histogram(aes(daily_ssc_mg_l), 
+                 bins = 50) + 
+  scale_x_continuous(breaks = seq(0, 14000, by = 3500), 
+                     labels = scales::comma) + 
+  labs(x = "Suspended Sediment Concentration (mg/L)", 
+       y = "Days Observed")
+
+load_hist <- ggplot(daily_sediment_df) + 
+  geom_histogram(aes(daily_suspended_sediment_load_tonnes/1000), 
+                 bins = 50) + 
+  scale_y_continuous(labels = scales::comma) + 
+  labs(x = "Suspended Sediment Load (000s Tonnes)", 
+       y = "Days Observed")
+
+plot_grid(ssc_hist, load_hist, nrow = 2, ncol = 1, labels = c("A", "B"))
+```
+
+**Figure 7** shows suspended sediment concentration and loads over the five-year period during and after dam removal. Because of the wide range of observed concentrations, sediment concentration data are grouped into buckets to better visualize a trend in sediment concentration over time. Each bar in **Figure 7.B** represents a week during the five-year period and is colored according to the suspended sediment concentrations through the week. Sediment concentrations align closely with peaks in sediment load shown in **Figure 7.A**. 
+
+```{r echo=FALSE, warning=FALSE, fig.height=6, fig.cap='Trends in Daily Sediment Load and Concentration at USGS Site #12046260 (2011–2016)'}
+# get composition of daily concentration for each week
+weekly_conc_to_plot <- daily_sediment_df %>% 
+  # group dates into weeks (starting on Sunday of each week)
+  mutate(weekday = as.POSIXlt(date)$wday,   
+         week = date - weekday) %>% 
+  group_by(week, concentration_mgL) %>% 
+  summarize(n_days = n()) %>% 
+  ungroup() %>% 
+  mutate(pct_of_week = n_days/7)
+
+# plot daily sediment load
+sediment_load_plot <- ggplot() + 
+  geom_line(data = daily_sediment_df, 
+            aes(x = date, y = daily_suspended_sediment_load_tonnes/1000)) + 
+  geom_vline(xintercept = complete_removal, color = "red", linetype = 2, linewidth = 0.75) +
+  geom_label(aes(x = complete_removal, y = 500, 
+                 label = "Completion of Glines Canyon Dam Removal"), 
+             fill = "white", size = 3) +
+  scale_x_date(expand = c(0,0)) + 
+  labs(x = NULL, 
+       y = "Suspended Sediment Load\n(000s tonnes)", 
+       title = "Daily Sediment Load and Concentration During and After Dam Removal", 
+       subtitle = "Elwha River, USGS Station 12046260, 2011–2016\n")
+
+# plot weekly SS concentration
+sediment_conc_plot <- ggplot() + 
+  geom_col(data = weekly_conc_to_plot, 
+           aes(x = week, y = pct_of_week, fill = concentration_mgL), width = 8) + 
+  geom_vline(xintercept = complete_removal, color = "red", linetype = 2, linewidth = 0.75) + 
+  scale_fill_manual(values = c("#ECAD7C","#DE924F", "#B25900", 
+                               "#964B00", "#663300", "#433100")) + 
+  scale_x_date(expand = c(0,0))+
+  scale_y_continuous(labels = scales::percent) + 
+  labs(x = NULL, 
+       y = "Share of Week", 
+       fill = "Sediment Concentration (mg/L)")
+
+plot_grid(plotlist = list(sediment_load_plot, sediment_conc_plot), 
+          ncol = 1, nrow = 2, 
+          rel_heights = c(0.45, 0.55))
+
+
+```
+
 
 ## III.C. Water quality
 
@@ -920,9 +1008,48 @@ In Coho, similar trends in diversification are seen, however they begin earlier.
 
 ## IV.A. Question 1. How are river discharge and gage height impacted by dam removal?
 
-As shown in **Figure 4** and **Figure 5** above, 
+**Figure 4** and **Figure 5.B** above depict daily average discharge and gage height levels recorded at USGS Site #12045500 from 2008 to 2017. We used time series analysis to understand whether the dam removals had a significant impact on discharge and gage height along the Elwha River. 
 
-## IV.B. Question 2. Is there an observable impact on sediment load and concentration following dam removal?
+As is evident in **Figures 4** and **5.B**, both discharge and gage height follow seasonal patterns. Therefore, we decomposed our time series data to isolate the observed seasonal component. Figure
+
+```{r}
+# filter to site of interest
+gage_height_df <- gage_height_df %>% filter(site_no == "12045500") 
+
+# df of all dates over time period
+dates <- tibble("date" = seq.Date(ymd(start), ymd(end), by = "day"))
+
+# join timeseries datasets on date object
+ts_df <- dates %>% 
+  left_join(gage_height_df, by = "date") %>%  # 130 days missing 
+  left_join(discharge_df %>% select(-site_no, -site_location), by = "date") %>% 
+  # use linear interpolation to fill in gaps
+  mutate(avg_discharge_cfs = zoo::na.approx(avg_discharge_cfs))
+
+first_month <- month(first(ts_df$date))
+first_year <- year(first(ts_df$date))
+
+# Create time series objects
+discharge_ts <- ts(ts_df$avg_discharge_cfs, 
+                   start = c(first_year, first_month), 
+                   frequency = 365)
+gage_height_ts <- ts(ts_df$avg_gage_height_ft, 
+                     start = c(first_year, first_month), 
+                     frequency = 365)
+```
+
+```{r}
+# Seasonal Decomposition of Time Series by Loess
+discharge_decomp <- stl(discharge_ts, s.window = "periodic")
+discharge_decomp_plot <- plot(discharge_decomp)
+
+gage_height_decomp <- stl(gage_height_ts, s.window = "periodic")
+gage_height_decomp_plot <- plot(gage_height_decomp)
+
+```
+
+
+## IV.B. Question 2. Is there a significant impact on sediment load and concentration following dam removal?
 
 ## IV.C. Question 3. Is water quality and nutrient availability impacted by the dam removal?
 
