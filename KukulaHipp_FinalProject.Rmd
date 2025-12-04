@@ -239,7 +239,7 @@ discharge_df <- wrangle_usgs_data(discharge_mid_raw, "discharge_cfs")
 
 We plotted the time series data to get a sense of how discharge and gage height trend over time. **Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data over 2008–2017. Daily averages were calculated over all 15-minute increments recorded each day. Over this 10-year period, discharge data was missing observations on 130 days. For our analysis, we interpolated discharge on these days using linear interpolation.
 
-```{r echo=FALSE, fig.align='center', fig.height=3, fig.cap='Elwha River Average Daily Discharge at USGS Site #12045500 (2008–2017)'}
+```{r echo=FALSE, fig.align='center', fig.height=3, fig.cap='Elwha River Average Daily Discharge at USGS Site 12045500 (2008–2017)'}
 
 # fig.cap='Elwha River Average Daily Discharge at USGS Site #12045500 (2008–2017)'
 # Figure: Discharge Data Site 12045500
@@ -325,7 +325,7 @@ daily_sediment_df <- daily_sediment_raw %>%
                                           "1,000–4,999", "5,000–9,999", ">10,000")))
 ```
 
-```{r echo=FALSE, fig.cap='Distribution of Daily Suspended Sediment Concentration and Load at USGS Site #12046260 (2011–2016)', fig.height=5}
+```{r echo=FALSE, fig.cap='Distribution of Daily Suspended Sediment Concentration and Load at USGS Site 12046260 (2011–2016)', fig.height=5}
 ssc_hist <- ggplot(daily_sediment_df) + 
   geom_histogram(aes(daily_ssc_mg_l), 
                  bins = 50) + 
@@ -348,8 +348,9 @@ plot_grid(ssc_hist, load_hist, nrow = 2, ncol = 1,
 ```
 
 **Figure 7** shows suspended sediment concentration and loads over the five-year period during and after dam removal. Because of the wide range of observed concentrations, sediment concentration data are grouped into buckets to better visualize a trend in sediment concentration over time. Each bar in **Figure 7.B** represents a week during the five-year period and is colored according to the suspended sediment concentrations through the week. Sediment concentrations align closely with peaks in sediment load shown in **Figure 7.A**. 
+\newpage
 
-```{r echo=FALSE, fig.cap='Trends, fig.height=6, message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.cap='Trends in Daily Sediment Load and Concentration at USGS Site 12046260 (2011–2016)', fig.height=6, message=FALSE, warning=FALSE}
 # get composition of daily concentration for each week
 weekly_conc_to_plot <- daily_sediment_df %>% 
   # group dates into weeks (starting on Sunday of each week)
