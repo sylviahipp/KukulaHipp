@@ -94,7 +94,7 @@ knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
 
 We obtained continuous gage height and discharge data along the Elwha River from USGS's Water Data for the Nation at several USGS monitoring stations along the Elwha River. Data availability for each monitoring station is discussed in-depth in **Section III.A** below. 
 
-Through USGS Water Data for the Nation (https://waterdata.usgs.gov/), continuous data are available at 15-minute increments for a variety of metrics, including discharge, gage height, and water turbidity. A glimpse of the raw data appears in **Table 1**.  
+Through USGS Water Data for the Nation (https://waterdata.usgs.gov/), continuous data are available at 15-minute increments for a variety of metrics, including discharge, gage height, and water turbidity. A glimpse of the raw data for gage height appears in **Table 1**.  
 
 ```{r include=FALSE}
 # function to read in raw data
@@ -157,9 +157,9 @@ kable(
 
 ## II.B. Sediment Data
 
-Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (**Author**) (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
+Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
 
-The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, **is this a typo??** interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
+The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, we interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
 filepath <- list.files(here("Data/Raw/Elwha_DailySediment_2011_2016/"), 
@@ -178,6 +178,7 @@ kable(head(daily_sediment_raw, 5),
 ## II.C. Water Quality Data
 
 Water quality data were obtained from USGS ScienceBase repository (https://doi.org/10.5066/F75B00N4) published in support of the 2020 article "Ecological parameters in the Elwha River estuary before and during dam removal" by Foley et al (see **Appendix**). Water quality was measured at two sites before removal (2006-2007) and five sites during/after removal (2013-2014). Concentration and physical characteristic measurements include phosphate, nitrate and nitrile, ammonium, salinity, temperature, turbidity, dissolved oxygen, percent dissolved oxygen, and pH. Turbidity measurements from this datasest were not utilized because sediment analysis is being conducted elsewhere. **Table 3** shows a glimpse of the raw water quality data, though the columns are truncated. In the complete dataset, a column is assigned to each water quality parameter and longitude and latitude are given.
+\newpage
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
 estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv")
@@ -258,7 +259,7 @@ discharge_df <- wrangle_usgs_data(discharge_mid_raw, "discharge_cfs")
 
 ```
 
-We plotted the time series data to get a sense of how discharge and gage height trend over time. **Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data over 2008–2017. Daily averages were calculated over all 15-minute increments recorded each day. Over this 10-year period, discharge data was missing observations on 130 days. For our analysis, we interpolated discharge on these days using linear interpolation.
+We plotted the time series data to get a sense of how discharge and gage height trend over time. **Figures 4** and **5** show daily average discharge (in cubic feet per second) and gage height (in feet), respectively, measured at the USGS monitoring sites with available data over 2008–2017. Daily averages were calculated over all 15-minute increments recorded each day. Over this 10-year period, discharge data were missing for 130 days. For our analysis, we interpolated discharge on these days using linear interpolation.
 
 ```{r echo=FALSE, fig.align='center', fig.height=3, fig.cap='Elwha River Daily Average Discharge at USGS Site 12045500 (2008–2017)'}
 
@@ -325,7 +326,7 @@ As is apparent in **Figure 5.A**, gage height at USGS Site #12044900 (located up
 
 Prior to removal, the dams along the Elwha River trapped roughly 30 million tonnes of sediment over their nearly 100-year lifespan (Ritchie et al., 2017). Our goal is to use suspended sediment concentration and load data measured downstream of both dams (USGS Site #12046260) to understand how dam removal changed the river's sediment budget, therefore impacting river morphology.  
 
-**Figure 6.A** shows the distribution of daily suspended sediment concentrations observed during and after dam removal, with values ranging from 0.22 to 13,819 mg/L. **Figure 6.B** shows the distribution of daily sediment load, with values ranging from 0.1 tonnes to 429,807 tonnes.  
+**Figure 6.A** shows the distribution of daily suspended sediment concentrations observed during and after dam removal, with values ranging from 0.22 to 13,819 mg/L. **Figure 6.B** shows the distribution of daily sediment load, with values ranging from 0.1 to 429,807 tonnes.  
 
 ```{r include=FALSE}
 daily_sediment_df <- daily_sediment_raw %>% 
@@ -907,9 +908,9 @@ A limitation of this study is that the number of fish surveyed was not used to n
 
 ## IV.A. Question 1. How are river discharge and gage height impacted by dam removal?
 
-**Figure 4** and **Figure 5.B** above depict daily average discharge and gage height levels recorded at USGS Site #12045500 from 2008 to 2017. We used time series analysis to understand whether the dam removals had a significant impact on discharge and gage height along the Elwha River. 
+**Figures 4** and **5** above depict daily average discharge and gage height levels recorded at USGS Site #12045500 from 2008 to 2017. We used time series analysis to understand whether a monotonic trend in discharge and gage height along the Elwha River was observed before, during, and after dam removal. 
 
-As is evident in **Figures 4** and **5.B**, both discharge and gage height follow seasonal patterns. We decomposed our time series data to isolate the seasonal component from the overall trend observed over the 10-year period. **Figure 10** shows the trend component (in red) overlaying the recorded data for both discharge and gage height.
+As is evident in **Figures 4** and **5.B**, both discharge and gage height follow seasonal patterns. We decomposed our time series data to isolate the seasonal component from the overall trend observed over the 10-year period. **Figure 10** shows the trend component (in red) overlaying the recorded data for both discharge and gage height. From this figure, it appears that gage height was particularly heightened during dam removal, but there is a less clear trend with regards to discharge.
 
 ```{r include=FALSE}
 # filter to site of interest
@@ -1003,7 +1004,85 @@ plot_grid(discharge_plot, gage_height_plot, nrow = 2, labels = c("A", "B"))
 ```
 
 \newpage
+
+For our analysis, we adjusted the discharge and gage height data for seasonality by removing the seasonal component. The seasonally adjusted time series for both datasets were then split into three periods: before the start of removal, during removal, and after removal was completed. A Mann Kendall Test was used to assess whether discharge and gage height were stationary during each period. Results of this analysis are outlined in **Table 7**. 
+
+```{r include=FALSE}
+## split up the time series with seasonality removed
+
+split_up_ts <- function(ts_decomp){
+  ts_no_season <- ts_decomp$time.series[, "trend"] + ts_decomp$time.series[, "remainder"]
+  
+  start_index <- which(dates$date == start_removal)
+  end_index <- which(dates$date == complete_removal)
+  
+  # separate out trend components during each period
+  before <- ts_no_season[1:(start_index-1)] %>% ts()
+  during <- ts_no_season[start_index:end_index] %>% ts()
+  after <- ts_no_season[(end_index+1):length(ts_decomp)] %>% ts()
+  
+  return(list(before, during, after))
+}
+
+discharge_ts_before <- split_up_ts(discharge_decomp)[[1]]
+discharge_ts_during <- split_up_ts(discharge_decomp)[[2]]
+discharge_ts_after <- split_up_ts(discharge_decomp)[[3]]
+
+gage_height_ts_before <- split_up_ts(gage_height_decomp)[[1]]
+gage_height_ts_during <- split_up_ts(gage_height_decomp)[[2]]
+gage_height_ts_after <- split_up_ts(gage_height_decomp)[[3]]
+```
+
+```{r echo=FALSE, warning=FALSE}
+## Perform Dickey Fuller Test
+
+adf_test_results <- tibble(
+  "period" = c("Before", "During", "After"),
+  "dates" = c("Jan 2008–Sept 2011", "Sept 2011–Aug 2014", "Aug 2014–Dec 2017"), 
+  "avg_d" = c(mean(ts_df %>% filter(date<start_removal) %>% pull(avg_discharge_cfs)), 
+              mean(ts_df %>% filter((date>=start_removal)&(date<=complete_removal)) %>%
+                     pull(avg_discharge_cfs)), 
+              mean(ts_df %>% filter(date>complete_removal) %>% pull(avg_discharge_cfs))), 
+  "p_value_d" = c(MannKendall(discharge_ts_before)$sl[[1]], 
+                  MannKendall(discharge_ts_during)$sl[[1]], 
+                  MannKendall(discharge_ts_after)$sl[[1]]),
+  "tau_d" = c(MannKendall(discharge_ts_before)$tau[[1]], 
+              MannKendall(discharge_ts_during)$tau[[1]], 
+              MannKendall(discharge_ts_after)$tau[[1]]),
+  "avg_gh" = c(mean(ts_df %>% filter(date<start_removal) %>% pull(avg_gage_height_ft)), 
+               mean(ts_df %>% filter((date>=start_removal)&(date<=complete_removal)) %>%
+                      pull(avg_gage_height_ft)), 
+               mean(ts_df %>% filter(date>complete_removal) %>% pull(avg_gage_height_ft))),  
+  "p_value_gh" = c(MannKendall(gage_height_ts_before)$sl[[1]], 
+                   MannKendall(gage_height_ts_during)$sl[[1]], 
+                   MannKendall(gage_height_ts_after)$sl[[1]]),
+  "tau_gh" = c(MannKendall(gage_height_ts_before)$tau[[1]], 
+               MannKendall(gage_height_ts_during)$tau[[1]], 
+               MannKendall(gage_height_ts_after)$tau[[1]]),
+  ) %>% 
+  mutate(across(c("avg_d", "tau_d", "avg_gh", "tau_gh"), 
+                ~round(., digits=2) %>% format(big.mark=",")), 
+         across(contains("p_value"), ~ifelse(as.numeric(.)<0.05, 
+                                             paste0(round(., digits=4), "*"), 
+                                             round(., digits =5))))
+
+kable(adf_test_results, 
+      caption = "Mann Kendall Test of Streamflow Data - USGS Site 12045500", 
+      col.names = c("Period", "Dates", "Average Value", "P-Value", "Tau", 
+                    "Average Value", "P-Value", "Tau"), 
+      align = c("c", "c", "r", "r", "r", "r", "r", "r")) %>% 
+  row_spec(0, align = "c", bold = TRUE) %>% 
+  add_header_above(
+    header = c(" "=2, "Discharge (cfs)"=3, "Gage Height (ft)"=3), align = "c", bold = TRUE) %>% 
+  kable_classic(full_width = FALSE)
+```
+
+The results of this analysis indicate that there were significant monotonic trends to both discharge and gage height levels over the periods before, during, and after dam removal. From these results, it is difficult to isolate a specific response in streamflow as a result of dam removal. We do observe a particularly strong negative trend (tau = -0.39) in gage height levels during the period after removal, which may suggest that river height returned to an equilibrium following the completion of the dam removals. 
+
 ## IV.B. Question 2. Is there a significant impact on sediment load and concentration following dam removal?
+
+
+
 
 ## IV.C. Question 3. Is water quality and nutrient availability impacted by the dam removal?
 
