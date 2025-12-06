@@ -18,9 +18,6 @@ markdown:
 \listoffigures 
 \newpage
 
-Sylvia: discharge, gage height, sediment, fish transport
-Kaitlyn: invert abundance, fish abundance, fish diet
-
 ```{r, echo = FALSE, include = FALSE}
 library(ggplot2)
 library(tidyverse)
@@ -57,27 +54,25 @@ theme_set(kukulahipp_theme)
 
 The Elwha River in Washington was the site of one of the largest dam removal projects in United States history. Headwatered in the Olympic Mountains of Washington and flowing to the Strait of Juan de Fuca, the Elwha River originally supported all five Pacific salmon species, steelhead, and other fish populations, along with the Lower Elwha Klallam Tribe. However, the Elwha Dam and Glines Canyon Dam, located 7.9 km and 21.6 km from the river mouth, respectively, blocked fish and sediment passage for more than 100 years (**Figures 1** and **2**). 
 
-```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha Dam approximately one month into removal (NPS 2025)"}
+```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=2, fig.cap = "Elwha Dam approximately one month into removal (NPS, 2025)"}
 knitr::include_graphics("~/KukulaHipp/Images/ElwhaDamRemovalNPS.png")
 ```
 
-```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Glines Canyon Dam approximately one month into removal (NPS 2025)"}
+```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=2, fig.cap = "Glines Canyon Dam approximately one month into removal (NPS, 2025)"}
 knitr::include_graphics("~/KukulaHipp/Images/GlinesDamRemovalNPS.png")
 ```
 
-Alongside the concern for fish populations and ecological balance was the concern of rising sea level and the impacts that dams have on coastal erosion and resilience. To restore the passage of fish, preserve the watershed, and protect the people, the Lower Elwha Klallam Tribe sought to remove the dams. They were instrumental in the passing of the Elwha River Ecosystem and Fisheries Restoration Act in 1992, but it took 20 years for dam removal to begin. Thus, from 2011 to 2014, the two dams were removed and impacts were tracked by a team of federal, state, tribal, academic, and community partners.
+Alongside the concern for fish populations and ecological balance was the concern of rising sea level and the impacts that dams have on coastal erosion and resilience. To restore the passage of fish, preserve the watershed, and protect the people, the Lower Elwha Klallam Tribe sought to remove the dams. They were instrumental in the passing of the Elwha River Ecosystem and Fisheries Restoration Act in 1992, but it took 20 years for dam removal to begin. Finally, from 2011 to 2014, the two dams were removed and impacts were tracked by a team of federal, state, tribal, academic, and community partners.
 
-Studies were conducted before, during, and after dam removal to understand the shifts in the geomorphology, hydrology, and ecology caused by the removal. Various groups sought to characterize phenomena such as sediment and woody debris dispersion, vegetation growth, invertebrate densities, and fish migration. In this study, we sought to analyze a portion of these impacts and specifically focused on the impacts on streamflow, sediment transport, water quality, invertebrate density, fish migration, and fish diet before, during, and after the dam removal.
+Studies were conducted before, during, and after dam removal to understand the shifts in the geomorphology, hydrology, and ecology caused by the removal. Various groups sought to characterize phenomena such as sediment and woody debris dispersion, vegetation growth, invertebrate densities, and fish migration. In this study, we sought to analyze a portion of these impacts and specifically focused on the impacts on streamflow, sediment transport, water quality, and fish diet before, during, and after the dam removal.
 
-Specific questions studied here include:
+The experimental questions of this study are as follows:
 
-- Question 1. How are river discharge and gage height impacted by dam removal? 
-- Question 2. Is there an observable impact on sediment load and concentration following dam removal? 
-- Question 3. Is water quality and nutrient availability impacted by the dam removal?
-- Question 4. Is there a shift in the types of taxa consumed by Chinook and Coho salmon before and after the dam removal?
+Question 1: How are river discharge and gage height impacted by dam removal?
+Question 2: Is there an observable impact on sediment load and concentration following dam removal?
+Question 3: Is what quality and nutrient availability impacted by the dam removal?
+Question 4: Is there a shift in the types of taxa consumed by Chinook and Coho salmon following dam removal?
 
-------->Sylvia you put your stuff here about the fish movement
--  5. Fish movement?
 \newpage
 
 # II. Dataset Information
@@ -87,10 +82,9 @@ We have obtained multiple datasets from the United States Geological Survey (USG
 1. Elwha River continuous gage height and discharge levels before, during, and after removal
 2. Elwha River daily sediment loads and concentrations during and after dam removal
 3. Elwha River water quality at the estuary
-4. Invertebrate abundance and density at multiple sites in the estuary  **REMOVE??**
-5. Chinook and Coho salmon diets, sampled at estuary sites
+4. Chinook and Coho salmon diets, sampled at estuary sites
 
-The relative locations of the Elwha River watershed, communities, USGS monitoring sites, and Elwha and Glines Canyon Dams are depicted in **Figure 3** (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", published 2011 by USGS).
+The relative locations of the Elwha River watershed, communities, USGS monitoring sites, and Elwha and Glines Canyon Dams are depicted in **Figure 3** (map sourced from "Coastal Habitats of the Elwha River, Washington-Biological and Physical Patterns and Processes Prior to Dam Removal", USGS, 2011).
 
 ```{r echo=FALSE, out.width="50%", fig.align="center", fig.height=3, fig.cap = "Elwha River watershed, monitoring stations, and dam locations (USGS, 2011)"}
 knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
@@ -163,9 +157,9 @@ kable(
 
 ## II.B. Sediment Data
 
-Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
+Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (**Author**) (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
 
-The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
+The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, **is this a typo??** interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
 filepath <- list.files(here("Data/Raw/Elwha_DailySediment_2011_2016/"), 
@@ -182,7 +176,32 @@ kable(head(daily_sediment_raw, 5),
 ```
 
 ## II.C. Water Quality Data
+
+Water quality data were obtained from USGS ScienceBase repository (https://doi.org/10.5066/F75B00N4) published in support of the 2020 article "Ecological parameters in the Elwha River estuary before and during dam removal" by Foley et al (see **Appendix**). Water quality was measured at two sites before removal (2006-2007) and five sites during/after removal (2013-2014). Concentration and physical characteristic measurements include phosphate, nitrate and nitrile, ammonium, salinity, temperature, turbidity, dissolved oxygen, percent dissolved oxygen, and pH. **Table 3** shows a glimpse of the raw water quality data, though the columns are truncated. In the complete dataset, a column is assigned to each water quality parameter.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
+estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv")
+
+kable(head(estuary_wq_raw %>% 
+             select(Field.Activity.Number:Phosphate.concentration), 5), 
+      caption = "Daily Sediment Concentration and Load Raw Data") %>% 
+  row_spec(0, bold = TRUE) %>%
+  kable_classic(full_width = FALSE)
+```
+
 ## II.D. Salmon Diet Data
+
+Data concerning the dietary intake of two salmon species, Chinook and Coho, was obtained from USGS ScienceBAse reposity (https://doi.org/10.5066/F75B00N4), published in support of "Ecological parameters in the Elwha River estuary before and during dam removal" by Foley et al (see **Appendix**). In this dataset, the composition of Chinook and Coho salmon diets are made available from stomach content analysis. Fish were collected for sampling throughout 2006-2007 ("Before") and 2013-2014 ("During").For Chinook, 93 and 164 fish were sampled from before and during removal, respectively. For Coho, 23 and 112 fish were sampled from before and during removal, respectively. 193 unique taxa were screened for. **Table 4** shows a glimpse of the dataset, with the columns being truncated for clarity. In the complete dataset, each taxa screened for is assigned a unique column.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
+salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv")
+
+kable(head(salmonid_diet_raw %>% 
+             select(Date:Amphipoda...unknown), 5), 
+      caption = "Daily Sediment Concentration and Load Raw Data") %>% 
+  row_spec(0, bold = TRUE) %>%
+  kable_classic(full_width = FALSE)
+```
 
 \newpage
 
@@ -405,15 +424,12 @@ From this figure, it appears that sediment load levels follow a seasonal trend, 
 ## III.C. Water quality
 
 ```{r include = FALSE, warning = FALSE}
-estuary_wq_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_Estuary_WQ/Elwha_estuary_water_quality_2006-2014.csv") %>%
-  mutate(Date = mdy(Date.Collected))
+estuary_wq_raw <- estuary_wq_raw %>% mutate(Date = mdy(Date.Collected))
 colnames(estuary_wq_raw)
 unique(estuary_wq_raw$Site.Name)
 ```
 
-----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
-This dataset contains information of nitrate/nitrile, ammonium, and phosphate concentrations, salinity, temperature, turbidity, dissolved oxygen, and pH at five sites in the Elwha River Estuary. To better understand the individual trends and suitability of this data for analysis, each parameter was plotted against time (plots not shown - for final plot of parameters see Figure #).
-----------------> THIS PARAGRAPH HAS A FIGURE NUMBER THAT NEEDS FILLING IN!!
+To better understand the individual trends and suitability of this data for analysis, each parameter was plotted against time (**Figure #** - other plots not shown - for final plot of parameters see **Figure #**).
 
 ``` {r include = FALSE,  warning = FALSE, fig.cap = "Measured nitrate/nitrile concentration [uM] before and after dam removal"}
 
@@ -466,7 +482,7 @@ nitrate_title <- ggplot() +
 nitrate_plot_legend <- plot_grid(nitrate_title, nitrate_plot, nitrate_legend, 
                                  nrow = 3, rel_heights = c(0.1, 0.8, 0.1))
 # Display plot
-# nitrate_plot_legend
+nitrate_plot_legend
 ```
 
 ``` {r include = FALSE,  fig.cap = "Measured phosphate [uM] before and after dam removal"}
@@ -793,8 +809,6 @@ ph_plot_legend <- plot_grid(ph_title, ph_plot, ph_legend,
 #ph_plot_legend
 ```
 
-To create the plots desired for analysis, the legend and title were assigned to unique variables.
-
 ```{r include = FALSE, }
 
 # Dataset legend (grabbed from nitrate subset)
@@ -813,11 +827,22 @@ dataset_title <- ggplot() +
   theme(plot.subtitle = element_text(hjust = 0.5))
 ```
 
-Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. The other parameters had significant missing data or displayed no trend.
+Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. The parameters not selected for further analysis are represented here (**Figure #**). This dataset is limited by the sampling density and locations, specifically by the lack of sampling at all sites across timepoints.
+
+``` {r include = FALSE, fig.cap = "Water quality parameters not selected for further analysis"}
+estuary_wq_rejects_plot <- plot_grid(dataset_title,
+                             salinity_before_plot, salinity_after_plot,
+                             temp_before_plot, temp_after_plot,
+                             do_before_plot, do_after_plot,
+                             ph_before_plot, ph_after_plot,
+                             estuary_wq_legend,
+                             nrow = 10, rel_heights = c(2,1,5,1,5,1,5,1,5,1,5,1))
+estuary_wq_rejects_plot
+```
 
 ## III.D. Salmon Diet
 
-``` {r include = FALSE, }
+``` {r include = FALSE}
 salmonid_diet_raw <- read.csv("~/KukulaHipp/Data/Raw/Elwha_estuary_fish_diet/Elwha_estuary_fish_diet.csv") %>%
   mutate(Date = mdy(Date),
          Year = as.numeric(Year)) %>% 
@@ -862,9 +887,7 @@ coho_diet <- salmonid_diet_processed %>% filter(fish == "Coho") %>%
          value_2014 = as.numeric(value_2014))
 ```
 
-In this dataset, the composition of Chinook and Coho salmon diets are made available. The authors sampled 12 times before the dam removal (across 2006 and 2007), and 23 times after the dam removal (across 2013 and 2014). 193 unique taxa were screened for. To assess the different taxa that comprised the diet, a dataset that contained the sum of each taxa count in each was created. For each year, the top 10 taxa more commonly observed taxa were plotted on a histogram (Figures # and #). A limitation of this study is that the number of fish surveyed was not used to normalize the data, so this dataset does not contain relative abundance.
-
-\newpage
+To assess the different taxa that comprised the diet, a dataset that contained the sum of each taxa count in each year was created. Some taxa are broken into distinct groups, such as Acari, which have entries for both larva and terrestrial (unknown). In the processed dataset, taxa from unique locations or growth stages were combined. In this example, Acari larva and terrestrial (unknown) were summed into a final "Acari" group. For each year, the top 10 taxa observed taxa were then plotted on a histogram (**Figures # and #**) to assess general trends.
 
 ``` {r echo = FALSE, fig.cap = "Total counts of the 10 most common dietary taxa each year in Chinook salmon"}
 # Chinook taxa in 2006
@@ -938,7 +961,7 @@ chinook_diet_4x4 <- plot_grid(chinook_top_taxa_plot_2006,
 chinook_diet_4x4
 ```
 
-Upon initial investigation, it is clear that the diet of Chinook salmon has diversified by 2014, and it is possible that the salmon are consuming more food (however, normalizing the data based on the number of fish and time points would be required to substantiate this claim).
+Upon initial investigation, it is clear that the diet of Chinook salmon has diversified by 2014.
 
 \newpage
 
@@ -1014,7 +1037,9 @@ coho_diet_4x4 <- plot_grid(coho_top_taxa_plot_2006,
 coho_diet_4x4
 ```
 
-In Coho, similar trends in diversification are seen, however they begin earlier. Unlike Chinook, is is less clear that Coho are consuming more after the dam removal.
+In Coho, similar trends in diversification are seen, however they begin earlier.
+
+A limitation of this study is that the number of fish surveyed was not used to normalize the data, so this dataset does not contain relative abundance of consumption across the species as a whole. As the number of times samples were collected greatly increased during the dam removal, this dataset cannot be used to determine the amount of food consumed per fish without further normalization. As such, the goal of this portion of the study is to determine how the dam removal impacted composition of diet, and not abundance of consumption.
 
 \newpage
 
@@ -1171,7 +1196,7 @@ Before removal and into 2013, the number of unique taxa consumed by Chinook salm
 
 To assess how the top taxa were impacted by dam removal, the top ten overall taxa were visualized (the top overall taxa reflect the sum of all counts across all years).
 
-```{r echo = FALSE, fig.cap = "Top overall taxa for Chinook salmon before and after dam removal"}
+```{r echo = FALSE, fig.cap = "Top taxa for Chinook salmon before and after dam removal"}
 
 # Overall
 chinook_top_taxa <- salmonid_diet_processed %>%
@@ -1209,7 +1234,7 @@ chinook_top_taxa_3x3
 
 For Chinook salmon, the taxa chironomidae (non-biting midges) are dominant before and after removal (Figure #). Other taxa, such as cladocera (water flea), chironomini (within the midge tribe), cyclopoida (order of small crustaceans), and osteichthyes (bony fishes) were present before removal, and either at low counts or not at all after. This could be due to water quality changes that these taxa cannot tolerate or do not prefer, increased choice in dietary foods such that salmon prefer to not eat these taxa, or a number of other reasons. Besides chironomidae, only amphipoda (order of malacostracan crustaceans) and Hilara (genus of dance flies) saw increased consumption after dam removal as compared to before. This could be due to the increased diversity in the diet that leads to fewer counts per taxa consumed.
 
-```{r echo = FALSE, fig.cap = "Top overall taxa for Coho salmon before and after dam removal"}
+```{r echo = FALSE, fig.cap = "Top taxa for Coho salmon before and after dam removal"}
 
 # Overall
 coho_top_taxa <- salmonid_diet_processed %>%
@@ -1239,10 +1264,6 @@ coho_top_taxa_3x3
 ```
 
 In Coho salmon, chironomidae are the dominant group before and after removal (Figure #). The overall taxa for Coho salmon are certainly dominated by the pre-dam removal state. Few of the taxa identified here have appreciable counts after the removal. This is likely due to the diversification of their diet after removal. 
-
-## IV.E. Question 5. Fish movement
-
-\newpage
 
 # V. Summary and Conclusions
 
@@ -1277,6 +1298,8 @@ https://www.nature.com/articles/s41598-018-30817-8
 --- Streamflow 
 
 https://waterdata.usgs.gov/blog/gage_height/ 
+
+Foley, M.M., Shafroth, P.B., Beirne, M.M., Paradis, R., Ritchie, A.C., and Duda, J.J., 2020, Ecological parameters in the Elwha River estuary before and during dam removal (ver. 2.0, August 2020): U.S. Geological Survey data release, https://doi.org/10.5066/F75B00N4.
 
 
 
