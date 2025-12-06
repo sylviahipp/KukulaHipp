@@ -1081,6 +1081,57 @@ The results of this analysis indicate that there were significant monotonic tren
 
 ## IV.B. Question 2. Is there a significant impact on sediment load and concentration following dam removal?
 
+As show in **Figure 7** above and **Figure 11** below, suspended sediment levels appear to be heightened during the period of dam removal compared to levels after removal. We performed a two-sample t-test to assess whether there is a significant difference in mean sediment concentration during and after removal. 
+
+```{r echo=FALSE, fig.height=4, fig.cap="Distribution of Sediment Concentration During and After Dam Removal at USGS Site 12046260 (2011–2016)"}
+ssc_df <- daily_sediment_df %>% 
+  mutate(period = case_when(date <= complete_removal ~ "During Removal", 
+                            date > complete_removal  ~ "After Removal"), 
+         period = factor(period, levels = c("During Removal", "After Removal"))) %>% 
+  select(date, period, daily_ssc_mg_l)
+
+ggplot(ssc_df) + 
+  geom_boxplot(aes(x = period, y = daily_ssc_mg_l)) + 
+  scale_y_continuous(labels = scales::comma, 
+                     limits = c(0, 15000),
+                     breaks = seq(0, 15000, by = 5000)) + 
+  labs(x = NULL, 
+       y = "Daily Sediment Concentration (mg/L)", 
+       title = "Daily Suspended Sediment Concentration During and After Dam Removal", 
+       subtitle = "Elwha River, USGS Station 12046260, 2011–2016\n")
+```
+
+The two-sample t-test compared mean suspended sediment concentrations recording during dam removal (n = 1,077 days) and after removal (n = 766 days). The results from the t-test are presented in **Table 8**. 
+
+```{r echo = FALSE}
+#nrow(ssc_df %>% filter(period == "During Removal"))
+#nrow(ssc_df %>% filter(period == "After Removal"))
+
+ssc_during <- ssc_df %>% filter(period == "During Removal") %>% pull(daily_ssc_mg_l)
+ssc_after <- ssc_df %>% filter(period == "After Removal") %>% pull(daily_ssc_mg_l)
+
+# p-value < 2.2e-16
+t_test_ssc <- t.test(ssc_during, ssc_after, alternative = "greater")
+
+ssc_means_table <- tibble(
+  "Period" = c("During Removal", "After Removal"), 
+  "Dates" = c("Sept 2011–Aug 2014", "Aug 2014–Sept 2016"),
+  "Observations" = c(nrow(ssc_df %>% filter(period == "During Removal")), 
+                     nrow(ssc_df %>% filter(period == "After Removal"))),
+  "Average" = c(round(mean(ssc_during), digits=2) %>% format(big.mark=","),  
+                round(mean(ssc_after), digits=2))
+)
+
+kable(ssc_means_table, 
+      caption = "Suspended Sediment Concentration (mg/L) During and After Dam Removal",
+      align = c("l", "c", "r", "r")) %>% 
+  row_spec(0, align = "c", bold = TRUE) %>% 
+  kable_classic(full_width = FALSE) %>%
+  add_footnote(label = glue("True difference in means is greater than 0 (p-value = {t_test_ssc$p.value %>% format(digits = 3, scientific=TRUE)})"), 
+               notation = "number")
+
+```
+
 
 
 
