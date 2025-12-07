@@ -324,7 +324,7 @@ As is apparent in **Figure 5.A**, gage height at USGS Site #12044900 (located up
 
 ## III.B. Sediment
 
-Prior to removal, the dams along the Elwha River trapped roughly 30 million tonnes of sediment over their nearly 100-year lifespan (Ritchie et al., 2017). Our goal is to use suspended sediment concentration and load data measured downstream of both dams (USGS Site #12046260) to understand how dam removal changed the river's sediment budget, therefore impacting river morphology.  
+Over the dams' 100-year lifetime, nearly 30 million tonnes of sediment had been trapped behind the Elwha and Glines Canyon dams (Coastal Watershed Institute, 2022). Removal of the dams along the Elwha River released over 10 million tonnes of sediment trapped in the dams' reservoirs (East at al., 2015). Our goal is to use suspended sediment concentration and load data measured downstream of both dams (USGS Site #12046260) to understand how dam removal changed the river's sediment budget, therefore impacting river morphology.  
 
 **Figure 6.A** shows the distribution of daily suspended sediment concentrations observed during and after dam removal, with values ranging from 0.22 to 13,819 mg/L. **Figure 6.B** shows the distribution of daily sediment load, with values ranging from 0.1 to 429,807 tonnes.  
 
@@ -422,7 +422,7 @@ plot_grid(plotlist = list(sediment_load_plot, sediment_conc_plot),
           rel_heights = c(0.45, 0.55))
 ```
 
-From this figure, it appears that sediment load levels follow a seasonal trend, but that higher suspended sediment concentrations were sustained throughout the entire period of dam removal. In **Section IV.B**, we analyze whether suspended sediment load and concentration levels were significantly heightened during dam removal relative to levels after dam removal. 
+**Figure 7** shows that suspended sediment concentration measured at this point below both dams was sustained at levels greater than 100 mg/L for weeks or months at a time during all three years of the removal period. During both periods during and after removal, suspended sediment load peaks in winter months during winter high flows and snow melt (Ritchie et al., 2018). In **Section IV.B**, we analyze whether suspended sediment load and concentration levels were significantly heightened during dam removal relative to levels after dam removal. 
 
 ## III.C. Water Quality
 
@@ -1077,7 +1077,7 @@ kable(adf_test_results,
   kable_classic(full_width = FALSE)
 ```
 
-The results of this analysis indicate that there were significant monotonic trends to both discharge and gage height levels over the periods before, during, and after dam removal. From these results, it is difficult to isolate a specific response in streamflow as a result of dam removal. We do observe a particularly strong negative trend (tau = -0.39) in gage height levels during the period after removal, which may suggest that river height returned to an equilibrium following the completion of the dam removals. 
+The results of this analysis indicate that there were significant monotonic trends to both discharge and gage height levels over the periods before, during, and after dam removal. From these results, it is difficult to isolate a specific response in streamflow as a result of dam removal. We do observe a particularly strong negative trend (tau = -0.39) in gage height levels after dam removal, which may suggest that river height returned to an equilibrium following the completion of the dam removals. 
 
 ## IV.B. Question 2. Is there a significant impact on sediment load and concentration following dam removal?
 
@@ -1101,11 +1101,9 @@ ggplot(ssc_df) +
        subtitle = "Elwha River, USGS Station 12046260, 2011–2016\n")
 ```
 
-The two-sample t-test compared mean suspended sediment concentrations recording during dam removal (n = 1,077 days) and after removal (n = 766 days). The results from the t-test are presented in **Table 8**. 
+The two-sample t-test compared the suspended sediment concentrations recording during dam removal (n = 1,077 days) and after removal (n = 766 days). The results from the t-test are presented in **Table 8**. This analysis confirms that suspended sediment concentration was significantly higher in the Elwha River during dam removal relative to after dam removal. While dam removal released millions of tons of sediment trapped behind both dams, suspended sediment concentrations appear to reach an equilibrium several months following the completion of both dam removals. 
 
 ```{r echo = FALSE}
-#nrow(ssc_df %>% filter(period == "During Removal"))
-#nrow(ssc_df %>% filter(period == "After Removal"))
 
 ssc_during <- ssc_df %>% filter(period == "During Removal") %>% pull(daily_ssc_mg_l)
 ssc_after <- ssc_df %>% filter(period == "After Removal") %>% pull(daily_ssc_mg_l)
@@ -1118,7 +1116,7 @@ ssc_means_table <- tibble(
   "Dates" = c("Sept 2011–Aug 2014", "Aug 2014–Sept 2016"),
   "Observations" = c(nrow(ssc_df %>% filter(period == "During Removal")), 
                      nrow(ssc_df %>% filter(period == "After Removal"))),
-  "Average" = c(round(mean(ssc_during), digits=2) %>% format(big.mark=","),  
+  "Average (1)" = c(round(mean(ssc_during), digits=2) %>% format(big.mark=","),  
                 round(mean(ssc_after), digits=2))
 )
 
@@ -1131,9 +1129,6 @@ kable(ssc_means_table,
                notation = "number")
 
 ```
-
-
-
 
 ## IV.C. Question 3. Is water quality and nutrient availability impacted by the dam removal?
 
@@ -1484,12 +1479,20 @@ The taxa consumed by both Chinook and Coho during dam removal is dominated by ne
 
 # V. Summary and Conclusions
 
-The impact of the removal of two dams from the Elwha River was assessed using physical and ecological endpoints. A number of datasets generated by USGS before, during, and after dam removal were utilized. It is clear that the removal of these dams has a profound impact on river characteristics and salmon behaviors.
+The impact of the removal of two dams from the Elwha River was assessed using physical and ecological endpoints. A number of datasets generated by USGS before, during, and after dam removal were utilized. It is clear that the removal of these dams has had a profound impact on river characteristics and salmon behaviors.
 
---> Stuff about the streamflow and sediment and stuff
+Stream discharge was not greatly impacted over the period analyzed. Discharge levels remained consistent 
 
-  Water quality was not heavily impacted over the time range analyzed, and levels did not exceed unsafe levels. It does appear that nutrient concentrations were elevated after removal. To fully assess how water quality was impacted by dam removal, significantly more timepoints and locations would have needed to be tested.
-  The diet of two salmon species, Chinook and Coho, was assessed. Although the data were not able to be normalized, it appears that the diet of both species was diversified by 2014. Chinook salmon appear to be consuming more food that before the dam, but the same is cannot be clearly seen in Coho. Further, the taxa consumed by each species saw some overlap before and after removal, however, new groups were introduced after the dam was removed. Some of the top taxa are shared between the species, such as chironomidae, hilara, and tanypodinae, however, more analysis of these variables would better elucidate the similarities and differences in the diet of Chinook and Coho.
+--> gage height: 
+
+from Ritchie et al: "discrete measurements of changes in stage were attributable to 1.0–1.5 m of widespread riverbed aggradation" (means that the deposition of sediment resulted in an increase in riverbed height)
+
+--> sediment
+River hydrology directly impacts sediment distribution following dam removal. [[examples and cite to East et al. (2015)]]
+
+Water quality was not heavily impacted over the time range analyzed, and levels did not exceed unsafe levels. It does appear that nutrient concentrations were elevated after removal. To fully assess how water quality was impacted by dam removal, significantly more timepoints and locations would have needed to be tested.
+
+The diet of two salmon species, Chinook and Coho, was assessed. Although the data were not able to be normalized, it appears that the diet of both species was diversified by 2014. Chinook salmon appear to be consuming more food that before the dam, but the same is cannot be clearly seen in Coho. Further, the taxa consumed by each species saw some overlap before and after removal, however, new groups were introduced after the dam was removed. Some of the top taxa are shared between the species, such as chironomidae, hilara, and tanypodinae, however, more analysis of these variables would better elucidate the similarities and differences in the diet of Chinook and Coho.
 
 \newpage
 
@@ -1515,6 +1518,8 @@ https://www.nature.com/articles/s41598-018-30817-8
 --- Streamflow 
 
 https://waterdata.usgs.gov/blog/gage_height/ 
+https://www.sciencedirect.com/science/article/pii/S0169555X14004553
+https://coastalwatershedinstitute.org/wp-content/uploads/2022/10/Elwha-Nearshore-Synthesiscwisept2022techmemo-1.pdf 
 
 Foley, M.M., Shafroth, P.B., Beirne, M.M., Paradis, R., Ritchie, A.C., and Duda, J.J., 2020, Ecological parameters in the Elwha River estuary before and during dam removal (ver. 2.0, August 2020): U.S. Geological Survey data release, https://doi.org/10.5066/F75B00N4.
 
