@@ -35,7 +35,7 @@ All datasets are located in the following folder: `~/Data/Raw/`
 - USGS Water Data for the Nation available at https://waterdata.usgs.gov/
     * Note: All data accessed from USGS Water Data for the Nation were accessed via URL and thus are not downloaded in this repository. See `~/KululaHipp/Analysis/Discharge_GageHeight.Rmd` (function `read_continuous_data`) for the code used to access these data.
 - `/00_Extraneous_Data`
-    * This folder contains extraneous datasets downloaded for initial exploration but that were ultimately not included in our final analysis.
+    * This folder contains extraneous datasets downloaded for initial exploration but that were ultimately not included in our analysis.
 
 
 ## Folder structure 
@@ -47,8 +47,8 @@ All datasets are located in the following folder: `~/Data/Raw/`
     * Naming of all files are as downloaded directly from the source
 - `~/Data/Metadata`: Includes all metadata files published in support of the datasets used in our analyses
     * Naming of all files are as downloaded directly from the source and correspond to the respective dataset
-- `~/Exploratory`: Includes .Rmd files used for initial data exploration to narrow down content of our analyses.
-- `~/Images`: Contains images used in our final report.
+- `~/Exploratory`: Includes .Rmd files used for initial data exploration to narrow down the content of our analyses.
+- `~/Images`: Contains images used as references in our final report.
 
 
 ## Metadata
@@ -61,7 +61,7 @@ Metadata files were downloaded directly from the data source and contain informa
 
 - `KukulaHipp_FinalProject.Rmd`: Markdown file used to create the final report. This script includes all data wrangling, exploration, and analysis that are part of our final report.
     * Authors: S. Hipp and K. Kukula 
-- All scripts in the folder `~/Analysis` were used to perform the data wranging and analysis of the different components of our final report. 
+- All scripts in the folder `~/Analysis` were used to perform the data wranging and analysis of the different components of our final report. Snippets from these scripts ended up in our final report markdown file.
     * `/Chinook_Diet.Rmd` (Author: K. Kukula) analyzes Chinook Salmon diets
     * `/Coho_Diet.Rmd` (Author: K. Kukula) analyzes Coho Salmon diets
     * `/Discharge_GageHeight.Rmd` (Author: S. Hipp) explores discharge and gage height data available from USGS and performs initial time series analysis of the data
