@@ -1,19 +1,22 @@
 # KukulaHipp
 ENV 872 Course Project for K. Kukula and S. Hipp
 
+Nicholas School of the Environment, Duke University, 2025
+
 ## Summary
 
-<describe the purpose of this repository, the information it contains, and any relevant analysis goals. What, why, where, when, how?>
+This repository contains all materials (data, analysis, final report) used to assess the environmental impacts of the removal of the Elwha and Glines Canyon dams along the Elwha River in Washington State.
+
+Removal of the Elwha River dams began in 2011 and concluded in 2014. This repository contains several datasets measuring environmental impacts before removal (2006–2011), during removal (2011–2014), and after removal (2014–2017). Data were collected from a range of sources, including the USGS Water Data for the Nation repository and academic publications available through the USGS ScienceBase repository. Our analysis (and the associated datasets) focuses on environmental impacts in four main areas: streamflow, sediment levels, water quality, and salmon diet. 
 
 ## Investigators
 
-Sylvia Hipp
-
-Kaitlyn Kukula
+- Sylvia Hipp, MEM '27
+- Kaitlyn Kukula, MEM '27
 
 ## Keywords
 
-<add relevant keywords here>
+Elwha River, Dam Removal, Elwha Dam, Glines Canyon Dam, water quality, salmon diet, sediment
 
 ## Database Information
 
@@ -34,4 +37,4 @@ Kaitlyn Kukula
 
 ## Scripts and code
 
-<list any software scripts/code contained in the repository and a description of their purpose.>
+- `KukulaHipp_FinalProject.Rmd` 
