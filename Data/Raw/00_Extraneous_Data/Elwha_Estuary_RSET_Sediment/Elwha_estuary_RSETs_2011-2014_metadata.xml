@@ -1,0 +1,418 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Rebecca Paradis</origin>
+        <pubdate>2017</pubdate>
+        <title>Sediment deposition in the Elwha River estuary, Washington, measured on rod surface elevation tables (RSETs) from 2011 to 2014</title>
+        <geoform>comma-delimited text</geoform>
+        <serinfo>
+          <sername>data release</sername>
+          <issue>DOI:10.5066/F75B00N4</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, California</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+        <onlink>https://www.sciencebase.gov/catalog/file/get/58f501d6e4b0f6ac3c40383a</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Melissa M. Foley</origin>
+            <origin>Patrick B. Shafroth</origin>
+            <origin>Matthew M. Beirne</origin>
+            <origin>Rebecca Paradis</origin>
+            <origin>Andrew C. Ritchie</origin>
+            <pubdate>2017</pubdate>
+            <title>Ecological parameters in the Elwha River estuary before and during dam removal</title>
+            <serinfo>
+              <sername>data release</sername>
+              <issue>DOI:10.5066/F75B00N4</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, CA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This portion of the data release presents sediment deposition in the estuary as measured using rod surface elevation tables (RSETs) at fifteen locations throughout the Elwha River estuary, Washington, from August 2011 to June 2014 (no associated USGS Field Activities numbers because data were collected predominantly by biologists from the Lower Elwha Klallam Tribe). The locations of the RSETs were determined with a hand-held global positioning system (GPS). We measured sediment deposition from 2011 to 2013 using the RSET table and pins at 36 points around each RSET. Because of extensive sediment deposition in the estuary, we needed to modify our methodology in 2014. We fabricated a new attachment for the RSET base that consisted of a 30 cm horizontal measuring rod and level, which replaced the RSET table. We leveled the rod with respect to the RSET receiver and measured the distance from the end of the rod to the sediment surface at six locations around the center point using a weighted line. The two methods were calibrated so that measurements were comparable. Measurements were taken approximately every two months in 2011 and 2012 and before and after the rainy and freshet (snowmelt) seasons in 2013 and 2014. The sediment deposition data are provided in a comma-delimited spreadsheet (.csv).</abstract>
+      <purpose>Data were obtained to assess the sediment response following the removal of two dams on the Elwha River between 2011 and 2014.
+Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20110811</begdate>
+          <enddate>20140611</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition at time data were collected</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.56693</westbc>
+        <eastbc>-123.55718</eastbc>
+        <northbc>48.14900</northbc>
+        <southbc>48.14520</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:58f501d6e4b0f6ac3c40383a</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>oceans</themekey>
+      </theme>
+      <theme>
+        <themekt>Data Categories for Marine Planning</themekt>
+        <themekey>substrate</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>sedimentation</themekey>
+        <themekey>sand deposits</themekey>
+        <themekey>gravel deposits</themekey>
+      </theme>
+      <theme>
+        <themekt>Global Change Master Directory (GCMD)</themekt>
+        <themekey>sedimentation</themekey>
+      </theme>
+      <theme>
+        <themekt>Marine Realms Information Bank (MRIB) keywords</themekt>
+        <themekey>sediment</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Elwha River</placekey>
+        <placekey>Strait of Juan de Fuca</placekey>
+        <placekey>Olympic Peninsula</placekey>
+        <placekey>Clallam County</placekey>
+        <placekey>State of Washington</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>USGS-authored or produced data and information are in the public domain from the U.S. Government and are freely redistributable with proper metadata and source attribution. Please recognize and acknowledge the U.S. Geological Survey as the originator(s) of the dataset and in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS Pacific Coastal and Marine Science Center</cntorg>
+          <cntper>PCMSC Science Data Coordinator</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>2885 Mission St</address>
+          <city>Santa Cruz</city>
+          <state>CA</state>
+          <postal>95060-5792</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>831-427-4747</cntvoice>
+        <cntemail>pcmsc_data@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>Microsoft Excel for Mac 2011, Mac OS X Yosemite, version 10.10.5.</native>
+    <crossref>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jonathan A. Warrick</origin>
+        <origin>Andrew C. Ritchie</origin>
+        <origin>Andrew W. Stevens</origin>
+        <origin>Patrick B. Shafroth</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <origin>Guy R. Gelfenbaum</origin>
+        <origin>Randall McCoy</origin>
+        <origin>Erin S. Cubley</origin>
+        <pubdate>2017</pubdate>
+        <title>Coastal habitat and biological community response to dam removal on the Elwha River</title>
+        <pubinfo>
+          <pubplace>Ecological Society of America, Washington DC</pubplace>
+          <publish>Ecological Monographs</publish>
+        </pubinfo>
+        <onlink>http://doi.org/10.1002/ecm.1268</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Dataset is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20110811</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20111011</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20111212</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20120308</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20120507</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20120712</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20120917</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20130328</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20131107</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Rod surface elevation tables were monitored to assess amount of sediment change.</procdesc>
+        <procdate>20140611</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add keywords section with USGS persistent identifier as theme keyword. No data were changed.</procdesc>
+        <procdate>20201019</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>VeeAnn A. Cross</cntper>
+            </cntorgp>
+            <cntpos>Marine Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>384 Woods Hole Road</address>
+              <city>Woods Hole</city>
+              <state>MA</state>
+              <postal>02543-1598</postal>
+            </cntaddr>
+            <cntvoice>508-548-8700 x2251</cntvoice>
+            <cntfax>508-457-2310</cntfax>
+            <cntemail>vatnipp@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Performed minor edits to the metadata to correct typos. No data were changed</procdesc>
+        <procdate>20211013</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>Susan A. Cochran</cntper>
+            </cntorgp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Point</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Point</sdtstype>
+        <ptvctcnt>166</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>0.00001</latres>
+        <longres>0.00001</longres>
+        <geogunit>Decimal degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS_1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Sediment deposition</enttypl>
+        <enttypd>Tabular data</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Latitude (deg. N)</attrlabl>
+        <attrdef>Latitude of sample in decimal degrees, north</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>48.14520</rdommin>
+            <rdommax>48.14900</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Longitude (deg. E)</attrlabl>
+        <attrdef>Longitude of sample in decimal degrees, east</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-123.55718</rdommin>
+            <rdommax>-123.56693</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RSET number</attrlabl>
+        <attrdef>Name of RSET location</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identifier for the location given when permanent stations were installed.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Date measured</attrlabl>
+        <attrdef>Date RSET was measured in mm/dd/yyyy format</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>08/11/2011</rdommin>
+            <rdommax>06/11/2014</rdommax>
+            <attrunit>Dates in mm/dd/yyyy format</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Average distance</attrlabl>
+        <attrdef>Average measured distance from the table or measuring rod to the sediment surface. NS indicates the location was not sampled. Negative numbers indicate that sediment deposition was greater than the height of the original rod and extensions had to be added.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-450.7</rdommin>
+            <rdommax>980.4</rdommax>
+            <attrunit>millimeters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Change</attrlabl>
+        <attrdef>Average sediment surface height change was calculated between successive time periods by subtracting the new measurement from the previous one. Positive numbers indicate that sediment was deposited between sampling intervals; negative numbers indicate erosion occurred between sampling intervals. NA indicates RSET was not measured in consecutive months so change could not be measured.</attrdef>
+        <attrdefs>producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-693.7</rdommin>
+            <rdommax>948</rdommax>
+            <attrunit>millimeters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The first line of the csv file is a header line.</eaover>
+      <eadetcit>U.S. Geological Survey</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>Sediment deposition data are presented as a comma-delimited file (.csv) and associated metadata.</resdesc>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>comma-delimited text</formname>
+          <formvern>Microsoft Excel for Mac 2011 14.7.1</formvern>
+          <formcont>comma-delimited text file</formcont>
+          <filedec>No compression applied.</filedec>
+          <transize>0.02</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://www.sciencebase.gov/catalog/file/get/58f501d6e4b0f6ac3c40383a</networkr>
+                <networkr>https://doi.org/10.5066/F75B00N4</networkr>
+              </networka>
+            </computer>
+            <accinstr>Data can be downloaded via the Internet</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211013</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS Pacific Coastal and Marine Science Center</cntorg>
+          <cntper>PCMSC Science Data Coordinator</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>2885 Mission St</address>
+          <city>Santa Cruz</city>
+          <state>CA</state>
+          <postal>95060-5792</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>831-427-4747</cntvoice>
+        <cntemail>pcmsc_data@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

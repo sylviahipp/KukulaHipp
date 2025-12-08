@@ -1,0 +1,422 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Patrick B. Shafroth</origin>
+        <pubdate>2017</pubdate>
+        <title>Riparian vegetation species richness in the Elwha River estuary, Washington, in 2007 and 2014</title>
+        <geoform>tabular digital data</geoform>
+        <serinfo>
+          <sername>data release</sername>
+          <issue>10.5066/F75B00N4</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, California</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+        <onlink>https://www.sciencebase.gov/catalog/file/get/592726f6e4b0b7ff9fb5dc9d</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Melissa M. Foley</origin>
+            <origin>Patrick B. Shafroth</origin>
+            <origin>Matthew M. Bierne</origin>
+            <origin>Rebecca Paradis</origin>
+            <origin>Andrew C. Ritchie</origin>
+            <pubdate>2017</pubdate>
+            <title>Ecological parameters in the Elwha River estuary before and during dam removal</title>
+            <serinfo>
+              <sername>data release</sername>
+              <issue>10.5066/F75B00N4</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Pacific Coastal and Marine Science Center, Santa Cruz, CA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/F75B00N4</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This portion of the data release presents riparian plant species richness (number of unique taxa) data from plots sampled in the Elwha River estuary, Washington, in 2007 and 2014. In August 2007, we established 21 vegetation plots within the study area in a stratified random fashion, with three to five plots in five of the vegetation cover types denoted in the habitat classification maps: mixed riparian forest, willow-alder forest, riparian shrub, emergent marsh/marsh-shrub transition, and dunegrass. Each plot was 100 square meters, usually 10 m x 10 m, but in areas where the vegetation patch was narrow, plots were either 4 m x 25 m or 5 m x 20 m. We visually estimated percent cover by species of all vascular plants within one of ten cover classes and tallied the number of unique taxa to estimate total species richness in each plot. We resampled all plots in August 2014. Plant species richness data are provided in a comma-delimited spreadsheet (.csv).</abstract>
+      <purpose>Data were obtained to assess the change in plant species richness in the Elwha estuary following the removal of two dams on the Elwha River between 2011 and 2014.</purpose>
+      <supplinf>Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <mdattim>
+          <sngdate>
+            <caldate>200708</caldate>
+          </sngdate>
+          <sngdate>
+            <caldate>201408</caldate>
+          </sngdate>
+        </mdattim>
+      </timeinfo>
+      <current>observed</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.56071</westbc>
+        <eastbc>-123.56009</eastbc>
+        <northbc>48.1477</northbc>
+        <southbc>48.147</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:592726f6e4b0b7ff9fb5dc9d</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>vegetation</themekey>
+        <themekey>wetland ecosystems</themekey>
+        <themekey>geospatial datasets</themekey>
+      </theme>
+      <theme>
+        <themekt>Marine Realms Information Bank (MRIB) keywords</themekt>
+        <themekey>estuary</themekey>
+        <themekey>dam removal</themekey>
+        <themekey>river</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>species richness</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>environment</themekey>
+        <themekey>geoscientificInformation</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Elwha River</placekey>
+        <placekey>Strait of Juan de Fuca</placekey>
+        <placekey>Olympic Peninsula</placekey>
+        <placekey>Port Angeles</placekey>
+        <placekey>Clallam County</placekey>
+        <placekey>United States of America</placekey>
+        <placekey>State of Washington</placekey>
+      </place>
+    </keywords>
+    <accconst>None.</accconst>
+    <useconst>USGS-authored or produced data and information are in the public domain from the U.S. Government and are freely redistributable with proper metadata and source attribution. Please recognize and acknowledge the U.S. Geological Survey and the Lower Elwha Klallam Tribe as the originators of the dataset and in products derived from these data.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Patrick B. Shafroth</cntper>
+          <cntorg>U.S. Geological Survey, Southwest Region</cntorg>
+        </cntperp>
+        <cntpos>Research Ecologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>2150 Centre Avenue Bldg C</address>
+          <city>Fort Collins</city>
+          <state>CO</state>
+          <postal>80526</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>970-226-9327</cntvoice>
+        <cntfax>970-226-9230</cntfax>
+        <cntemail>shafrothp@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Matt Beirne and Rebecca Paradis (Lower Elwha Klallam tribe) contributed to all aspects of this work. Tracy Fuentes, Cindy Pritekel, and Vanessa Beauchamp helped with the 2007 vegetation data collection and analysis. Jarrett Schuster, Cody Thomas, and Jamie Michel helped with 2014 vegetation data collection.
+Aaron Freeman helped with planform habitat mapping and metadata creation.</datacred>
+    <crossref>
+      <citeinfo>
+        <origin>Melissa M. Foley</origin>
+        <origin>Jonathan A. Warrick</origin>
+        <origin>Andrew Ritchie</origin>
+        <origin>Andrew W. Stevens</origin>
+        <origin>Patrick B. Shafroth</origin>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Matthew M. Beirne</origin>
+        <origin>Rebecca Paradis</origin>
+        <origin>Guy Gelfenbaum</origin>
+        <origin>Randall McCoy</origin>
+        <origin>Erin S. Cubley</origin>
+        <pubdate>2017</pubdate>
+        <title>Coastal habitat and biological community response to dam removal on the Elwha River</title>
+        <pubinfo>
+          <pubplace>Ecological Society of America, Washington DC</pubplace>
+          <publish>Ecological Monographs</publish>
+        </pubinfo>
+        <onlink>http://doi.org/10.1002/ecm.1268</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Species richness values depend on accurately discerning distinct plant species. Many species can be identified accurately in the field, based on the previous knowledge and expertise of the observers. When there was uncertainty, plant specimens were collected and identified in the laboratory using dichotomous keys. In some cases, plant specimens were taken to the University of Washington herbarium to confirm species identification.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>The data set represents species richness in August 2007 and August 2014 within sample plots within the Elwha estuary study area (see Spatial_Domain information).</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the data set has either not been conducted, or is not applicable.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Plant species richness data (total number of unique species within each vegetation plot) were derived from vegetation plot sampling and subsequent plant identification. Vegetation plots were randomly placed within five different vegetation types. The area of each vegetation plot was 100 square meters. Data were collected and plants identified in August 2007 and August 2014. Vegetation plots were marked with metal stakes and located with global positioning system in 2007 and the same locations were relocated in 2014.</procdesc>
+        <procdate>200708</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Keywords section of metadata edited for consistency across the USGS Pacific Coastal and Marine Science Center and to further optimize discovery in search engines and data catalogs. Metadata was modified to bring up to current USGS PCMSC standards. Minor typos were corrected. No data information was changed.</procdesc>
+        <procdate>20180719</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Susan A Cochran</cntper>
+              <cntorg>U.S. Geological Survey, Pacific Coastal and Marine Science Center</cntorg>
+            </cntperp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical address</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060-5792</postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>(831) 460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Corrected Point of Contact and Metadata Contact phone number prefix.</procdesc>
+        <procdate>20180905</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Susan A Cochran</cntper>
+              <cntorg>U.S. Geological Survey, Pacific Coastal and Marine Science Center</cntorg>
+            </cntperp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>2885 Mission St.</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+              <country>United States</country>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Edited metadata to add keywords section with USGS persistent identifier as theme keyword. No data were changed.</procdesc>
+        <procdate>20201019</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>VeeAnn A. Cross</cntper>
+            </cntorgp>
+            <cntpos>Marine Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>384 Woods Hole Road</address>
+              <city>Woods Hole</city>
+              <state>MA</state>
+              <postal>02543-1598</postal>
+            </cntaddr>
+            <cntvoice>508-548-8700 x2251</cntvoice>
+            <cntfax>508-457-2310</cntfax>
+            <cntemail>vatnipp@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Performed minor edits to the metadata to correct typos. No data were changed</procdesc>
+        <procdate>20211013</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>U.S. Geological Survey</cntorg>
+              <cntper>Susan A. Cochran</cntper>
+            </cntorgp>
+            <cntpos>Geologist</cntpos>
+            <cntaddr>
+              <addrtype>Mailing and Physical</addrtype>
+              <address>2885 Mission Street</address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <postal>95060</postal>
+            </cntaddr>
+            <cntvoice>831-460-7545</cntvoice>
+            <cntemail>scochran@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Elwha_riparian_veg_richness.csv</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>PlotNumber</attrlabl>
+        <attrdef>Vegetation plot number</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>alpha numeric codes used to uniquely identify individual vegetation plots</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CoverType</attrlabl>
+        <attrdef>Vegetation type descriptor</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Dunegrass</edomv>
+            <edomvd>Plant communities dominated by Leymus mollis (American dunegrass) with generally high diversity of forb species.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Emergent marsh transition</edomv>
+            <edomvd>Plant assemblages including relatively pure emergent marsh plants such as Juncus spp. (rushes), Carex spp. (sedges), Potentilla anserina (Pacific silverweed), Rumex salicifolius (willow dock), and Eleocharis palustris (spike rush). In addition, this vegetation cover type includes vegetation that typically occurs between the narrow bands of emergent marsh vegetation that are subject to regular and relatively large tidally-driven water level fluctuations and patches of riparian shrub or riparian forest that typically are inundated by river flooding vs. tidal fluctuations.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Mixed riparian forest</edomv>
+            <edomvd>Mature forests composed of deciduous and coniferous trees with shrub understory. Common overstory trees include Acer macrophyllum (bigleaf maple), Populus balsamifera ssp. trichocarpa (black cottonwood), Alnus rubra (red alder), Pseudotsuga menziesii (Douglas-fir), Thuja plicata (western red cedar), and Abies grandis (grand fir).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Riparian shrub</edomv>
+            <edomvd>Plant assemblages characterized by high shrub cover, including: Rosa nutkana (Nutka rose), Rosa pisocarpa (clustered wild rose), Crataegus douglasii (black hawthorne), Lonicera involucrata (black twinberry), Malus fusca (Pacific crab apple), Oemleria cerasiformis (Indian-plum), Rubus spectabilis (salmonberry), and Symphoricarpos albus (common snowberry).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Willow-alder forest</edomv>
+            <edomvd>Young deciduous forest composed primarily of Salix spp. (willow species) and Alnus rubra (red alder).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Year</attrlabl>
+        <attrdef>descriptor of time when vegetation plot was sampled, relative to dam removal</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>before</edomv>
+            <edomvd>before dam removal (sampled in 2007)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>during</edomv>
+            <edomvd>during dam removal (sampled in 2014)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TotalRichness</attrlabl>
+        <attrdef>total number of unique vascular plant species within the vegetation plot</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>6</rdommin>
+            <rdommax>40</rdommax>
+            <attrunit>number of species</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The entity and attribute information provided here describes the tabular data associated with the data set. Please review the detailed descriptions that are provided (the individual attribute descriptions) for information on the values that appear as fields/table entries of the data set.</eaover>
+      <eadetcit>The entity and attribute information provided here describes the tabular data associated with the data set. Please review the detailed descriptions that are provided (the individual attribute descriptions) for information on the values that appear as fields/table entries of the data set.</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>These data are available in comma-delimited (.csv) format (Elwha_riparian_veg_richness.csv), which also includes CSDGM FGDC-compliant metadata.</resdesc>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>comma-delimited text</formname>
+          <transize>0.008</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://www.sciencebase.gov/catalog/file/get/592726f6e4b0b7ff9fb5dc9d</networkr>
+                <networkr>https://doi.org/10.5066/F75B00N4</networkr>
+              </networka>
+            </computer>
+            <accinstr>The first network resource link will begin a direct download of the data. The second link is a landing page for the entire project.</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. No fees are applicable for obtaining the data set.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211013</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS Pacific Coastal and Marine Science Center</cntorg>
+          <cntper>PCMSC Science Data Coordinator</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>2885 Mission St</address>
+          <city>Santa Cruz</city>
+          <state>CA</state>
+          <postal>95060-5792</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>831-427-4747</cntvoice>
+        <cntemail>pcmsc_data@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

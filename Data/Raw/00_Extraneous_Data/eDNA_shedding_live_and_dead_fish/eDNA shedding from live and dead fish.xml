@@ -1,0 +1,782 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Carl O. Ostberg</origin>
+        <origin>Marshal S. Hoy</origin>
+        <origin>Dorothy M. Chase</origin>
+        <origin>Hiroki Yamanaka</origin>
+        <origin>Jeffery J. Duda</origin>
+        <origin>Takaya Hirohara</origin>
+        <pubdate>20250807</pubdate>
+        <title>Data used to assess differences in shedding of environmental DNA between living fish and carcasses</title>
+        <geoform>spreadsheet</geoform>
+        <onlink>https://doi.org/10.5066/P9VABQDO</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>These data were generated from a  five-day laboratory study that compared environmental DNA (eDNA) concentrations derived from live and dead rainbow trout (Oncorhychus mykiss) to investigate  how  eDNA shedding differs between live and dead fish. Live and dead fish were each housed in separate tanks and eDNA samples were collected from each tank after 1, 2, 3, and 5 days. Additionally, propidium monoazide (PMA)  was used to differentiate eDNA contributions from intact versus disrupted cells from both live and dead fish. The metadata described include: data collected on each fish used in the experiment including length and weight; quantitative PCR (qPCR) cycle threshold (Ct) values; and eDNA copy number. The metadata also includes the Y-intercept, slope, and R-squared value for each qPCR assay performed.</abstract>
+      <purpose>The purpose of the study was to determine whether eDNA shedding (empirically measured as eDNA concentrations) differ between live and dead fish, whether the contribution of eDNA from intact versus disrupted cells differs between live and dead fish, and how temporal dynamics affect eDNA shedding. The results contributed to the knowledge of eDNA dynamics and interpretation, particularly in field contexts where both live and dead fish are present (e.g., during Pacific salmon spawning).</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20181030</begdate>
+          <enddate>20181128</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <descgeog>Western Fisheries Research Center in Seattle, WA</descgeog>
+      <bounding>
+        <westbc>-122.2581983</westbc>
+        <eastbc>-122.2546363</eastbc>
+        <northbc>47.6757332</northbc>
+        <southbc>47.6747940</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>biota</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>environmental DNA</themekey>
+        <themekey>fishes</themekey>
+        <themekey>ecology</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:68928430d4be0244121f6645</themekey>
+      </theme>
+    </keywords>
+    <taxonomy>
+      <keywtax>
+        <taxonkt>Salmonid</taxonkt>
+        <taxonkey>Rainbow Trout</taxonkey>
+      </keywtax>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Actinopterygii</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Teleostei</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Superorder</taxonrn>
+                        <taxonrv>Protacanthopterygii</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Order</taxonrn>
+                          <taxonrv>Salmoniformes</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Family</taxonrn>
+                            <taxonrv>Salmonidae</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Subfamily</taxonrn>
+                              <taxonrv>Salmoninae</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Genus</taxonrn>
+                                <taxonrv>Oncorhynchus</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Species</taxonrn>
+                                  <taxonrv>Oncorhynchus mykiss</taxonrv>
+                                  <common>TSN: 161989</common>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+    </taxonomy>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the dataset's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Carl O Ostberg</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntpos>Research Fishery Biologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65Th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2535</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>costberg@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>All data have been cross-checked and are accurate</attraccr>
+    </attracc>
+    <logic>All data have been checked for duplication and omission and none were found.</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Water Source: The fish housing facility at Western Fisheries Research Center in Seattle, WA is supplied with freshwater from Lake Washington, UV-treated, and filtered by spinning disc (2uM final). The water is supplied to fish through a single pass, flow-through system.</procdesc>
+        <procdate>20181105</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Experiment 1: Confirmation of propidium monoazide (PMA) effectivity.
+Nine replicate water samples (0.5 liter each) were collected from the outflow from a single stock tank containing live rainbow trout. One negative control was also prepared in a disposable cup with 0.5-liter ultrapure water and treated as a filtration negative control (FNC).The 9 water sample replicates were divided into three treatments: 1) unpasteurized-PMA treated (hereafter uPMA), 2) pasteurized-PMA treated (pPMA), and 3) unpasteurized-untreated (UT) with three water sample replicates for each treatment. 
+
+The three pPMA samples were each placed into a sterilized glass bottle and incubated in a water bath at 65 ℃ for 60 mins. After the incubation, all samples (n = 9 + FNC) were placed into disposable plastic bags and vacuum filtered using Sterivex filter cartridges (pore size 0.45 µm; Merck) connected to an aspirator following the procedures of Hirohara et al. (2021). Both pPMA and uPMA samples were subjected to PMA treatment following the protocol of Hirohara et al. (2021). 
+
+DNA was extracted from the Sterivex filters by following the protocol in Hirohara et al. (2021) with a final elution volume of 100 µl. 
+
+Real-time PCR was performed on a ViiATM 7 Real-Time PCR System (Applied Biosystems) using a species-specific assay for rainbow trout (Wilcox et al., 2015) to measure the concentration of target eDNA in the samples. All samples and FNC were tested together with a non-template control (NTC) with three technical replicates. PCRs were performed in 12 µl reaction volumes consisting of 2 µl of DNA template, 6 µl of Gene Expression Mastermix (Thermo Fisher Scientific), and a final concentration of forward and reverse primers at 450 nM each and probe at 125 nM. For the NTC, 2 µl of ultrapure water was added in place of DNA template. All PCR runs included the NTC and DNA quantity standards prepared as a dilution series of artificially synthesized target DNA sequence (gBlocks, Integrated DNA Technologies Inc.). The standards were run in triplicate as an eight-point serial dilution at concentrations of 1 x 10^1—10^8 copies per reaction. DNA concentrations were estimated as DNA copies per liter.
+
+References
+Hirohara, T., Tsuri, K., Miyagawa, K., Paine, R. T. R., &amp; Yamanaka, H. (2021). The Application of PMA (Propidium Monoazide) to Different Target Sequence Lengths of Zebrafish eDNA: A New Approach Aimed Toward Improving Environmental DNA Ecology and Biological Surveillance. Frontiers in Ecology and Evolution, 9. 
+Wilcox, T. M., Carim, K. J., McKelvey, K. S., Young, M. K., &amp; Schwartz, M. K. (2015). The dual challenges of generality and specificity when developing environmental DNA markers for species and subspecies of oncorhynchus. Plos One, 10(11), e0142008.</procdesc>
+        <procdate>20181118</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Experiment 2: eDNA concentration and extracellular:intracellular ratios in tanks containing either live fish or carcasses
+The experiment consisted of 13 flow-through tanks, each containing 27.5 liters of water. Each tank received a continuous water flow at 152 liters per hour maintained at 12 ℃ and all tanks were aerated over the entire experimental period. Prior to introducing fish, all tanks and accessories were treated overnight with a 10% bleach solution and rinsed with source water.
+
+On day 0 of the experiment, all fish were anesthetized, and their length and wet weight measured before they were introduced into tanks. Six tanks were assigned to the live fish block, each tank holding five live fish. Six other tanks were assigned to the carcass block, with each tank containing five carcasses. Prior to their introduction into experimental carcass tanks, fish used were euthanized with an overdose of tricaine methanesulfonate (MS-222) buffered to a neutral pH.
+
+Duplicate 0.5-liter water samples were collected from the surface of each tank in both blocks on day 1, 2, 3, and 5. One of the duplicates from each tank was treated with PMA (hereafter PMA-Treated) and the other duplicate was not treated with PMA (hereafter PMA-Untreated). PMA-Treated was for estimating the intracellular eDNA concentration in water samples. PMA-Untreated provides an estimate of the total eDNA concentration in water samples derived from the combination of intra- and extracellular DNA. One tank served as a negative control tank (no live or dead fish) and was used as a filtration negative control (FNC) to monitor the possibility of unintended cross contamination among the samples during the downstream experimental procedures. A 0.5-liter water sample was collected from the negative control tank on day 1, 2, 3, and 5 and FNC samples were treated in a manner similar to PMA-Untreated samples. The filtration, PMA treatment, DNA extraction, and PCR procedure were conducted in the same manner as Experiment 1.</procdesc>
+        <procdate>20181128</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Experiment 1_Confirmation of PMA effectivity.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Treatments</attrlabl>
+        <attrdef>Identifies a specific treatment for samples used in Experiment 1.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>pPMA</edomv>
+            <edomvd>pasteurized-PMA treated</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>uPMA</edomv>
+            <edomvd>unpasteurized-PMA treated</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>UT</edomv>
+            <edomvd>unpasteurized-untreated</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>FNC</edomv>
+            <edomvd>Filtration negative control</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PCR-NTC</edomv>
+            <edomvd>PCR no-template control</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sample</attrlabl>
+        <attrdef>Arbitrary sample number.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>3</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 1 Ct</attrlabl>
+        <attrdef>PCR replicate 1, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>27.93499947</rdommin>
+            <rdommax>35.964</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 2 Ct</attrlabl>
+        <attrdef>PCR replicate 2, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>28.08499908</rdommin>
+            <rdommax>35.818</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 3 Ct</attrlabl>
+        <attrdef>PCR replicate 3, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>27.99799919</rdommin>
+            <rdommax>36.774</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 1 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 1, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>6160</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 2 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 2, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>5598</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 3 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 3, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>5919</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mean copies/qPCR</attrlabl>
+        <attrdef>Mean copies per PCR across PCR replicates 1, 2, and 3.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>5891</rdommax>
+            <attrunit>Mean DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mean copies/liter</attrlabl>
+        <attrdef>Mean DNA copies per liter of water across PCR replicates 1, 2, and 3.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>589094</rdommax>
+            <attrunit>Mean DNA copies per liter of water</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay Y-intercept</attrlabl>
+        <attrdef>A numeric identifier for the Y-intercept of the qPCR assay performed for the target species.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>41.622</rdommin>
+            <rdommax>41.622</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay slope</attrlabl>
+        <attrdef>A numeric identifier for the slope of the qPCR assay performed for the target species.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3.612</rdommin>
+            <rdommax>-3.612</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay R square</attrlabl>
+        <attrdef>A numeric identifier for the R square value of the qPCR assay performed for the target species</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.997</rdommin>
+            <rdommax>0.997</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Experiment 2_fish length and weights.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Live/Dead</attrlabl>
+        <attrdef>Describes the condition of the fish being held in the tank.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Live</edomv>
+            <edomvd>Live fish were held in the tank.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Dead</edomv>
+            <edomvd>Dead fish were held in the tank.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Fish ID</attrlabl>
+        <attrdef>Unique identification number for each fish.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>60</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tank</attrlabl>
+        <attrdef>Unique identification number for each tank that held fish.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>12</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Length (mm)</attrlabl>
+        <attrdef>The measured fork length in millimeters for an individual fish.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>95</rdommin>
+            <rdommax>154</rdommax>
+            <attrunit>millimeters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Weight (g)</attrlabl>
+        <attrdef>The measured weight in grams for an individual fish.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>15.7</rdommin>
+            <rdommax>44.2</rdommax>
+            <attrunit>grams</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Experiment 2_eDNA concentrations.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Live/Dead</attrlabl>
+        <attrdef>Describes the condition of the fish being held in the tank.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>live</edomv>
+            <edomvd>Live fish were held in the tank.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>dead</edomv>
+            <edomvd>Dead fish were held in the tank.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>no fish_FNC</edomv>
+            <edomvd>A negative control tank that held no fish and served as the filtration negative control (FNC),</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PCR-NTC</edomv>
+            <edomvd>PCR-NTC indicates the PCR no-template control sample for Experiment 2. It has no tank relationship.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Day</attrlabl>
+        <attrdef>A specific day that water samples were collected after fish were added to tanks.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>The 'NA' value indicates the PCR no-template control sample for Experiment 2. It has no relationship with sample day.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>5</rdommax>
+            <attrunit>day</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PMA</attrlabl>
+        <attrdef>Identifies whether a sample was treated with propidium monoazide (PMA).</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>no</edomv>
+            <edomvd>Sample was not treated with PMA.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>yes</edomv>
+            <edomvd>Sample was treatd with PMA.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tank</attrlabl>
+        <attrdef>Unique identification number for each tank that held fish (tanks 1-12) or did not hold fish (tank 13).</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>The 'NA' value indicates the PCR no-template control sample for Experiment 2. It has no tank relationship.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>13</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 1 Ct</attrlabl>
+        <attrdef>PCR replicate 1, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>19.126</rdommin>
+            <rdommax>38.075</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 2 Ct</attrlabl>
+        <attrdef>PCR replicate 2, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>18.357</rdommin>
+            <rdommax>38.185</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR rep 3 Ct</attrlabl>
+        <attrdef>PCR replicate 3, quantitative PCR cycle threshold (Ct) value.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>No detectable qPCR amplification.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>18.434</rdommin>
+            <rdommax>38.515</rdommax>
+            <attrunit>quantification cycle threshold (Ct)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 1 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 1, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>12627447</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 2 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 2, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>20865432</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rep 3 copies/qPCR</attrlabl>
+        <attrdef>PCR replicate 3, DNA copies per PCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>19844236</rdommax>
+            <attrunit>DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mean copies/qPCR</attrlabl>
+        <attrdef>Mean copies per PCR across PCR replicates 1, 2, and 3.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>17779038</rdommax>
+            <attrunit>Mean DNA copies per PCR</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mean copies/liter</attrlabl>
+        <attrdef>Mean DNA copies per liter of water across PCR replicates 1, 2, and 3.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1777903833</rdommax>
+            <attrunit>Mean DNA copies per liter of water</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay Y-intercept</attrlabl>
+        <attrdef>A numeric identifier for the Y-intercept of the qPCR assay performed for the target species.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>44.13510132</rdommin>
+            <rdommax>44.17839813</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay slope</attrlabl>
+        <attrdef>A numeric identifier for the slope of the qPCR assay performed for the target species.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3.562599897</rdommin>
+            <rdommax>-3.527800083</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>qPCR assay R square</attrlabl>
+        <attrdef>A numeric identifier for the R square value of the qPCR assay performed for the target species</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.997300029</rdommin>
+            <rdommax>0.997500002</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P9VABQDO</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20250807</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Carl O Ostberg</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntpos>Research Fishery Biologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65Th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2535</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>costberg@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>

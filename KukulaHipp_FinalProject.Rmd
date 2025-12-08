@@ -94,7 +94,7 @@ knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
 
 We obtained continuous gage height and discharge data along the Elwha River from USGS's Water Data for the Nation at several USGS monitoring stations along the Elwha River. Data availability for each monitoring station is discussed in-depth in **Section III.A** below. 
 
-Through USGS Water Data for the Nation (https://waterdata.usgs.gov/), continuous data are available at 15-minute increments for a variety of metrics, including discharge, gage height, and water turbidity. A glimpse of the raw data for gage height appears in **Table 1**.  
+Through USGS Water Data for the Nation (https://waterdata.usgs.gov/), continuous data are available at 15-minute increments for a variety of metrics, including discharge, gage height, and water turbidity. A glimpse of the raw data for gage height appears in **Table 1**. We queried data over a 10-year period before, during, and after dam removal (2008–2017).
 
 ```{r include=FALSE}
 # function to read in raw data
@@ -423,6 +423,7 @@ plot_grid(plotlist = list(sediment_load_plot, sediment_conc_plot),
 ```
 
 **Figure 7** shows that suspended sediment concentration measured at this point below both dams was sustained at levels greater than 100 mg/L for weeks or months at a time during all three years of the removal period. During both periods during and after removal, suspended sediment load peaks in winter months during winter high flows and snow melt (Ritchie et al., 2018). In **Section IV.B**, we analyze whether suspended sediment load and concentration levels were significantly heightened during dam removal relative to levels after dam removal. 
+\newpage
 
 ## III.C. Water Quality
 
@@ -432,7 +433,7 @@ estuary_wq_raw <- estuary_wq_raw %>% mutate(Date = mdy(Date.Collected))
 #unique(estuary_wq_raw$Site.Name)
 ```
 
-To better understand the individual trends and suitability of this data for analysis, each parameter was plotted against time. **Figure #** displays an example of these plot for nitrate concentrations.
+To better understand the individual trends and suitability of this data for analysis, each parameter was plotted against time. **Figure 8** displays an example of these plot for nitrate concentrations.
 
 ``` {r echo = FALSE, warning = FALSE, fig.height = 2, fig.cap = "Measured nitrate/nitrile concentration [uM] before and after dam removal"}
 
@@ -829,9 +830,9 @@ dataset_title <- ggplot() +
   theme(plot.subtitle = element_text(hjust = 0.5))
 ```
 
-Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. The parameters not selected for further analysis are represented here (**Figure #**). This dataset is limited by the sampling density and locations, specifically by the lack of sampling at all sites across time points. 
+Based on this data exploration, the parameters with useful data are nitrate/nitrile concentration, phosphate concentration, ammonium concentration, and dissolved oxygen. Further analysis of these parameters is included below in **Section IV.C.** The parameters not selected for further analysis include salinity, temperature, and pH, and are represented below (**Figure 9**). This dataset is limited by the sampling density and locations, specifically by the lack of sampling at all sites across time points. 
 
-``` {r warning = FALSE, echo = FALSE, fig.cap = "Water quality parameters not selected for further analysis"}
+``` {r warning = FALSE, echo = FALSE, fig.cap = "Water quality parameters not selected for further analysis", fig.height=6}
 estuary_wq_rejects_plot <- plot_grid(dataset_title,
                              salinity_title, salinity_plot,
                              temp_title, temp_plot,
@@ -1129,7 +1130,7 @@ kable(ssc_means_table,
                notation = "number")
 
 ```
-
+\newpage
 ## IV.C. Question 3. Is water quality and nutrient availability impacted by the dam removal?
 
 Based on the exploratory analysis, only nitrate/nitrile, phosphate, ammonium, and dissoled oxygen concentrations were considered in this water quality analysis (**Figure #**). Each datapoint is based on one reported measurement with no error attached, no statistical analyses were run. Thus, all analysis of this data is based on visual evaluation.

@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Marshal S. Hoy</origin>
+        <origin>Dorothy M. Chase</origin>
+        <origin>George R. Pess</origin>
+        <origin>Samuel J. Brenkman</origin>
+        <origin>Michael M. McHenry</origin>
+        <origin>Carl O. Ostberg</origin>
+        <pubdate>20200724</pubdate>
+        <title>Environmental DNA (eDNA) is an Effective Tool to Track Recolonizing Migratory Fish Following Large-Scale Dam Removal, field data</title>
+        <geoform>spreadsheet</geoform>
+        <onlink>https://doi.org/10.5066/P96R5Q0M</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>We collected environmental DNA (eDNA) data from the Elwha River, home to the world’s largest dam removal project, to track the spatial and temporal patterns of species responses following dam removal. In total, we collected data for 11 different fish taxa, sampled at 25 sites ranging across 56 river kilometers in a wilderness river for 4 years following dam removal. We show that eDNA can effectively be used to determine whether fish have recolonized past former dams, and in some cases determine the spatial extent of that recolonization.</abstract>
+      <purpose>The goal was to develop and test the use of species specific eDNA assays to detect patterns of fish species responses following dam removal.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20140801</begdate>
+          <enddate>20171231</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>observed</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-123.63739013671876</westbc>
+        <eastbc>-123.44238281250001</eastbc>
+        <northbc>48.151428143221224</northbc>
+        <southbc>47.730087095193056</southbc>
+      </bounding>
+      <descgeog></descgeog>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>biota</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>environmental DNA</themekey>
+        <themekey>Salmon</themekey>
+        <themekey>Charr</themekey>
+        <themekey>Elwha River</themekey>
+        <themekey>Dam Removal</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5e9dea4a82ce172707fb8daa</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Elwha River</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the data set's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Jeff Duda</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65Th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2532</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>jduda@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <crossref>
+      <citeinfo>
+        <origin>Jeffrey J. Duda</origin>
+        <origin>Marshal M. Hoy</origin>
+        <origin>Dorothy M. Chase</origin>
+        <origin>George R. Pess</origin>
+        <origin>Samuel J. Brenkman</origin>
+        <origin>Michael M. McHenry</origin>
+        <origin>Carl O. Ostberg</origin>
+        <pubdate>20200630</pubdate>
+        <title>The goal was to develop and test the use of species specific eDNA assays to detect the presence of two non-native plant species (Egeria densa and Myriophyllym spicatum) in aquatic environments.</title>
+        <geoform>publication</geoform>
+        <pubinfo>
+          <pubplace>Environental DNA</pubplace>
+          <publish>Wiley</publish>
+        </pubinfo>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>All locations were inspected using aerial imagery, alongside locational data attributes (when available), in the HydroLink Tool (https://doi.org/10.5066/P9KRWCFL) to help verify location information.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract.  Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set has not been conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the data set has either not been conducted, or is not applicable.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>We established a network of 25 eDNA field sampling locations throughout 56 rkm of the main stem Elwha River (n = 14 sites) and in 10 major tributaries (n = 11 sites). From 2014 to 2017, sampling occurred downstream of Elwha Dam (hereafter LE; n = 2 sites) and in-between the dams (hereafter ME; n = 8 sites) in areas accessible by road. All sites upstream of the Glines Canyon Dam (hereafter UE; n = 15 sites) were in roadless backcountry, with the sites in Mills and Geyser Valley floodplains requiring a full day hike for access and sampling. For sites near roads or accessible by foot in a day, we collected eDNA samples approximately monthly for the duration of the study (with some exceptions). For sites that required multi-day backpacking trips, we conducted sampling in one month during summer base flows (August or September). The number of sampling occasions at each site ranged from 3 to 33 (Table 3). Resource limitations during early project sampling in 2014 and the winter of 2015 precluded monthly sampling, which began in March of 2015 and continued until December 2017. Weather events and logistical issues precluded sampling during 4 of these time periods in December 2015 and February, March, and November of 2017.</procdesc>
+        <procdate>2014</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>For each water sampling event, individually bagged sampling kits containing a filter funnel loaded with a filter, unused 475 ml plastic cup, forceps, applicator stick (to help fold the filter), gloves, and 5 ml tube with ethanol were prepared prior to field sampling and care was taken to avoid cross-sample contamination in the field. We sterilized all filter funnels and forceps prior to their use by soaking in 10% bleach for at least 10 minutes followed by rinsing with filtered water.
+
+To survey eDNA, we collected three replicate 1-L sub-surface water samples at each site and filtered the water through a pre-sterilized 47 mm diameter Nalgene filter funnel with a 0.45 µm pore size cellulose nitrate sterile filter membrane (GE Healthcare, Marlborough, MA). The filter funnel was connected to a Masterflex L/S Easy-Load peristaltic pump powered by a 12 v cordless screwdriver. After filtration, filters were removed from the funnel and placed in sterile 5 ml tubes containing 95 % ethanol and then stored at -20 degrees C until DNA extraction.</procdesc>
+        <procdate>2014</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The eDNA workflow and sample preparation was separated into designated work rooms including a clean room where DNA was extracted (no amplified PCR products or highly concentrated target DNA sequences allowed), a second room where qPCR reagents and mastermixes were prepared and loaded, a third room where DNA standards and highly concentrated DNA was diluted and loaded, and a fourth room dedicated to PCR amplification. Sample preparation was performed in UV hoods (except for PCR amplification) using equipment dedicated to processing eDNA samples at each workstation. Workstations were decontaminated with UV and/or 10 % bleach before and after each use.</procdesc>
+        <procdate>2014</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Filter and mesocosm samples were air dried to allow ethanol to evaporate and then each filter was cut into 2 mm wide strips with sterile scissors and incubated in lysis buffer for one hour at 55 °C. DNA was extracted using DNeasy Blood and Tissue kits (Qiagen) with the following modifications: 360 µl ATL buffer and 40 µl of Proteinase K were used for cell lysis and the volume of AL buffer and 100% ethanol was adjusted to 400 µl post-lysis. DNA was eluted in 200 µl AE buffer and stored at -20 oC until qPCR analysis.
+
+All DNA extracted from water samples were tested first for the presence of PCR inhibitors by performing an internal positive control (IPC) assay using TaqMan Exogenous Internal Positive Control Reagents (EXO-IPC) (Applied Biosystems). Each DNA sample was run in duplicate and each IPC assay was performed in 10 µl volumes consisting of 5 µl of Gene Expression Master Mix, 1 µl EXO-IPC mix, 0.2 µl EXO-IPC DNA, and 3 µl DNA template or sterile water for the non-template control (NTC) using the default cycle parameters with 40 cycles. Environmental samples were considered inhibited when samples at &gt; 3 cycle threshold (Ct) shift relative to the mean NTC. Samples that were inhibited were treated with OneStep PCR Inhibitor Removal kit (Zymo Research Corporation, Irvine, California) and re-tested with the IPC assay to confirm that PCR inhibition was alleviated.
+
+We used the 11 fish eDNA assays to interrogate DNA extracted from the Elwha River water samples. All qPCR assays were performed in triplicate on each sample. 
+
+Ct values for each sample replicate were summarized to a binary detection/non-detection value of 1 or 0, respectively. We considered a positive detection as any sample amplifying at less than 40 Ct with a uniform curve morphology, as suggested by Klymus et al. (2019).</procdesc>
+        <procdate>2014</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>4475</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>0.0197128137</latres>
+        <longres>0.0292515059</longres>
+        <geogunit>Decimal seconds</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS_84</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Elwha river eDNA data 2014_2017.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Site_Name</attrlabl>
+        <attrdef>Site name where water samples were collected for eDNA analysis</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha Road</edomv>
+            <edomvd>Water samples collected from Elwha Road site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Bike Bridge</edomv>
+            <edomvd>Water samples collected from Bike Bridge site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Aldwell Reservoir</edomv>
+            <edomvd>Water samples collected from the former Aldwell Reservoir site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Indian Creek</edomv>
+            <edomvd>Water samples collected from Indian Creek, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Little River</edomv>
+            <edomvd>Water samples collected from Little River, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Little River above barrier</edomv>
+            <edomvd>Water samples collected from Little River, a tributary of the Elwha River, upstream of a barrier to anadromous fish migation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Boulder Garden</edomv>
+            <edomvd>Water samples collected from Boulder Garden site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Hughes Creek</edomv>
+            <edomvd>Water samples collected from Hughes Creek, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Griff Creek</edomv>
+            <edomvd>Water samples collected from Griff Creek, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Altair Bridge</edomv>
+            <edomvd>Water samples collected from Altair Bridge, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Whiskey Bend</edomv>
+            <edomvd>Water samples collected from Whiskey Bend site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Goblin Gates</edomv>
+            <edomvd>Water samples collected from Goblin Gates site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Dodger Point Bridge</edomv>
+            <edomvd>Water samples collected from Dodger Point Bridge site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Lillian River</edomv>
+            <edomvd>Water samples collected from Lillian River, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Mary's Falls</edomv>
+            <edomvd>Water samples collected from Mary's Falls site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Lost River</edomv>
+            <edomvd>Water samples collected from Lost River, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Hayes River</edomv>
+            <edomvd>Water samples collected from Hayes River, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Hayes Floodplain</edomv>
+            <edomvd>Water samples collected from Hayes Floodplain site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Chateau Camp</edomv>
+            <edomvd>Water samples collected from Chateau Camp site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Glines</edomv>
+            <edomvd>Water samples collected from Glines site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Cat Creek</edomv>
+            <edomvd>Water samples collected from Cat Creek, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elkhorn</edomv>
+            <edomvd>Water samples collected from Elkhorn site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Goldie River</edomv>
+            <edomvd>Water samples collected from Goldie River, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Godkin Creek</edomv>
+            <edomvd>Water samples collected from Godkin Creek, a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Wilder Floodplain</edomv>
+            <edomvd>Water samples collected from Wilder Floodplain site on the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site_ID</attrlabl>
+        <attrdef>Unique identifier code given to each site where water samples were collected for eDNA analysis</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_1</edomv>
+            <edomvd>Unique identifier code for Elwha Road site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_2</edomv>
+            <edomvd>Unique identifier code for Bike Bridge site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_3</edomv>
+            <edomvd>Unique identifier code for Aldwell Reservoir site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_4</edomv>
+            <edomvd>Unique identifier code for Indian Creek site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_5</edomv>
+            <edomvd>Unique identifier code for Little River site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_6</edomv>
+            <edomvd>Unique identifier code for Little River above barrier site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_7</edomv>
+            <edomvd>Unique identifier code for Boulder Garden site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_8</edomv>
+            <edomvd>Unique identifier code for Hughes Creek site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_9</edomv>
+            <edomvd>Unique identifier code for Griff Creek site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_10</edomv>
+            <edomvd>Unique identifier code for Altaire Bridge site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_11</edomv>
+            <edomvd>Unique identifier code for Glines site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_12</edomv>
+            <edomvd>Unique identifier code for Whiskey Bend site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_13</edomv>
+            <edomvd>Unique identifier code for Cat Creek site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_14</edomv>
+            <edomvd>Unique identifier code for Goblin Gates site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_15</edomv>
+            <edomvd>Unique identifier code for Dodger Point Bridge site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_16</edomv>
+            <edomvd>Unique identifier code for Lillian River site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_17</edomv>
+            <edomvd>Unique identifier code for Mary's Falls site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_18</edomv>
+            <edomvd>Unique identifier code for Elkhorn site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_19</edomv>
+            <edomvd>Unique identifier code for Lost River site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_20</edomv>
+            <edomvd>Unique identifier code for Goldie River site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_22</edomv>
+            <edomvd>Unique identifier code for Hayes River site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_23</edomv>
+            <edomvd>Unique identifier code for Hayes Floodplain site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_24</edomv>
+            <edomvd>Unique identifier code for Godkin Creek site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Elwha_eDNA_25</edomv>
+            <edomvd>Unique identifier code for Wilder Floodplain site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+        <attrdef>Latitude coordinate (WGS_1984) of site on Elwha mainstem or tributary</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>47.533353</rdommin>
+            <rdommax>48.144216</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+        <attrdef>Longitude coordinate (WGS_1984) of site on Elwha mainstem or tributary</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-123.601121</rdommin>
+            <rdommax>-123.322908</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site_Type</attrlabl>
+        <attrdef>Field differentiates between mainstem and tributary sites</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Mainstem</edomv>
+            <edomvd>Site located on the Mainstem of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tributary</edomv>
+            <edomvd>Site located on a tributary of the Elwha River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Target</attrlabl>
+        <attrdef>Describes one of eleven target assays for each row of data</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Brook Trout</edomv>
+            <edomvd>Common name of target organism for eDNA assay BKCO3_314-388</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Bull Trout</edomv>
+            <edomvd>Common name of target organism for eDNA assay BLCytb_771-854</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Coastal Cutthroat Trout</edomv>
+            <edomvd>Common name of target organism for eDNA assay CCCytb_572-685</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Chinook Salmon</edomv>
+            <edomvd>Common name of target organism for eDNA assay CKCO3_464-534</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Chum Salmon</edomv>
+            <edomvd>Common name of target organism for eDNA assay CMCO3_812-893</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Coho Salmon</edomv>
+            <edomvd>Common name of target organism for eDNA assay COCytb_980-1093</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pacific Lamprey</edomv>
+            <edomvd>Common name of target organism for eDNA assay ETCytb_890-1015</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Lampetra spp.</edomv>
+            <edomvd>Genera name of target organism for eDNA assay LACytb_890-1015</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pink Salmon</edomv>
+            <edomvd>Common name of target organism for eDNA assay PKCytb_906-1000</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Rainbow Trout</edomv>
+            <edomvd>Common name of target organism for eDNA assay RTCytb_793-878</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Sockeye Salmon</edomv>
+            <edomvd>Common name of target organism for eDNA assay SECO3_861-930</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sample_Occn</attrlabl>
+        <attrdef>Indicates the ordered sampling occassion in which samples were collected</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>33</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sample_month</attrlabl>
+        <attrdef>Specifies the month of water sample collection</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>August</edomv>
+            <edomvd>Samples collected in August</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>September</edomv>
+            <edomvd>Samples collected in September</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>November</edomv>
+            <edomvd>Samples collected in November</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>March</edomv>
+            <edomvd>Samples collected in March</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>April</edomv>
+            <edomvd>Samples collected in April</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>May</edomv>
+            <edomvd>Samples collected in May</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>June</edomv>
+            <edomvd>Samples collected in June</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>October</edomv>
+            <edomvd>Samples collected in October</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>January</edomv>
+            <edomvd>Samples collected in January</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>February</edomv>
+            <edomvd>Samples collected in February</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>December</edomv>
+            <edomvd>Samples collected in December</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sample_yr</attrlabl>
+        <attrdef>Specifies the month of calendar year of sample collection</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>2014.0</edomv>
+            <edomvd>Samples collected in 2014</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2015.0</edomv>
+            <edomvd>Samples collected in 2015</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2016.0</edomv>
+            <edomvd>Samples collected in 2016</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2017.0</edomv>
+            <edomvd>Samples collected in 2017</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>A1</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 1st replicate PCR assay ran on the 1st water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>A2</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 2nd replicate PCR assay ran on the 1st water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>A3</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 3rd replicate PCR assay ran on the 1st water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>B1</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 1st replicate PCR assay ran on the 2nd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>B2</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 2nd replicate PCR assay ran on the 2nd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>B3</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 3rd replicate PCR assay ran on the 2nd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>C1</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 1st replicate PCR assay ran on the 3rd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>C2</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 2nd replicate PCR assay ran on the 3rd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>C3</attrlabl>
+        <attrdef>An alphanumeric code that specifies the 3rd replicate PCR assay ran on the 3rd water sample collected at each site-sample event.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Sample not collected or unavailable</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>Target species not detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>Target species detected with eDNA assay.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SmdateHigh</attrlabl>
+        <attrdef>Reach spatial modification date as defined by the NHD. This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL.</attrdef>
+        <attrdefs>NHD High Res</attrdefs>
+        <attrdomv>
+          <udom>Reach spatial modification date as defined by the NHD.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MeasHigh</attrlabl>
+        <attrdef>Measure referring to the address of the feature on the NHD High Resolution reach (identified by reachcode).  Values range from 0, referring to the most downstream point of the reach and 100 referring to the most upstream point of the reach.  This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>100.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MeasMed</attrlabl>
+        <attrdef>Measure referring to the address of the feature on the NHDPlusV2.1 reach (identified by reachcode).  Values range from 0, referring to the most downstream point of the reach and 100 referring to the most upstream point of the reach. This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL.</attrdef>
+        <attrdefs>NHDPlusV2.1</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>100.0</rdommax>
+            <attrunit>Percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Comid</attrlabl>
+        <attrdef>Unique identifier for stream segment and catchments of the National Hydrography Dataset Plus Version 2.1.  This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL. An example of how to query additional information about a target comid is shown here: query information for comid 179 using https://watersgeo.epa.gov/arcgis/rest/services/NHDPlus/NHDPlus/MapServer/2/query?where=comid=179</attrdef>
+        <attrdefs>NHDPlusV2.1</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>179</rdommin>
+            <rdommax>921010001</rdommax>
+            <attrunit>No Units</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ReachHigh</attrlabl>
+        <attrdef>Reachcode of the National Hydrography Dataset (NHD High Resolution). This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL. An example of how to query additional information about a target reachcode is shown here: query information for reach 2720050000000010 using https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/5/query?where=REACHCODE%3D%2720050000000010%27</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>As defined by the NHD, "Unique identifier composed of two parts. The first eight digits are the subbasin code defines by FIPS 103, next six digits is a randomly assigned sequential number unique within a Cataloging Unit, length 14."</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ReachMed</attrlabl>
+        <attrdef>Reachcode assigned to feature in the NHDPlusV2.1 dataset. This is a field assigned by The Hydrolink Tool, https://doi.org/10.5066/P9KRWCFL. An example of how to query additional information about a target reachcode is shown here: query information for reach 20050000000010 using https://watersgeo.epa.gov/arcgis/rest/services/NHDPlus/NHDPlus/MapServer/2/query?where=REACHCODE=%2720050000000010%27</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>Reach code assigned to feature in the NHDPlusV2.1 dataset.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The data described in this metadata record can be found in the publication in Environmental DNA by Duda et al. This paper describes a projects that uses environmental DNA (eDNA) to detect eleven fish speces in the Elwha River and selected tributaries following dam remova. The data for these projects are contained in a single text file described in this metadata record, that provides the presence/non-detection for replicate water samples at 25 sites over a four year period.</eaover>
+      <eadetcit>Duda, J.J., Hoy, M.S., Chase, D.M., Pess, G.R., Brenkman, S.J., McHenry, M.M., and Ostberg, C.O. 2020 Environmental DNA (eDNA) is an Effective Tool to Track Recolonizing Migratory Fish Following Large-Scale Dam Removal. Environmental DNA 00:000-000.</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P96R5Q0M</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20200830</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Jeff Duda</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65Th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2532</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>jduda@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+    <metuc>Record created using USGS Metadata Wizard tool. (https://github.com/usgs/fort-pymdwizard)</metuc>
+  </metainfo>
+</metadata>
