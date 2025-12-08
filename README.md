@@ -38,10 +38,11 @@ All datasets are located in the following folder: `~/Data/Raw/`
     * This folder contains extraneous datasets downloaded for initial exploration but that were ultimately not included in our final analysis.
 
 
-## Folder structure, file formats, and naming conventions 
+## Folder structure 
 
-- `~/`: Base repository includes README file and final report (.Rmd and PDF files)
+- `~/`: Base repository includes README file and final report (Rmd and PDF files)
 - `~/Analysis`: Analysis folder includes .Rmd files used for initial data wrangling and analysis to inform the content of our final report.
+    * Named according to the content of each analysis
 - `~/Data/Raw`: Includes all raw data downloaded for analysis and initial data exploration
     * Naming of all files are as downloaded directly from the source
 - `~/Data/Metadata`: Includes all metadata files published in support of the datasets used in our analyses
@@ -52,9 +53,9 @@ All datasets are located in the following folder: `~/Data/Raw/`
 
 ## Metadata
 
-See the folder `~/Data/Metadata` for metadata of all datasets 
+See the folder `~/Data/Metadata` for metadata of all datasets used in our analysis. 
 
-<For each data file in the repository, describe the data contained in each column. Include the column name, a description of the information, the class of data, and any units associated with the data. Create a list or table for each data file.> 
+Metadata files were downloaded directly from the data source and contain information on column names, description of the data content, units associated with the data, and methods of data collection.
 
 ## Scripts and code
 
