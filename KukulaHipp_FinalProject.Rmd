@@ -93,7 +93,7 @@ knitr::include_graphics("~/KukulaHipp/Images/ElwhaWatershedMap.png")
 
 ## II.A. Streamflow Data 
 
-We obtained continuous gage height and discharge data along the Elwha River from USGS's Water Data for the Nation at several USGS monitoring stations along the Elwha River. Data availability for each monitoring station is discussed in-depth in **Section III.A** below. 
+We obtained continuous gage height and discharge data from USGS's Water Data for the Nation at several USGS monitoring stations along the Elwha River. Data availability for each monitoring station is discussed in-depth in **Section III.A** below. 
 
 Through USGS Water Data for the Nation (https://waterdata.usgs.gov/), continuous data are available at 15-minute increments for a variety of metrics, including discharge, gage height, and water turbidity. A glimpse of the raw data for gage height appears in **Table 1**. We queried data over a 10-year period before, during, and after dam removal (2008–2017).
 
@@ -158,9 +158,9 @@ kable(
 
 ## II.B. Sediment Data
 
-Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260, located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
+Data on sediment load and suspended sediment concentration were obtained from the USGS ScienceBase repository (https://doi.org/10.5066/F7PG1QWC) published in support of the 2018 article by Ritchie, et al. titled "Morphodynamic evolution following sediment release from the world’s largest dam removal" (see **Appendix**). These data were measured and estimated at USGS gaging station #12046260 located on the Elwha River downstream from the Elwha Dam site. Daily data were reported from September 15, 2011 (the start of the Elwha Dam removal) through September 30, 2016 (2 years following the completion of the Glines Canyon Dam removal).
 
-The raw daily sediment data contained 1843 observations and 18 variables measuring daily discharge, sediment concentration, sedimend load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, we interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
+The raw daily sediment data contained 1,843 observations and 18 variables measuring daily discharge, sediment concentration, sediment load and bedload, and sediment discharge. Over this 5 year period, daily suspended sediment concentration data is missing for 10 days. In our analysis, we interpolated these missing data points using linear interpolation. **Table 2** shows a glimpse of the raw data for the daily suspended sediment concentration and load variables, which are of interest for our analysis. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, table.attr="style='width:40%;'"}
 filepath <- list.files(here("Data/Raw/Elwha_DailySediment_2011_2016/"), 
@@ -310,7 +310,7 @@ gage_height_explore_plot <- baseplot(0, 600, 100) +
             aes(x = date, y = avg_gage_height_ft, color = site_no)) +
   theme(legend.position = "None") + 
   labs(title = "Daily Average Gage Height Before, During, and After Dam Removal",
-       subtitle = "Elwha River, USGS Station 12045500, 2008–2017")
+       subtitle = "Elwha River, 2008–2017")
 
 gage_height_mid_only <- baseplot(9, 20, 1) + 
   geom_line(data = gage_height_df, #%>% filter(site_no == "12045500"), 
@@ -374,7 +374,7 @@ plot_grid(ssc_hist, load_hist, nrow = 2, ncol = 1,
           labels = c("A", "B"), rel_heights = c(0.52, 0.48))
 ```
 
-**Figure 7** shows suspended sediment concentration and load measured downstream both dams over the five-year period during and after dam removal. Because of the wide range of observed concentrations, the data are grouped into buckets to better visualize a trend in sediment concentration over time. Each bar in **Figure 7.B** represents a week during the five-year period and is colored according to the suspended sediment concentrations recorded throughout the week. Sediment concentrations align closely with peaks in sediment load shown in **Figure 7.A**. 
+**Figure 7** below shows a time series of suspended sediment concentration and load measured downstream both dams over the five-year period during and after dam removal. Because of the wide range of observed concentrations, the concentration data are grouped into buckets to better visualize a trend over time. Each bar in **Figure 7.B** represents a week during the five-year period and is colored according to the suspended sediment concentrations recorded throughout the week. Sediment concentrations align closely with peaks in sediment load shown in **Figure 7.A**. 
 \newpage
 
 ```{r echo=FALSE, fig.cap='Trends in Daily Sediment Load and Concentration at USGS Site 12046260 (2011–2016)', fig.height=6, message=FALSE, warning=FALSE}
@@ -427,7 +427,7 @@ plot_grid(plotlist = list(sediment_load_plot, sediment_conc_plot),
           rel_heights = c(0.45, 0.55))
 ```
 
-**Figure 7** shows that suspended sediment concentration measured at this point below both dams was sustained at levels greater than 100 mg/L for weeks or months at a time during all three years of the removal period. During both periods during and after removal, suspended sediment load peaks in winter months during winter high flows and snow melt (Ritchie et al., 2018). In **Section IV.B**, we analyze whether suspended sediment load and concentration levels were significantly heightened during dam removal relative to levels after dam removal. 
+**Figure 7** shows that suspended sediment concentration was sustained at levels greater than 100 mg/L for weeks or months at a time during all three years of the removal period. During both periods during and after removal, suspended sediment load peaks in winter months during winter high flows and snow melt (Ritchie et al., 2018). In **Section IV.B**, we analyze whether suspended sediment load and concentration levels were significantly heightened during dam removal relative to levels after dam removal. 
 \newpage
 
 ## III.C. Water Quality
@@ -952,9 +952,9 @@ kable(streamflow_summary,
 
 ```
 
-A one-way ANOVA test was used to assess whether discharge and gage height levels were significantly different during each period. **Table 8** summarizes the output of the ANOVA and Post-Hoc analysis. Discharge levels during dam removal were not significantly different from discharge levels before and after removal (p-value of 0.94 and 0.09, respecitvely). However, discharge levels before removal did differ significantly from discharge levels after removal (p=0.02).
+A one-way ANOVA test was used to assess whether discharge and gage height levels were significantly different during each period. **Table 8** summarizes the output of the ANOVA and Post-Hoc analysis. Discharge levels during dam removal did not significantly differ from discharge levels before and after removal (p-value of 0.94 and 0.09, respecitvely). However, discharge levels before removal did differ significantly from discharge levels after removal (p=0.02).
 
-Observed gage height varied much more significantly during removal. Gage height during removal was on-average 1.13 ft  and 1.38 ft higher than levels before and after removal, respectively. The ANOVA test confirmed that average gage height levels were significantly different during all periods analyzed. 
+Average gage height levels varied much more significantly during removal compared to discharge levels. Gage height during removal was on-average 1.13 ft  and 1.38 ft higher than levels before and after removal, respectively. The ANOVA test confirmed that average gage height levels differed significantly between all periods analyzed. 
 
 ```{r echo=FALSE}
 # ANOVA Analysis
@@ -1090,7 +1090,7 @@ plot_grid(discharge_plot, gage_height_plot, nrow = 2, labels = c("A", "B"))
 
 \newpage
 
-For our analysis, we adjusted the discharge and gage height data for seasonality by removing the seasonal component. The seasonally adjusted time series for both datasets were then split into three periods: before the start of removal, during removal, and after removal was completed. A Mann Kendall Test was used to assess whether discharge and gage height were stationary during each period. Results of this analysis are outlined in **Table 9**. 
+For our analysis, we adjusted the discharge and gage height data for seasonality by removing the seasonal component from each observation. The seasonally adjusted time series for both datasets were then split into three periods: before the start of removal, during removal, and after removal was completed. A Mann Kendall Test was used to assess whether a monotonic trend was present in discharge and gage height levels during each period. Results of this analysis are outlined in **Table 9**. 
 
 ```{r include=FALSE}
 ## split up the time series with seasonality removed
@@ -1152,7 +1152,7 @@ adf_test_results <- tibble(
                                              round(., digits =5))))
 
 kable(adf_test_results, 
-      caption = "Mann Kendall Test of Streamflow Data - USGS Site 12045500", 
+      caption = "Mann Kendall Test of Seasonally Adjusted Streamflow Data - USGS Site 12045500", 
       col.names = c("Period", "Dates", "Average Value", "P-Value", "Tau", 
                     "Average Value", "P-Value", "Tau"), 
       align = c("c", "c", "r", "r", "r", "r", "r", "r")) %>% 
@@ -1162,12 +1162,12 @@ kable(adf_test_results,
   kable_classic(full_width = FALSE)
 ```
 
-The results of this analysis indicate that there were significant monotonic trends to both discharge and gage height levels over the periods before, during, and after dam removal. From these results, it is difficult to isolate a specific response in streamflow as a result of dam removal. We do observe a particularly strong negative trend (tau = -0.39) in gage height levels after dam removal, which may suggest that river height returned to an equilibrium following the completion of the dam removals. 
+The results of this analysis indicate that there were significant monotonic trends to both discharge and gage height levels over all periods before, during, and after dam removal. From these results, it is difficult to isolate a specific response in streamflow as a result of dam removal. We do observe a particularly strong negative trend (tau = -0.39) in gage height levels after dam removal following a positive trend during dam removal, which may suggest that river height returned to an equilibrium following the completion of the dam removals. 
 \newpage
 
 ## IV.B. Question 2. Is there a significant impact on sediment load and concentration following dam removal?
 
-As show in **Figure 7** above and **Figure 11** below, suspended sediment levels appear to be heightened during the period of dam removal compared to levels after removal. We performed a two-sample t-test to assess whether there is a significant difference in mean sediment concentration during and after removal. 
+As show in **Figure 7** above and **Figure 11** below, suspended sediment levels appear to be heightened during dam removal compared to levels after removal. We performed a two-sample t-test to assess whether there is a significant difference in mean sediment concentration during and after removal. 
 
 ```{r echo=FALSE, fig.height=3, fig.cap="Distribution of Sediment Concentration During and After Dam Removal at USGS Site 12046260 (2011–2016)"}
 ssc_df <- daily_sediment_df %>% 
@@ -1187,7 +1187,7 @@ ggplot(ssc_df) +
        subtitle = "Elwha River, USGS Station 12046260, 2011–2016\n")
 ```
 
-A directional two-sample t-test compared the suspended sediment concentrations recording during dam removal (n = 1,077 days) and after removal (n = 766 days). **Table 10** shows a summary of average suspended sediment concentrations before and after removal. This t-test had a p-value of 2.44e-24 (H1 being that levels were higher during removal), which confirms that suspended sediment concentration was significantly higher in the Elwha River during dam removal relative to after dam removal. While dam removal released millions of tons of sediment trapped behind both dams, suspended sediment concentrations appear to reach an equilibrium several months following the completion of both dam removals. 
+A directional two-sample t-test compared the suspended sediment concentrations recording during dam removal (n = 1,077 days) and after removal (n = 766 days). **Table 10** shows a summary of average suspended sediment concentrations before and after removal. This t-test had a p-value of 2.44e-24 (H1 being that levels were higher during removal than after), which confirms that suspended sediment concentration was significantly higher in the Elwha River during dam removal relative to after dam removal. While dam removal released millions of tons of sediment trapped behind both dams, suspended sediment concentrations appear to reach an equilibrium several months following the completion of both dam removals. 
 
 ```{r echo = FALSE}
 
@@ -1577,9 +1577,9 @@ The taxa consumed by both Chinook and Coho during dam removal is dominated by ne
 
 The impact of the removal of two dams from the Elwha River was assessed using physical and ecological endpoints. A number of datasets generated by USGS before, during, and after dam removal were utilized. It is clear that the removal of these dams has had a profound impact on river characteristics and salmon behaviors.
 
-Stream discharge was not greatly impacted over the period analyzed. While the time series analysis did find significant monotonic trend in observed discharge levels during all periods analyzed (**Figure 10**, **Table 9**), average discharge levels during removal were not significantly different from levels before and after removal. However, an ANOVA test confirmed that there was a signficant difference (p=0.02) between discharge levels observed before and after removal (see **Table 8**). This may be explained by changes in river shape and turbidity as a result of the release of over 100-years worth of accumulated sediment following dam removal (National Park Service, 2016).
+Stream discharge was not greatly impacted over the period analyzed. While the time series analysis did find significant monotonic trend in observed discharge levels during all periods analyzed (**Figure 10**, **Table 9**), average discharge levels during removal did not differ significantly from levels before and after removal. However, an ANOVA test confirmed that there was a signficant difference (p=0.02) between discharge levels observed before and after removal (see **Table 8**). This may be explained by changes in river shape and turbidity as a result of the release of over 100-years worth of accumulated sediment following dam removal (National Park Service, 2016).
 
-Gage height rose significantly during dam removal. A one-way ANOVA test confirmed that gage height was significantly different during dam removal compared to the periods before and after (**Table 8**). A time series analysis confirmed that there were significant monotonic trends during all three periods surrounding dam removal, and that there was a strong positive trend in gage height during removal, and a strong negative trend following its completion (**Figure 10**, **Table 9**). Ritchie et al. (2018) found that changes in river stage could be attributed to widespread riverbed aggradation. In other words, increased sediment deposition resulted in rising riverbed height and thus higher water levels. 
+Gage height rose significantly during dam removal. A one-way ANOVA test confirmed that gage height during dam removal differed significantly compared to the periods before and after (**Table 8**). A time series analysis confirmed that there were significant monotonic trends during all three periods surrounding dam removal, and that there was a strong positive trend in gage height during removal, and a strong negative trend following its completion (**Figure 10**, **Table 9**). Ritchie et al. (2018) found that changes in river stage could be attributed to widespread riverbed aggradation. In other words, increased sediment deposition resulted in rising riverbed height and thus higher water levels. 
 
 An analysis of suspended sediment load and concentration data found that suspended sediment levels were significantly altered during dam removal. A two-way directional t-test confirmed that suspended sediment concentration was significantly higher (p<0.001) during dam removal compared to after dam removal was completed. This change was a result of over 10 million tonnes of trapped sediment in the dams' reservoirs being released throughout the process of dam removal (East et al., 2015). **Figure 7** illustrates that high sediment concentration levels were sustained during dam removal but appear to diminish following its completion. This is likely do to the settlement of suspended sediment over time, while sediment loads continued to peak in the winter during periods of high winter flows and snow melt. Further analysis of sediment bedload could be interesting to understand how sediment deposits have impacted the morphology of the Elwha River in the years following the completion of the dam removal. 
 
