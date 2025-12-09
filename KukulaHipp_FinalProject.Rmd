@@ -1218,7 +1218,7 @@ kable(ssc_means_table,
 
 Based on the exploratory analysis, only nitrate/nitrile, phosphate, ammonium, and dissoled oxygen concentrations were considered in this water quality analysis (**Figure 12**). Each datapoint is based on one reported measurement with no error attached, no statistical analyses were run. Thus, all analysis of this data is based on visual evaluation.
 
-Scientifically, these parameters are all highly interconnected. An increase in nitrates will cause an increase in phosphate, leading to an excess of plant growth and decomposition. As a result, dissolved oxygen will decrease and may impact aquatic animals. Optimal ranges for these compounds include 0.16 - 48.38 uM for nitrate with lower being better (Lehigh University), and 0.05 - 0.53 uM (normal ~ 0.32) for phosphate (Univeristy of Wisconsin). Concentrations of all analyzed parameters do not breech unsafe thresholds.
+Scientifically, these parameters are all highly interconnected. An increase in nitrates will cause an increase in phosphate, leading to an excess of plant growth and decomposition. As a result, dissolved oxygen will decrease and may impact aquatic animals. Optimal ranges for these compounds include 0.16 - 48.38 uM for nitrate with lower being better (Lehigh University), and arounf 0.50 uM for phosphate (Lake James Environmental Association). Concentrations of all analyzed parameters do not breech unsafe thresholds.
 
 Nitrate/nitrile, phosphate, and ammonium concentrations are consistent or increased during dam removal. At ES2, ammonium concentrations are the most changed between dam conditions. Dissolved oxygen levels appear to decrease during the dam removal at sites that were sampled before and during removal.
 
@@ -1267,7 +1267,7 @@ salmon_taxa_totals_plot <- ggplot(data = data.frame(
 salmon_taxa_totals_plot
 ```
 
-Before removal and into 2013, the diversity of taxa consumed by Chinook salmon appears largely unchanged. However, there was a large increase in 2014, going from 56 to 85 taxa in 2013 and 2014, respectively. Coho salmon saw more consistency in the diversity of diet in the two dam conditions, where levels were generally similar between the 2006-2007 and 2013-2014. Between 2007 and 2013, an increase in 36 taxa was observed. These results suggest that dam removal had a positive impact on the diversity of both Chinook and Coho salmon diet.
+Before removal and into 2013, the diversity of taxa consumed by Chinook salmon appears largely unchanged. However, there was a large increase in 2014, going from 56 to 85 taxa in 2013 and 2014, respectively. Coho salmon saw more consistency in diet over the two dam conditions, where levels were generally similar between the 2006-2007 and 2013-2014. Between 2007 and 2013, an increase in 36 taxa was observed. These results suggest that dam removal had a positive impact on the diversity of both Chinook and Coho salmon diet.
 
 For each year, the distribution of the top 10 taxa observed in Chinook (**Figure 14**) and Coho (**Figure 15**) salmon were plotted to assess general trends.
 
@@ -1417,13 +1417,11 @@ coho_diet_4x4
 
 \newpage
 
-Upon initial investigation, it is clear that the diets of Chinook and Coho salmon have diversified by 2014. Chinook salmon appear more resistant to changes in the diet, as diversitifaction lagged behind Coho by one year. **Need to write more about this later**
+Upon initial investigation, it is clear that the diets of Chinook and Coho salmon have diversified by 2014. Chinook salmon appear more resistant to changes in the diet, as diversitifaction lagged behind Coho by one year. Without normalizing the data, no conclusions can be drawn regarding the abundance of food consumed. It is hypothesized that salmon will consume more, and this should be a focus of future research.
 
-To assess how the top taxa were impacted by dam removal, the top ten overall taxa were visualized (the top overall taxa reflect the sum of all counts across all years).
+To assess how the top taxa were impacted by dam removal, the top ten overall taxa were visualized. These taxa were identified by summing the counts across all years for each taxa. For Chinook salmon, the taxa chironomidae (non-biting midges) are dominant before and after removal (**Figure 16.A**). Other taxa, such as cladocera (water flea), chironomini (within the midge tribe), cyclopoida (order of small crustaceans), and osteichthyes (bony fishes) were present before removal, either at low counts or not at all during removal. This could be due to water quality changes that these taxa cannot tolerate or do not prefer, increased choice in foods such that salmon prefer to not eat these taxa, or a number of other reasons. Besides chironomidae, only amphipoda (an order of malacostracan crustaceans) and hilara (genus of dance flies) saw increased consumption after dam removal as compared to before.
 
-For Chinook salmon, the taxa chironomidae (non-biting midges) are dominant before and after removal (**Figure 16.A**). Other taxa, such as cladocera (water flea), chironomini (within the midge tribe), cyclopoida (order of small crustaceans), and osteichthyes (bony fishes) were present before removal, and either at low counts or not at all after. This could be due to water quality changes that these taxa cannot tolerate or do not prefer, increased choice in foods such that salmon prefer to not eat these taxa, or a number of other reasons. Besides chironomidae, only amphipoda (an order of malacostracan crustaceans) and Hilara (genus of dance flies) saw increased consumption after dam removal as compared to before.
-
-In Coho salmon, chironomidae are the dominant group before and after removal (**Figure 16.B**). The overall taxa for Coho salmon are certainly dominated by the pre-dam removal state. Few of the taxa identified here have appreciable counts after the removal. This is likely due to the diversification of their diet after removal.
+In Coho salmon, chironomidae are the dominant group before and after removal (**Figure 16.B**). The overall taxa for Coho salmon are certainly dominated by the pre-dam removal state. Few of the taxa identified here have appreciable counts during the removal. This is likely due to the diversification of their diet after removal.
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.cap = "Top taxa for Chinook and Coho salmon before and during dam removal"}
 
@@ -1504,7 +1502,7 @@ top_salmon_taxa_plot
 
 \newpage
 
-To better understand the diet of Chinook and Coho during the dam removal, **Figure 17** shows the top taxa observed in both salmon populations during dam removal (2013–2014). This figure shows levels of these top taxa observed both before and during dam removal.
+To better understand the diet of Chinook and Coho during the dam removal, **Figure 17** shows the top taxa observed in both salmon populations during dam removal (2013–2014). This figure shows levels of these top taxa observed both before dam removal as well to assess if these taxa were newly intriduced into the diet or ones that were being consumed before dam removal.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Top taxa for Chinook salmon during dam removal"}
 during_diet_title <- ggplot() + 
@@ -1584,9 +1582,11 @@ Gage height rose significantly during dam removal. A one-way ANOVA test confirme
 
 An analysis of suspended sediment load and concentration data found that suspended sediment levels were significantly altered during dam removal. A two-way directional t-test confirmed that suspended sediment concentration was significantly higher (p<0.001) during dam removal compared to after dam removal was completed. This change was a result of over 10 million tonnes of trapped sediment in the dams' reservoirs being released throughout the process of dam removal (East et al., 2015). **Figure 7** illustrates that high sediment concentration levels were sustained during dam removal but appear to diminish following its completion. This is likely do to the settlement of suspended sediment over time, while sediment loads continued to peak in the winter during periods of high winter flows and snow melt. Further analysis of sediment bedload could be interesting to understand how sediment deposits have impacted the morphology of the Elwha River in the years following the completion of the dam removal. 
 
-Water quality was not heavily impacted over the time range analyzed, and levels did not exceed unsafe levels. It does appear that nutrient concentrations were elevated after removal. To fully assess how water quality was impacted by dam removal, significantly more timepoints and locations would have needed to be tested.
+Water quality was not heavily impacted over the time range analyzed, and levels did not exceed unsafe levels. It does appear that some nutrient concentrations were elevated after removal at sites that were monitored before dam removal. To fully assess how water quality was impacted by dam removal, significantly more timepoints and locations would have needed to be tested.
 
-The diet of two salmon species, Chinook and Coho, was assessed. Although the data were not able to be normalized, it appears that the diet of both species was diversified by 2014. Chinook salmon appear to be consuming more food that before the dam, but the same is cannot be clearly seen in Coho. Further, the taxa consumed by each species saw some overlap before and after removal, however, new groups were introduced after the dam was removed. Some of the top taxa are shared between the species, such as chironomidae, hilara, and tanypodinae, however, more analysis of these variables would better elucidate the similarities and differences in the diet of Chinook and Coho.
+The diet of two salmon species, Chinook and Coho, was assessed. Although the data were not able to be normalized, it appears that the diet of both species was diversified by 2014. There was some overlap in diets, particularily for Chinook salmon between the dam removal states, however, Coho salmon saw a shift in food sources during the dam removal. Between the two species, there was some overlap in taxa consumed, such as chironomidae, hilara, and tanypodinae, however, more analysis of these variables would better elucidate the similarities and differences in the diet of Chinook and Coho. Further investigations of invertebrate density and abundance would clarify if the food these fish are consuming is due to presence and abundance or out of preference due to increased diversity.
+
+It can be seen that the removal of the two dams that previously blocked the Elwha River for nearly a century have positively impacted the physical and biological parameters of the river. Natural conditions, such as streamflow and sediment, are returning to natural conditions and impacts to water quality may be productive for ecological restoration and wildlife conservation. The return of salmon into the river is notable, and it is clear that the dam removal has allowed for diversification of diet.
 
 \newpage
 
@@ -1611,26 +1611,11 @@ The diet of two salmon species, Chinook and Coho, was assessed. Although the dat
 - National Park Service, "Dam Removal," March 28, 2025. Available at https://www.nps.gov/olym/learn/nature/dam-removal.htm.
 - National Park Service, "Elwha River Restoration Research, August 9, 2016. Available at https://www.nps.gov/olym/learn/nature/elwha-research-efforts.htm
 - Ritchie, A.C., "Morphodynamic evolution following sediment release from the world’s largest dam removal," *Scientific Reports* 8, 13279 (2018), https://doi.org/10.1038/s41598-018-30817-8
-
-https://duke.app.box.com/file/2042213070552
-
-https://www.nature.com/articles/s41598-018-30817-8
-
---- Streamflow 
-
-https://www.sciencedirect.com/science/article/pii/S0169555X14004553
-https://coastalwatershedinstitute.org/wp-content/uploads/2022/10/Elwha-Nearshore-Synthesiscwisept2022techmemo-1.pdf 
-
-
-
-
-
---- Nutrient concentrations
-
-https://ei.lehigh.edu/envirosci/watershed/wq/wqbackground/nitratesbg.html#:~:text=in%20a%20watershed?-,1.,blood%20cells%20to%20carry%20oxygen.
-
-chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://osse.ssec.wisc.edu/curriculum/earth/Minifact2_Phosphorus.pdf
-
+- U.S. Geological Survey, "Coastal Habitats of the Elwha River, Washington - Biological and Physical Patterns and Processes Prior to Dam Removal", 2011. available at https://pubs.usgs.gov/publication/sir201151201
+- East, A. E., Pess, G. R., Bountry, J. A., Magirl, C. S., Ritchie, A. C., Logan, J. B., Randle, T. J., Mastin, M. C., Minear, J. T., Duda, J. J., Liermann, M. C., McHenry, M. L., Beechie, T. J., & Shafroth, P. B. "Large-scale dam removal on the Elwha River, Washington, USA: River channel and floodplain geomorphic change", May 1, 2014, *Geomorphology*, 228, 765–786. https://doi.org/10.1016/j.geomorph.2014.08.028
+- Coastal Watershed Institute (CWI) 2022. Elwha River Dam Removals: A Nearshore Synthesis a Decade After the World’s Largest Dam Removal Project. A CWI Technical Report. Coastal Watershed Institute Port Angeles, Washington. ISSN 092022:1. ISSN2643-9697, Available at https://coastalwatershedinstitute.org/wp-content/uploads/2022/10/Elwha-Nearshore-Synthesiscwisept2022techmemo-1.pdf 
+- Lehigh University, "Nitrates", n.d. Available at https://ei.lehigh.edu/envirosci/watershed/wq/wqbackground/nitratesbg.html#:~:text=in%20a%20watershed?-,1.,blood%20cells%20to%20carry%20oxygen.
+- Lake James Environmental Association, "Nutrients", n.d. Available at https://www.ljea.org/2018-state-lake-james-watershed/chemical-analysis-water-quality/nutrients/
 
 
 
