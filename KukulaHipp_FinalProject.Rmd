@@ -1,5 +1,6 @@
 ---
 title: "Elwha River Dam Removal"
+subtitle: "https://github.com/sylviahipp/KukulaHipp"
 author: "Sylvia Hipp and Kaitlyn Kukula"
 date: "Fall 2025"
 output: 
@@ -1610,7 +1611,7 @@ It can be seen that the removal of the two dams that previously blocked the Elwh
 - Fahlquist, L., Hopkins, C., "Why We Use Gage Height," *USGS*, November 25, 2025. Available at https://waterdata.usgs.gov/blog/gage_height/.
 - Kojima, A.C., Pearsall, P., and Gussman, J. "The Elwha River: Landscapes of Recovery," *USGS*. Available at https://geonarrative.usgs.gov/elwhariverrestoration/.
 - Lake James Environmental Association, "Nutrients", n.d. Available at https://www.ljea.org/2018-state-lake-james-watershed/chemical-analysis-water-quality/nutrients/
-- Lehigh University, "Nitrates", n.d. Available at https://ei.lehigh.edu/envirosci/watershed/wq/wqbackground/nitratesbg.html#:~:text=in%20a%20watershed?-,1.,blood%20cells%20to%20carry%20oxygen.
+- Lehigh University, "Nitrates", n.d. Available at https://ei.lehigh.edu/envirosci/watershed/wq/wqbackground/nitratesbg.html
 - Mapes, L.V., "Elwha: Roaring back to life," *The Seattle Times*, February 13, 2016. Available at https://projects.seattletimes.com/2016/elwha/.
 - National Park Service, "Dam Removal," March 28, 2025. Available at https://www.nps.gov/olym/learn/nature/dam-removal.htm.
 - National Park Service, "Elwha River Restoration Research, August 9, 2016. Available at https://www.nps.gov/olym/learn/nature/elwha-research-efforts.htm
